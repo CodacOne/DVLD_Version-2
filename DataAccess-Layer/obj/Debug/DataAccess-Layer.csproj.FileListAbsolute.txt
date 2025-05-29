@@ -1,0 +1,12 @@
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\DataAccess-Layer\bin\Debug\DataAccess-Layer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\DataAccess-Layer\bin\Debug\DataAccess-Layer.pdb
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\DataAccess-Layer\obj\Debug\DataAccess-Layer.csprojAssemblyReference.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\DataAccess-Layer\obj\Debug\DataAccess-Layer.csproj.CoreCompileInputs.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\DataAccess-Layer\obj\Debug\DataAccess-Layer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\DataAccess-Layer\obj\Debug\DataAccess-Layer.pdb
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\bin\Debug\DataAccess-Layer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\bin\Debug\DataAccess-Layer.pdb
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Debug\DataAccess-Layer.csprojAssemblyReference.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Debug\DataAccess-Layer.csproj.CoreCompileInputs.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Debug\DataAccess-Layer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Debug\DataAccess-Layer.pdb

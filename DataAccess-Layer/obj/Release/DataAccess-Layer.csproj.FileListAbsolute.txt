@@ -1,0 +1,6 @@
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\bin\Release\DataAccess-Layer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\bin\Release\DataAccess-Layer.pdb
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Release\DataAccess-Layer.csprojAssemblyReference.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Release\DataAccess-Layer.csproj.CoreCompileInputs.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Release\DataAccess-Layer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\DataAccess-Layer\obj\Release\DataAccess-Layer.pdb

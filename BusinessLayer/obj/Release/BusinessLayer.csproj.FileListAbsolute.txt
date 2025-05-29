@@ -1,0 +1,9 @@
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Release\BusinessLayer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Release\BusinessLayer.pdb
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Release\DataAccess-Layer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Release\DataAccess-Layer.pdb
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Release\BusinessLayer.csprojAssemblyReference.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Release\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Release\BusinessLayer.csproj.CopyComplete
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Release\BusinessLayer.dll
+D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Release\BusinessLayer.pdb
