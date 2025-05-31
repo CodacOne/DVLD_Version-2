@@ -52,11 +52,11 @@
     <Compile Include="User\AddNewUser.Designer.cs">
       <DependentUpon>AddNewUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Person\AddNewPerson.cs">
+    <Compile Include="Person\AddUpdateNewPerson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Person\AddNewPerson.Designer.cs">
-      <DependentUpon>AddNewPerson.cs</DependentUpon>
+    <Compile Include="Person\AddUpdateNewPerson.Designer.cs">
+      <DependentUpon>AddUpdateNewPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\ctrl2PersonalInfoWithFilter.cs">
       <SubType>UserControl</SubType>
@@ -339,8 +339,8 @@
     <EmbeddedResource Include="User\AddNewUser.resx">
       <DependentUpon>AddNewUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Person\AddNewPerson.resx">
-      <DependentUpon>AddNewPerson.cs</DependentUpon>
+    <EmbeddedResource Include="Person\AddUpdateNewPerson.resx">
+      <DependentUpon>AddUpdateNewPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\ctrl2PersonalInfoWithFilter.resx">
       <DependentUpon>ctrl2PersonalInfoWithFilter.cs</DependentUpon>
@@ -1018,6 +1018,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Graphicloads-Flat-Finance-Lock.641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20250516_1137_نظام ترخيص القيادة_remix_01jvc3tam8evas5aa427j0fev01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20250516_1130_تعديل ألوان البطاقة_remix_01jvc3db03ezzt539cmkhzkepr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,10 +43,10 @@
   <ItemGroup>
     <Compile Include="clsDADetainAndRelease.cs" />
     <Compile Include="clsDataAccessCountries.cs" />
-    <Compile Include="clsConnectionString.cs" />
+    <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsDAManageApplicationType.cs" />
     <Compile Include="clsDAManageTestTypes.cs" />
-    <Compile Include="clsDatabase1.cs" />
+    <Compile Include="clsPerson.cs" />
     <Compile Include="clsDATestTypesAppointement.cs" />
     <Compile Include="clsDAUsers.cs" />
     <Compile Include="clsDAManageLocalDrivingApplication.cs" />

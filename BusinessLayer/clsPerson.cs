@@ -7,13 +7,32 @@ using System.Data;
 
 using DataAccess_Layer;
 
+
 namespace BusinessLayer
 {
+    //public struct stPersonDetails
+    //{
+    //    public int PersonID;
+    //    public string NationalNo;
+    //    public string FirstName;
+    //    public string SecondName;
+    //    public string ThirdName;
+    //    public string LastName;
+    //    public byte Gendor;
+    //    public string Email;
+    //    public string Phone;
+    //    public string Address;
+    //    public DateTime DateOfBirth;
+    //    public int NationalityCountryID;
+    //    public string ImagePath;
+    //}
+
+
     public class clsPerson
     {
        public static int ID;
 
-
+      
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
 
@@ -107,30 +126,30 @@ namespace BusinessLayer
 
         /*/////*/////*/////*/////*/////*/////*/////*////
 
-        private clsPerson(int ID, string NationalNo, string FirstName, string SecondName, string ThirdName,
-            string LastName, DateTime DateOfBirth, Byte Gendor, string Address,
-            string Phone, string Email, int NationalityCountryID , 
-             string ImagePath)
+        private clsPerson(stPersonDetails personData)
         {
-            this.PersonID = ID;
-            this.NationalNo = NationalNo;
-            this.FirstName = FirstName;
-            this.SecondName = SecondName;
-            this.ThirdName = ThirdName;
+            this.PersonID = personData.PersonID;
+            this.NationalNo = personData.NationalNo;
+            this.FirstName = personData.FirstName;
+            this.SecondName = personData.SecondName;
+            this.ThirdName = personData.ThirdName;
 
-            this.LastName = LastName;
-            this.Email = Email;
-            this.Phone = Phone;
-            this.Address = Address;
-            this.Gendor = Gendor;
-            this.DateOfBirth = DateOfBirth;
-            this.NationalityCountryID = NationalityCountryID;
-            this.ImagePath = ImagePath;
+            this.LastName = personData.LastName;
+            this.Email = personData.Email;
+            this.Phone = personData.Phone;
+            this.Address = personData.Address;
+            this.Gendor = personData.Gendor;
+            this.DateOfBirth = personData.DateOfBirth;
+            this.NationalityCountryID = personData.NationalityCountryID;
+            this.ImagePath = personData.ImagePath;
 
             Mode = enMode.Update;
         }
 
+
         /////////////////////////////////////////////////////////////////////
+        ///
+        // ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅
         public static DataTable GetAllPeople()
         {
             return clsDataAccess.GetAllPeople();
@@ -138,14 +157,7 @@ namespace BusinessLayer
         }
 
 
-        public static int GetCountPeople()
-        {
-
-            return clsDataAccess.GetPeopleCount();
-
-
-        }
-
+     
         /////////////////////////////////////////////////////////////////////
 
         public static DataTable GetAllCountries()
@@ -195,25 +207,19 @@ namespace BusinessLayer
 
 
 
+        // ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅
         public static clsPerson FindByPersonID(int ID)
         {
-            string NationalNo = "",  FirstName = "", SecondName = "", ThirdName = "", LastName = "", Email = "", Phone = "";
-            string Address = ""; Byte Gendor = 0; DateTime DateOfBirth =DateTime.Now;
-            int NationalityCountryID = -1;
-            string ImagePath = "";
+            
+            stPersonDetails PersonDetails = new stPersonDetails();
+
 
             DateTime dateOfBirth = DateTime.Now;
 
-            if (clsDataAccess.GetPersonInfoByID( ID, ref NationalNo, ref FirstName, ref SecondName, ref ThirdName,
-            ref LastName, ref DateOfBirth, ref Gendor, ref Address,
-            ref Phone, ref Email, ref NationalityCountryID,
-             ref ImagePath))
+            if (clsDataAccess.GetPersonInfoByID( ID, ref PersonDetails))
             {
                 //  Console.WriteLine("ID is found");
-                return new clsPerson( ID,  NationalNo,  FirstName,  SecondName,  ThirdName,
-             LastName,  DateOfBirth,  Gendor,  Address,
-             Phone,  Email,  NationalityCountryID,
-              ImagePath);
+                return new clsPerson(PersonDetails);
 
             }
 
@@ -231,26 +237,18 @@ namespace BusinessLayer
         /// <summary>
 
 
+        // ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅
         public static clsPerson FindByNationalNo(string NationalNo)
         {
-            int PersonID = -1; string FirstName = "", SecondName = "", ThirdName = "", LastName = "", Email = "", Phone = "";
-            string Address = ""; Byte Gendor = 0; DateTime DateOfBirth = DateTime.Now;
-            int NationalityCountryID = -1;
-            string ImagePath = "";
 
+            stPersonDetails PersonDetails = new stPersonDetails();
             //DateTime dateOfBirth = DateTime.Now;
 
-            if (clsDataAccess.GetPersonInfoByNationalNo(NationalNo, ref PersonID, ref FirstName, ref SecondName, ref ThirdName,
-            ref LastName, ref DateOfBirth, ref Gendor, ref Address,
-            ref Phone, ref Email, ref NationalityCountryID,
-             ref ImagePath))
+            if (clsDataAccess.GetPersonInfoByNationalNo(NationalNo,ref PersonDetails))
             {
                 
 
-                return new clsPerson(PersonID, NationalNo, FirstName, SecondName, ThirdName,
-             LastName, DateOfBirth, Gendor, Address,
-             Phone, Email, NationalityCountryID,
-              ImagePath);
+                return new clsPerson(PersonDetails);
 
             }
 

@@ -193,9 +193,6 @@
   <data name="Oxygen-Icons.org-Oxygen-Apps-krfb3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Apps-krfb.1283.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="photo_2025-05-15_20-08-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\photo_2025-05-15_20-08-24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="License View 321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\License View 321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -229,8 +226,8 @@
   <data name="Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user.1282.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Manage Applications 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Manage Applications 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo_2025-05-15_20-08-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo_2025-05-15_20-08-24.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Address 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Address 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -415,6 +412,9 @@
   <data name="Retake Test 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Retake Test 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Graphicloads-Flat-Finance-Lock2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Graphicloads-Flat-Finance-Lock.641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Release Detained License 512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Release Detained License 512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -460,8 +460,8 @@
   <data name="Icondrawer-Flags-Palestine.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icondrawer-Flags-Palestine.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Application Types 641" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Application Types 641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Manage Applications 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Manage Applications 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IssueDrivingLicense 321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IssueDrivingLicense 321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -532,6 +532,9 @@
   <data name="20250516_1110_علم الثورة السورية_remix_01jvc27ey1fn9ttn4618qta2qr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20250516_1110_علم الثورة السورية_remix_01jvc27ey1fn9ttn4618qta2qr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Application Types 641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Application Types 641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Add New User 72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add New User 72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -558,6 +561,9 @@
   </data>
   <data name="Renew Driving License 321" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Renew Driving License 321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="20250516_1137_نظام ترخيص القيادة_remix_01jvc3tam8evas5aa427j0fev01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250516_1137_نظام ترخيص القيادة_remix_01jvc3tam8evas5aa427j0fev01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="45d47a85-08cb-4908-ad64-ff60062caf92" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\45d47a85-08cb-4908-ad64-ff60062caf92.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -625,7 +631,7 @@
   <data name="PersonDetails 322" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PersonDetails 322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Graphicloads-Flat-Finance-Lock2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Graphicloads-Flat-Finance-Lock.641.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="20250516_1130_تعديل ألوان البطاقة_remix_01jvc3db03ezzt539cmkhzkepr" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20250516_1130_تعديل ألوان البطاقة_remix_01jvc3db03ezzt539cmkhzkepr.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

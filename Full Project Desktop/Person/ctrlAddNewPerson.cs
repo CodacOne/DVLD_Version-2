@@ -77,12 +77,7 @@ namespace Full_Project_Desktop
         ///
         private void RbFemale_CheckedChanged(object sender, EventArgs e)
         {
-            if(rbFemale.Checked)
-            {
-
-                pbforPerson.Image = Properties.Resources.Female2;
-            }
-
+          
            
 
         }
@@ -92,14 +87,7 @@ namespace Full_Project_Desktop
         private void BtnClose_Click(object sender, EventArgs e)
         {
            
-                // البحث عن الفورم الأب (Parent Form) الذي يحتوي على الـ UserControl
-                Form parentForm = this.ParentForm;
-
-                if (parentForm != null)
-                {
-                    parentForm.Close(); // إغلاق الفورم
-                }
-            
+               
 
 
         }
@@ -108,11 +96,7 @@ namespace Full_Project_Desktop
         //////////////////////////////////////////////////////////////////////////////////////////
         private void RbMale_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbMale.Checked)
-            {
-
-                pbforPerson.Image = Properties.Resources.male2;
-            }
+           
 
            
 
@@ -120,18 +104,7 @@ namespace Full_Project_Desktop
 
         ///////////////////////////////////////////////////////////////////
 
-        private void FillCountriesInComboBox()
-        {
-            DataTable dt = clsPerson.GetAllCountries();
-
-            foreach (DataRow row in dt.Rows)
-            {
-                comboBox1.Items.Add(row["CountryName"]);
-
-            }
-
-
-        }
+      
 
         ///////////////////////////////////////////////////////////////////
        
@@ -336,10 +309,10 @@ namespace Full_Project_Desktop
         ///////////////////////////////////////////////////////////////////
         private void UrclAddNewPerson_Load(object sender, EventArgs e)
         {
-            Remove_Visible();
+         
 
-            FillCountriesInComboBox();
-            comboBox1.SelectedIndex = 168;
+           
+            
 
          
         }
@@ -348,37 +321,14 @@ namespace Full_Project_Desktop
         //////////////////////////////////////////////////////////////////////////////////////////
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.Filter = "Image Files|*.jpg;*.png;*.bmp";
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                pbforPerson.Image = new Bitmap(openFileDialog1.FileName);
-            }
-
-            Remove_Visible();
+           
         }
 
 
         //////////////////////////////////////////////////////////////////////////////////////////
         private void TxtFirstName_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
-            {
-
-                e.Cancel = true;
-                txtFirstName.Focus();
-                errorProvider1.SetError(txtFirstName, "Should have a Value");
-
-            }
-
-            else
-
-            {
-                e.Cancel = false;
-
-                errorProvider1.SetError(txtFirstName, "");
-            }
+           
 
         }
 
@@ -386,24 +336,6 @@ namespace Full_Project_Desktop
 
         private void TxtEmail_Validating(object sender, CancelEventArgs e)
         {
-            TextBox txt = sender as TextBox;
-
-            try
-            {
-                var mail = new MailAddress(txt.Text);
-                
-                errorProvider1.SetError(txt, "");
-            }
-
-
-            catch
-            {
-                
-                errorProvider1.SetError(txt, "Invalid Email Address Format");
-                e.Cancel = true; // 
-                txt.Focus();
-            }
-
 
         }
 
@@ -419,80 +351,24 @@ namespace Full_Project_Desktop
 
         private void TxtAddress_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtAddress.Text))
-            {
-
-                e.Cancel = true;
-                txtAddress.Focus();
-                errorProvider1.SetError(txtAddress, "Should have a Value");
-
-            }
-
-            else
-
-            {
-                e.Cancel = false;
-
-                errorProvider1.SetError(txtAddress, "");
-            }
+           
         }
 
 
         /// <summary>
-        /// ////////////////////////////////////////
-        private bool FindNationalNumber()
-        {
-            if (clsPerson.IsNationalNumber(txtNationalNo.Text))
-            {
-                return true;
-
-            }
-
-            else
-
-                return false;
-
-        }
-
+      
         ////////////////////////////////////////
         private void TxtNationalNo_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        ////////////////////////////////////////
-        private void Remove_Visible()
-        {
-            if (pictureBox1.Image != null)
-            {
-                llRemove.Visible = true;
-
-            }
-
-            else
-
-                llRemove.Visible = false;
-        }
+      
 
 
         private void TxtNationalNo_Validating(object sender, CancelEventArgs e)
         {
-            if (FindNationalNumber())
-            {
-
-                e.Cancel = true;
-                txtAddress.Focus();
-                errorProvider1.SetError(txtNationalNo, "National No Is Found");
-
-            }
-
-            else
-
-            {
-                e.Cancel = false;
-
-                errorProvider1.SetError(txtNationalNo, "");
-            }
+            
         }
 
         private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

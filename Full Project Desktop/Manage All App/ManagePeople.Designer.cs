@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvManagePeople = new System.Windows.Forms.DataGridView();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmsPeople = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
@@ -51,36 +51,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbRefresh = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvManagePeople)).BeginInit();
+            this.dgvManagePeople = new System.Windows.Forms.DataGridView();
             this.cmsPeople.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManagePeople)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvManagePeople
-            // 
-            this.dgvManagePeople.AllowUserToAddRows = false;
-            this.dgvManagePeople.AllowUserToDeleteRows = false;
-            this.dgvManagePeople.AllowUserToOrderColumns = true;
-            this.dgvManagePeople.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvManagePeople.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvManagePeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvManagePeople.ContextMenuStrip = this.cmsPeople;
-            this.dgvManagePeople.Location = new System.Drawing.Point(8, 239);
-            this.dgvManagePeople.Name = "dgvManagePeople";
-            this.dgvManagePeople.ReadOnly = true;
-            this.dgvManagePeople.Size = new System.Drawing.Size(1134, 239);
-            this.dgvManagePeople.TabIndex = 0;
-            this.dgvManagePeople.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // cmsPeople
             // 
@@ -249,7 +227,7 @@
             // 
             this.pictureBox2.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Custom_Icon_Design_Flatastic_4_Male_user_add_128;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(1063, 168);
+            this.pictureBox2.Location = new System.Drawing.Point(1220, 168);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(79, 55);
             this.pictureBox2.TabIndex = 5;
@@ -260,12 +238,43 @@
             // 
             this.pbRefresh.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Graphicloads_Colorful_Long_Shadow_Arrow_reload_2_64;
             this.pbRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbRefresh.Location = new System.Drawing.Point(945, 168);
+            this.pbRefresh.Location = new System.Drawing.Point(1102, 168);
             this.pbRefresh.Name = "pbRefresh";
             this.pbRefresh.Size = new System.Drawing.Size(79, 55);
             this.pbRefresh.TabIndex = 41;
             this.pbRefresh.TabStop = false;
             this.pbRefresh.Click += new System.EventHandler(this.PbRefresh_Click);
+            // 
+            // dgvManagePeople
+            // 
+            this.dgvManagePeople.AllowUserToAddRows = false;
+            this.dgvManagePeople.AllowUserToDeleteRows = false;
+            this.dgvManagePeople.AllowUserToOrderColumns = true;
+            this.dgvManagePeople.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvManagePeople.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvManagePeople.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvManagePeople.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvManagePeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvManagePeople.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvManagePeople.Location = new System.Drawing.Point(0, 243);
+            this.dgvManagePeople.Name = "dgvManagePeople";
+            this.dgvManagePeople.ReadOnly = true;
+            this.dgvManagePeople.Size = new System.Drawing.Size(1315, 222);
+            this.dgvManagePeople.TabIndex = 48;
             // 
             // Manage_People
             // 
@@ -273,7 +282,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1191, 553);
+            this.ClientSize = new System.Drawing.Size(1327, 553);
+            this.Controls.Add(this.dgvManagePeople);
             this.Controls.Add(this.pbRefresh);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -284,25 +294,22 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cbFilter);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvManagePeople);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Manage_People";
             this.Text = "Manage People";
             this.Load += new System.EventHandler(this.Manage_People_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvManagePeople)).EndInit();
             this.cmsPeople.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvManagePeople)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvManagePeople;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -323,5 +330,6 @@
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.PictureBox pbRefresh;
+        private System.Windows.Forms.DataGridView dgvManagePeople;
     }
 }

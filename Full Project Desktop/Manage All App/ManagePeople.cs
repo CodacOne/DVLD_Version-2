@@ -30,7 +30,16 @@ namespace Full_Project_Desktop
             private void _RefreshContactList()
         {
             dgvManagePeople.DataSource = clsPerson.GetAllPeople();
-            
+
+            dgvManagePeople.Columns[0].Width = 80;
+            dgvManagePeople.Columns[7].Width = 80;
+
+            dgvManagePeople.Columns[10].Width = 80;
+            dgvManagePeople.Columns[9].HeaderText = "Nationality";
+            dgvManagePeople.Columns[11].Width = 150;
+           
+
+
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -42,7 +51,7 @@ namespace Full_Project_Desktop
         {
             _RefreshContactList();
 
-            lblCountPeople.Text = clsPerson.GetCountPeople().ToString();
+            lblCountPeople.Text = dgvManagePeople.Rows.Count.ToString();
 
             cbFilter.Items.Add("None");
             cbFilter.Items.Add("Person ID");

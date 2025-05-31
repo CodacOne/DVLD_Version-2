@@ -16,3 +16,12 @@ D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\Busin
 D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\DataAccess-Layer.dll
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\DataAccess-Layer.pdb
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.pdb

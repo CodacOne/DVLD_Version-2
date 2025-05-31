@@ -73,6 +73,16 @@ namespace Full_Project_Desktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _20250516_1130_تعديل_ألوان_البطاقة_remix_01jvc3db03ezzt539cmkhzkepr {
+            get {
+                object obj = ResourceManager.GetObject("20250516_1130_تعديل ألوان البطاقة_remix_01jvc3db03ezzt539cmkhzkepr", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _20250516_1130_تعديل_ألوان_البطاقة_remix_01jvc3db04f0vtp68cm0e4yn22 {
             get {
                 object obj = ResourceManager.GetObject("20250516_1130_تعديل ألوان البطاقة_remix_01jvc3db04f0vtp68cm0e4yn22", resourceCulture);
@@ -86,6 +96,16 @@ namespace Full_Project_Desktop.Properties {
         internal static System.Drawing.Bitmap _20250516_1137_نظام_ترخيص_القيادة_remix_01jvc3tam8evas5aa427j0fev0 {
             get {
                 object obj = ResourceManager.GetObject("20250516_1137_نظام ترخيص القيادة_remix_01jvc3tam8evas5aa427j0fev0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20250516_1137_نظام_ترخيص_القيادة_remix_01jvc3tam8evas5aa427j0fev01 {
+            get {
+                object obj = ResourceManager.GetObject("20250516_1137_نظام ترخيص القيادة_remix_01jvc3tam8evas5aa427j0fev01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

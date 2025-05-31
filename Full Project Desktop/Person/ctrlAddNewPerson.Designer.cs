@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pbforPerson = new System.Windows.Forms.PictureBox();
             this.btnSaveurcl = new System.Windows.Forms.Button();
@@ -66,7 +64,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.llRemove = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbforPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -77,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -326,10 +322,6 @@
             this.dateTimePicker1.TabIndex = 30;
             this.dateTimePicker1.Value = new System.DateTime(2007, 4, 27, 0, 0, 0, 0);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // linkLabel1
             // 
             this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -462,10 +454,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // llRemove
             // 
             this.llRemove.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -478,7 +466,7 @@
             this.llRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.llRemove.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel2_LinkClicked);
             // 
-            // urclAddNewPerson
+            // ctrlAddNewPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -519,7 +507,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "urclAddNewPerson";
+            this.Name = "ctrlAddNewPerson";
             this.Size = new System.Drawing.Size(996, 429);
             this.Load += new System.EventHandler(this.UrclAddNewPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbforPerson)).EndInit();
@@ -531,7 +519,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -572,10 +559,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSaveurcl;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pbforPerson;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.LinkLabel llRemove;
     }
 }
