@@ -42,7 +42,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ctrlPersonAndUserInformation1 = new Full_Project_Desktop.ctrlPersonAndUserInformation();
+            this.ctrlPersonAndUserInformation1 = new Full_Project_Desktop.ctrlShowPersonAndUserInformation();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -235,7 +235,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private ctrlPersonAndUserInformation ctrlPersonAndUserInformation1;
+        private ctrlShowPersonAndUserInformation ctrlPersonAndUserInformation1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

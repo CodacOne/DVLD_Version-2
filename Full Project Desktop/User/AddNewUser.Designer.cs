@@ -32,7 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new System.Windows.Forms.Button();
-            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrl2PersonalInfoWithFilter();
+            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrlShowPersonalInfoWithFilter();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.cbIsActive = new System.Windows.Forms.CheckBox();
             this.lblUserID = new System.Windows.Forms.Label();
@@ -356,7 +356,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox cbIsActive;
-        private ctrl2PersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
+        private ctrlShowPersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ErrorProvider errorProvider1;
     }

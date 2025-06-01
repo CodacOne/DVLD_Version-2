@@ -213,7 +213,7 @@ namespace DataAccess_Layer
             Command.Parameters.AddWithValue("@SecondName", SecondName);
 
 
-            if (ThirdName != "" &&  ThirdName != null)
+            if (string.IsNullOrWhiteSpace(ThirdName))
             {
                 Command.Parameters.AddWithValue("@ThirdName", DBNull.Value);
             }
@@ -230,7 +230,7 @@ namespace DataAccess_Layer
             Command.Parameters.AddWithValue("@Phone", Phone);
 
 
-            if (Email != "" && Email != null)
+            if (string.IsNullOrWhiteSpace(Email))
             {
                 Command.Parameters.AddWithValue("@Email", DBNull.Value);
             }
@@ -241,7 +241,7 @@ namespace DataAccess_Layer
 
 
             Command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
-            if (ImagePath != "" && ImagePath != null)
+            if (string.IsNullOrWhiteSpace(ImagePath))
             {
                 Command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
             }

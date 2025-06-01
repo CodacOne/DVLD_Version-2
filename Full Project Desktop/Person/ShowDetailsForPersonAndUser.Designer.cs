@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlPersonAndUserInformation1 = new Full_Project_Desktop.ctrlPersonAndUserInformation();
+            this.ctrlPersonAndUserInformation1 = new Full_Project_Desktop.ctrlShowPersonAndUserInformation();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -68,7 +68,7 @@
 
         #endregion
 
-        private ctrlPersonAndUserInformation ctrlPersonAndUserInformation1;
+        private ctrlShowPersonAndUserInformation ctrlPersonAndUserInformation1;
         private System.Windows.Forms.Label label1;
     }
 }

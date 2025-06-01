@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
-            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrl2PersonalInfoWithFilter();
             this.button1 = new System.Windows.Forms.Button();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.lblApplicationFees = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.btnSaveurcl = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrlShowPersonalInfoWithFilter();
             this.tabControl1.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
@@ -80,7 +80,7 @@
             this.tabControl1.Location = new System.Drawing.Point(34, 58);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1137, 734);
+            this.tabControl1.Size = new System.Drawing.Size(1343, 734);
             this.tabControl1.TabIndex = 85;
             // 
             // tpPersonalInfo
@@ -92,20 +92,11 @@
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 32);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(1129, 698);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(1335, 698);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
             this.tpPersonalInfo.UseVisualStyleBackColor = true;
             this.tpPersonalInfo.Click += new System.EventHandler(this.TpPersonalInfo_Click);
-            // 
-            // ctrl2PersonalInfoWithFilter1
-            // 
-            this.ctrl2PersonalInfoWithFilter1._PersonID = 0;
-            this.ctrl2PersonalInfoWithFilter1.Location = new System.Drawing.Point(7, 33);
-            this.ctrl2PersonalInfoWithFilter1.Margin = new System.Windows.Forms.Padding(4);
-            this.ctrl2PersonalInfoWithFilter1.Name = "ctrl2PersonalInfoWithFilter1";
-            this.ctrl2PersonalInfoWithFilter1.Size = new System.Drawing.Size(1159, 594);
-            this.ctrl2PersonalInfoWithFilter1.TabIndex = 68;
             // 
             // button1
             // 
@@ -142,7 +133,7 @@
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 32);
             this.tpLoginInfo.Name = "tpLoginInfo";
             this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLoginInfo.Size = new System.Drawing.Size(1129, 698);
+            this.tpLoginInfo.Size = new System.Drawing.Size(1144, 698);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "LoginInfo";
             this.tpLoginInfo.UseVisualStyleBackColor = true;
@@ -335,13 +326,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // ctrl2PersonalInfoWithFilter1
+            // 
+            this.ctrl2PersonalInfoWithFilter1._PersonID = 0;
+            this.ctrl2PersonalInfoWithFilter1.Location = new System.Drawing.Point(7, 33);
+            this.ctrl2PersonalInfoWithFilter1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrl2PersonalInfoWithFilter1.Name = "ctrl2PersonalInfoWithFilter1";
+            this.ctrl2PersonalInfoWithFilter1.Size = new System.Drawing.Size(1321, 594);
+            this.ctrl2PersonalInfoWithFilter1.TabIndex = 68;
+            // 
             // LocalLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1156, 881);
+            this.ClientSize = new System.Drawing.Size(1370, 881);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnSaveurcl);
             this.Controls.Add(this.btnClose);
@@ -381,7 +381,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.ComboBox cbLicenseClass;
-        private ctrl2PersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
+        private ctrlShowPersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
         private System.Windows.Forms.Label lblApplicationFees;
         private System.Windows.Forms.Label lblCreatedBy;
         private System.Windows.Forms.Label lblApplicationDate;

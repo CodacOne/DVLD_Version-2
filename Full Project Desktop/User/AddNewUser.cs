@@ -77,7 +77,7 @@ namespace Full_Project_Desktop
         /***************//**********************************************//****************************************/
         private void PbAdd_Click(object sender, EventArgs e)
         {
-            AddNewPerson frmPerson = new AddNewPerson();
+            AddUpdateNewPerson frmPerson = new AddUpdateNewPerson();
             frmPerson.ShowDialog();
         }
 

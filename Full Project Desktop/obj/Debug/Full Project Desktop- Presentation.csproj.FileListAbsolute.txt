@@ -127,13 +127,10 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\bin\Debug\BusinessLayer.p
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\bin\Debug\DataAccess-Layer.pdb
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project Desktop- Presentation.csprojAssemblyReference.cache
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.Add_New_User.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.AddNewPerson.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrl2PersonalInfoWithFilter.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlApplicationInfo.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlDriverInternationalLicenseInfo.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlDriverLicense.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlDriverLicenseWithFilter.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlPersonAndUserInformation.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrl_T_VisionTestAppointment.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.DetainLicense.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.DriverInternationalLicenseInfo.resources
@@ -167,11 +164,9 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_De
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.Schedule_Vision_Test.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ScheduleWrittenTest.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ResultVisionTest.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.Update_Person.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.Update_User.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.UpdateApplicationType.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.UpdateTestType.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlAddNewPerson.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlPersonDetails.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ResultWrittenTest.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.T_WrittenTestAppointment.resources
@@ -180,3 +175,6 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project De
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project Desktop- Presentation.csproj.CopyComplete
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project Desktop.exe
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project Desktop.pdb
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.AddUpdateNewPerson.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlShowPersonalInfoWithFilter.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlShowPersonAndUserInformation.resources

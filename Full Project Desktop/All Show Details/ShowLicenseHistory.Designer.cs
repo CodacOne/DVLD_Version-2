@@ -30,7 +30,7 @@
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrl2PersonalInfoWithFilter();
+            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrlShowPersonalInfoWithFilter();
             this.label8 = new System.Windows.Forms.Label();
             this.ctrlDriverLicense1 = new Full_Project_Desktop.ctrlDriverLicense();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -112,7 +112,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox10;
-        private ctrl2PersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
+        private ctrlShowPersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label8;
         private ctrlDriverLicense ctrlDriverLicense1;

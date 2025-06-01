@@ -1,6 +1,6 @@
 ﻿namespace Full_Project_Desktop
 {
-    partial class AddNewPerson
+    partial class AddUpdateNewPerson
     {
         /// <summary>
         /// Required designer variable.
@@ -32,12 +32,11 @@
             this.lblTitleForm = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPersonID = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.llRemove = new System.Windows.Forms.LinkLabel();
             this.pbforPerson = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btnSaveurcl = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -73,7 +72,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbforPerson)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -85,6 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitleForm
@@ -117,23 +117,12 @@
             this.lblPersonID.Text = "N/A";
             this.lblPersonID.Click += new System.EventHandler(this.LblPersonID_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Number_32;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(230, 70);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(41, 23);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.llRemove);
             this.groupBox1.Controls.Add(this.pbforPerson);
             this.groupBox1.Controls.Add(this.linkLabel1);
-            this.groupBox1.Controls.Add(this.btnSaveurcl);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -174,6 +163,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSave.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Image = global::Full_Project_Desktop.Properties.Resources.Save_321;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(694, 373);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(97, 40);
+            this.btnSave.TabIndex = 75;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
             // llRemove
             // 
             this.llRemove.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,6 +188,7 @@
             this.llRemove.TabStop = true;
             this.llRemove.Text = "Remove";
             this.llRemove.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.llRemove.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LlRemove_LinkClicked);
             // 
             // pbforPerson
             // 
@@ -206,24 +211,11 @@
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel1_LinkClicked);
             // 
-            // btnSaveurcl
-            // 
-            this.btnSaveurcl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveurcl.Image = global::Full_Project_Desktop.Properties.Resources.Save_32;
-            this.btnSaveurcl.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSaveurcl.Location = new System.Drawing.Point(691, 373);
-            this.btnSaveurcl.Name = "btnSaveurcl";
-            this.btnSaveurcl.Size = new System.Drawing.Size(97, 40);
-            this.btnSaveurcl.TabIndex = 71;
-            this.btnSaveurcl.Text = "  Save";
-            this.btnSaveurcl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveurcl.UseMnemonic = false;
-            this.btnSaveurcl.UseVisualStyleBackColor = true;
-            // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::Full_Project_Desktop.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnClose.Location = new System.Drawing.Point(556, 373);
@@ -233,7 +225,8 @@
             this.btnClose.Text = "   Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseMnemonic = false;
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // comboBox1
             // 
@@ -334,6 +327,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.Click += new System.EventHandler(this.RbFemale_Click);
             // 
             // rbMale
             // 
@@ -345,6 +339,7 @@
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.Click += new System.EventHandler(this.RbMale_Click);
             // 
             // txtAddress
             // 
@@ -364,6 +359,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(151, 27);
             this.txtEmail.TabIndex = 57;
+            this.txtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEmail_Validating);
             // 
             // txtNationalNo
@@ -452,6 +448,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(37, 40);
             this.pictureBox5.TabIndex = 48;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.PictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -556,9 +553,19 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // AddNewPerson
+            // pictureBox2
             // 
-            this.AcceptButton = this.btnSaveurcl;
+            this.pictureBox2.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Number_32;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(230, 70);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(41, 23);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
+            // 
+            // AddUpdateNewPerson
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
@@ -570,10 +577,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitleForm);
-            this.Name = "AddNewPerson";
+            this.Name = "AddUpdateNewPerson";
             this.Text = "Add / Edit New Person";
             this.Load += new System.EventHandler(this.AddNewPerson_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbforPerson)).EndInit();
@@ -586,6 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -600,7 +607,6 @@
         private System.Windows.Forms.LinkLabel llRemove;
         private System.Windows.Forms.PictureBox pbforPerson;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button btnSaveurcl;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -636,5 +642,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnSave;
     }
 }

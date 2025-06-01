@@ -16,39 +16,13 @@ namespace Full_Project_Desktop
     {
         private int _PersonID=-1;
 
-        private clsPerson _Person;
-
-
-
         public ShowDetails(int PersonID)
         {
             InitializeComponent();
 
             _PersonID = PersonID;
-
-            try
-            {
-
-
-                _Person = clsPerson.FindByPersonID(PersonID);
-
-
-
-                if (_Person != null)
-                {
-
-                    usclPersonDetails1._LoadDataFromTable(_Person);
-
-                }
-
-            }
-
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error :" + ex.Message);
-
-            }
+            usclPersonDetails1._LoadDataToForm(_PersonID);
+            
         }
 
 
