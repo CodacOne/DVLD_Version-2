@@ -41,6 +41,8 @@ namespace Full_Project_Desktop
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
+           
+           
             //// To Avoid transfer To Main Screen before to Login
             if (string.IsNullOrWhiteSpace(txtUserName.Text))
             {
@@ -56,12 +58,13 @@ namespace Full_Project_Desktop
                 return;
             }
 
+            clsUsers user = clsUsers.FindByUsernameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
 
-
-            if (clsUsers.ValidateToLogIn(_UserName, _Password))
+            
+            if (user != null )
             {
-             
-                   MainForm frm = new MainForm();
+                clsGlobal.CurrentUser = user;
+                MainForm frm = new MainForm();
                    frm.ShowDialog();
                    this.Hide();
 
@@ -69,8 +72,10 @@ namespace Full_Project_Desktop
 
 
             else
-
+            {
                 MessageBox.Show("Invalid UserName,Password");
+            }
+              
 
 
         }

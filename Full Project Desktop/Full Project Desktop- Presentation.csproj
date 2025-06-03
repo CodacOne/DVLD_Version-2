@@ -46,13 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsGlobal.cs" />
     <Compile Include="clsUtil.cs" />
     <Compile Include="clsValidation.cs" />
-    <Compile Include="User\AddNewUser.cs">
+    <Compile Include="User\AddUpdateNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\AddNewUser.Designer.cs">
-      <DependentUpon>AddNewUser.cs</DependentUpon>
+    <Compile Include="User\AddUpdateNewUser.Designer.cs">
+      <DependentUpon>AddUpdateNewUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Person\AddUpdateNewPerson.cs">
       <SubType>Form</SubType>
@@ -222,10 +223,10 @@
     <Compile Include="Person\ManagePeople.Designer.cs">
       <DependentUpon>ManagePeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage All App\ManageUsers.cs">
+    <Compile Include="User\ManageUsers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage All App\ManageUsers.Designer.cs">
+    <Compile Include="User\ManageUsers.Designer.cs">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage All App\ManageTestType.cs">
@@ -326,8 +327,8 @@
     <Compile Include="Manage Tests And Scheduling\T_WrittenTestAppointment.Designer.cs">
       <DependentUpon>T_WrittenTestAppointment.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="User\AddNewUser.resx">
-      <DependentUpon>AddNewUser.cs</DependentUpon>
+    <EmbeddedResource Include="User\AddUpdateNewUser.resx">
+      <DependentUpon>AddUpdateNewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Person\AddUpdateNewPerson.resx">
       <DependentUpon>AddUpdateNewPerson.cs</DependentUpon>
@@ -413,7 +414,7 @@
     <EmbeddedResource Include="Person\ManagePeople.resx">
       <DependentUpon>ManagePeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage All App\ManageUsers.resx">
+    <EmbeddedResource Include="User\ManageUsers.resx">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage All App\ManageTestType.resx">

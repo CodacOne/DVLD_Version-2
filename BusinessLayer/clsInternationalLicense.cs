@@ -105,7 +105,7 @@ namespace BusinessLayer
         private bool _AddNewInternationalLicense()
         {
             // يفترض أن لديك كلاس Data Access مثل clsDAInternationalLicenses يحتوي على دالة للإضافة
-            this.InternationalLicenseID =clsIssuingLicense.AddNewInternationalLicense(
+            this.InternationalLicenseID =clsDAIssuingLicense.AddNewInternationalLicense(
                 this.ApplicationID,
                 this.DriverID,
                 this.IssuedUsingLocalLicenseID,
@@ -126,7 +126,7 @@ namespace BusinessLayer
         public static bool LicenseExistOrNotInInternationalTable(int LicenseID)
         {
 
-            return clsIssuingLicense.CheckIfLicenseExistsInInternationalCertificates(LicenseID);
+            return clsDAIssuingLicense.CheckIfLicenseExistsInInternationalCertificates(LicenseID);
 
 
         }
@@ -139,7 +139,7 @@ namespace BusinessLayer
         public static bool CheckIfLocalLicenseExistsAndAndLicenseClassWorth_3(int LicenseID)
         {
 
-            return clsIssuingLicense.CheckIfLocalLicenseExistsAndAndLicenseClassWorth_3(LicenseID);
+            return clsDAIssuingLicense.CheckIfLocalLicenseExistsAndAndLicenseClassWorth_3(LicenseID);
 
 
         }
@@ -149,7 +149,7 @@ namespace BusinessLayer
         public static DataTable GetInternationalLicenseInfo(int LicenseID)
         {
 
-            return clsIssuingLicense.GetInternationalLicenseInfo(LicenseID);
+            return clsDAIssuingLicense.GetInternationalLicenseInfo(LicenseID);
 
         }
         /////////////////////////////////////////////////////////////////////
@@ -158,7 +158,7 @@ namespace BusinessLayer
         public static int GetLocalDrivingLicenseApplicationIDByApplicationID(int ApplicationID)
         {
             
-            return clsIssuingLicense.GetLocalDrivingLicenseApplicationIDByApplicationID(ApplicationID);
+            return clsDAIssuingLicense.GetLocalDrivingLicenseApplicationIDByApplicationID(ApplicationID);
 
 
         }
@@ -170,7 +170,7 @@ namespace BusinessLayer
         public static DataTable GetAllInternationalLicenseByPersonID(int PersonID)
         {
 
-            return clsIssuingLicense.GetAllInternationalLicenseByPersonID(PersonID);
+            return clsDAIssuingLicense.GetAllInternationalLicenseByPersonID(PersonID);
 
         }
 
@@ -179,7 +179,7 @@ namespace BusinessLayer
         public static DataTable GetInternationalLicenseInforDgv()
         {
 
-            return clsIssuingLicense.GetInternationalLicenseInforDgv();
+            return clsDAIssuingLicense.GetInternationalLicenseInforDgv();
 
         }
 
@@ -191,7 +191,7 @@ namespace BusinessLayer
         public static DataTable GetInternationalLicenseOfPersonForDgv(int ApplicationID)
         {
             
-            return clsIssuingLicense.GetInternationalLicenseOfPersonForDgv(ApplicationID);
+            return clsDAIssuingLicense.GetInternationalLicenseOfPersonForDgv(ApplicationID);
 
         }
 
@@ -201,7 +201,7 @@ namespace BusinessLayer
         public static DataTable GetAllLocalLicenseInfoForRenewLicense(int LicenseID)
         {
 
-            return clsIssuingLicense.GetAllLocalLicenseInfoForRenewLicense(LicenseID);
+            return clsDAIssuingLicense.GetAllLocalLicenseInfoForRenewLicense(LicenseID);
 
         }
 
@@ -209,7 +209,7 @@ namespace BusinessLayer
         public static int GetPersonIDByDriverID(int DriverID)
         {
 
-            return clsIssuingLicense.GetPersonIDByDriverID(DriverID);
+            return clsDAIssuingLicense.GetPersonIDByDriverID(DriverID);
 
 
         }
@@ -219,7 +219,7 @@ namespace BusinessLayer
         public static bool IsLicenseValid(int LicenseID)
         {
 
-            return clsIssuingLicense.IsLicenseValid(LicenseID);
+            return clsDAIssuingLicense.IsLicenseValid(LicenseID);
 
 
         }

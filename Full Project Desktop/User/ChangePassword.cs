@@ -21,7 +21,7 @@ namespace Full_Project_Desktop
         {
             InitializeComponent();
             _PersonID = PersonID;
-            ctrlPersonAndUserInformation1._LoadUserDataToForm(_PersonID);
+          //  ctrlPersonAndUserInformation1._LoadUserDataToForm(_PersonID);
 
         }
 
@@ -42,22 +42,22 @@ namespace Full_Project_Desktop
 
         private void TxtCurrentPassword_Validating(object sender, CancelEventArgs e)
         {
-            if (txtCurrentPassword.Text != ctrlPersonAndUserInformation1._Password)
-            {
+            //if (txtCurrentPassword.Text != ctrlPersonAndUserInformation1._Password)
+            //{
 
-                e.Cancel = true;
-                txtCurrentPassword.Focus();
-                errorProvider1.SetError(txtCurrentPassword, "Current Password Is Wrong");
+            //    e.Cancel = true;
+            //    txtCurrentPassword.Focus();
+            //    errorProvider1.SetError(txtCurrentPassword, "Current Password Is Wrong");
 
-            }
+            //}
 
-            else
+            //else
 
-            {
-                e.Cancel = false;
+            //{
+            //    e.Cancel = false;
 
-                errorProvider1.SetError(txtCurrentPassword, "");
-            }
+            //    errorProvider1.SetError(txtCurrentPassword, "");
+            //}
         }
 
         private void TxtConfirmPassword_Validating(object sender, CancelEventArgs e)
@@ -87,7 +87,7 @@ namespace Full_Project_Desktop
         {
             
 
-            if (clsUsers.UpdateUser(ctrlPersonAndUserInformation1._UserID, _NewPassword))
+            if (clsUsers.UpdateUser(ctrlPersonAndUserInformation1.UserID, _NewPassword))
             {
 
 

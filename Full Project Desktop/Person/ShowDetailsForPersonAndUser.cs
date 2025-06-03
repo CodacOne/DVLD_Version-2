@@ -12,19 +12,29 @@ namespace Full_Project_Desktop
 {
     public partial class ShowDetailsForPersonAndUser : Form
     {
-        private int _PersonID = -1;
+        private int _UserID = -1;
 
-        public ShowDetailsForPersonAndUser(int PersonID)
+        public ShowDetailsForPersonAndUser(int UserID)
         {
             InitializeComponent();
 
-            _PersonID = PersonID;
-
-            ctrlPersonAndUserInformation1._LoadUserDataToForm(_PersonID);
+            _UserID = UserID;
 
         }
 
         private void ShowDetailsForPersonAndUser_Load(object sender, EventArgs e)
+        {
+            ctrlShowPersonAndUserInformation1._LoadUserDataToForm(_UserID);
+
+           
+        }
+
+        private void CtrlPersonAndUserInformation1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }

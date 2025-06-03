@@ -14,6 +14,15 @@ namespace Full_Project_Desktop
 {
     public partial class Manage_People : Form
     {
+        //private static DataTable _dtAllPeople = clsPerson.GetAllPeople();
+
+        ////only select the columns that you want to show in the grid
+        //private DataTable _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
+        //                                                 "FirstName", "SecondName", "ThirdName", "LastName",
+        //                                               "GendorCaption", "DateOfBirth", "CountryName",
+        //                                                 "Phone", "Email");
+
+
         public Manage_People()
         {
             InitializeComponent();
@@ -83,6 +92,7 @@ namespace Full_Project_Desktop
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+            txtFilter.Visible = (cbFilter.Text != "None");  // to show textbox filter or disable
             txtFilter.Clear();
             _RefreshContactList();
         }
@@ -133,7 +143,7 @@ namespace Full_Project_Desktop
         {
             string InputTExtBox = "";
             int    InputNumber = 0;
-
+          
 
             InputTExtBox = txtFilter.Text;
             InputNumber = cbFilter.SelectedIndex;

@@ -67,7 +67,7 @@ namespace BusinessLayer
         private bool _AddNewLicense()
         {
     
-            this.LicenseID = clsIssuingLicense.AddNewLicense(this.ApplicationID,
+            this.LicenseID = clsDAIssuingLicense.AddNewLicense(this.ApplicationID,
               this.DriverID, this.LicenseClassID, this.IssueReason,
               this.PaidFees, this.CreatedByUserID, this.IssueDate, this.ExpirationDate,
                this.Notes,this.IsActive );
@@ -81,7 +81,7 @@ namespace BusinessLayer
         public static bool DisabledOldLicense(int OldLicenseID)
         {
 
-          return  clsIssuingLicense.DisabledOldLicense(OldLicenseID);
+          return  clsDAIssuingLicense.DisabledOldLicense(OldLicenseID);
 
         }
 
@@ -122,7 +122,7 @@ namespace BusinessLayer
         public static int ValidationIfLicenseActiveOrNotActive(int LicenseID)
         {
 
-            return clsIssuingLicense.ValidationIfLicenseActiveOrNotActive(LicenseID);
+            return clsDAIssuingLicense.ValidationIfLicenseActiveOrNotActive(LicenseID);
 
         }
 
@@ -131,7 +131,7 @@ namespace BusinessLayer
 
         public static bool IsLicenseDetainedOrNotDetained(int LicenseID)
         {
-            return clsIssuingLicense.IsLicenseDetainedOrNotDetained(LicenseID);
+            return clsDAIssuingLicense.IsLicenseDetainedOrNotDetained(LicenseID);
 
         }
 
@@ -141,7 +141,7 @@ namespace BusinessLayer
 
         public static bool IsLicenseDisactivatedOrNotDisactivated(int LicenseID)
         {
-            return clsIssuingLicense.IsLicenseDisactivatedOrNotDisactivated(LicenseID);
+            return clsDAIssuingLicense.IsLicenseDisactivatedOrNotDisactivated(LicenseID);
 
         }
 

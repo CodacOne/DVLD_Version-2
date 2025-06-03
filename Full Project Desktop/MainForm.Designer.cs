@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.applicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,6 +61,7 @@
             this.currentUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -80,17 +80,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(1027, 56);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.BackgroundImage = global::Full_Project_Desktop.Properties.Resources._20250516_1130_تعديل_ألوان_البطاقة_remix_01jvc3db03ezzt539cmkhzkepr;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1015, 686);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // applicationToolStripMenuItem
             // 
@@ -341,24 +330,36 @@
             this.currentUserInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.currentUserInfoToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.Oxygen_Icons_org_Oxygen_Apps_preferences_desktop_user_128;
             this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
-            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
+            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(248, 54);
             this.currentUserInfoToolStripMenuItem.Text = "Current User Info";
+            this.currentUserInfoToolStripMenuItem.Click += new System.EventHandler(this.CurrentUserInfoToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changePasswordToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.Alecive_Flatwoken_Apps_Keepass_128;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(248, 54);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.sign_out_32__2;
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(216, 30);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(248, 54);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.SignOutToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.BackgroundImage = global::Full_Project_Desktop.Properties.Resources._20250516_1130_تعديل_ألوان_البطاقة_remix_01jvc3db03ezzt539cmkhzkepr;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1015, 686);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 

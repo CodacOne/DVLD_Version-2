@@ -21,12 +21,18 @@ namespace Full_Project_Desktop
             InitializeComponent();
 
             _PersonID = PersonID;
-            usclPersonDetails1._LoadDataToForm(_PersonID);
+            usclPersonDetails1.LoadPersonInfo(_PersonID);
             
         }
+        /*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*////
+        public ShowDetails(string NationalNo)
+        {
+            InitializeComponent();
 
+            usclPersonDetails1.LoadPersonInfo(NationalNo);
 
-
+        }
+        /*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*////
         private void UsclPersonDetails1_Load(object sender, EventArgs e)
         {
 

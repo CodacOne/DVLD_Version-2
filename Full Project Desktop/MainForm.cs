@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace Full_Project_Desktop
 {
@@ -130,6 +131,14 @@ namespace Full_Project_Desktop
         {
             ManageLocalDivingLicenseApplication frm = new ManageLocalDivingLicenseApplication();
             frm.Show();
+        }
+
+        private void CurrentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int UserID = clsGlobal.CurrentUser.UserID;
+
+            ShowDetailsForPersonAndUser frm = new ShowDetailsForPersonAndUser(UserID);
+            frm.ShowDialog();
         }
     }
 }

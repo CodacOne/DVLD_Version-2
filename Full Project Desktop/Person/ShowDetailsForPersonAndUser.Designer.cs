@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlPersonAndUserInformation1 = new Full_Project_Desktop.ctrlShowPersonAndUserInformation();
             this.label1 = new System.Windows.Forms.Label();
+            this.ctrlShowPersonAndUserInformation1 = new Full_Project_Desktop.ctrlShowPersonAndUserInformation();
             this.SuspendLayout();
-            // 
-            // ctrlPersonAndUserInformation1
-            // 
-            this.ctrlPersonAndUserInformation1.Location = new System.Drawing.Point(46, 86);
-            this.ctrlPersonAndUserInformation1.Name = "ctrlPersonAndUserInformation1";
-            this.ctrlPersonAndUserInformation1.Size = new System.Drawing.Size(1065, 477);
-            this.ctrlPersonAndUserInformation1.TabIndex = 0;
             // 
             // label1
             // 
@@ -49,6 +42,14 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Person And User Details";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // ctrlShowPersonAndUserInformation1
+            // 
+            this.ctrlShowPersonAndUserInformation1.Location = new System.Drawing.Point(43, 77);
+            this.ctrlShowPersonAndUserInformation1.Name = "ctrlShowPersonAndUserInformation1";
+            this.ctrlShowPersonAndUserInformation1.Size = new System.Drawing.Size(1065, 477);
+            this.ctrlShowPersonAndUserInformation1.TabIndex = 37;
             // 
             // ShowDetailsForPersonAndUser
             // 
@@ -57,8 +58,8 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1164, 591);
+            this.Controls.Add(this.ctrlShowPersonAndUserInformation1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ctrlPersonAndUserInformation1);
             this.Name = "ShowDetailsForPersonAndUser";
             this.Text = "Show Details For Person And User";
             this.Load += new System.EventHandler(this.ShowDetailsForPersonAndUser_Load);
@@ -70,5 +71,6 @@
 
         private ctrlShowPersonAndUserInformation ctrlPersonAndUserInformation1;
         private System.Windows.Forms.Label label1;
+        private ctrlShowPersonAndUserInformation ctrlShowPersonAndUserInformation1;
     }
 }

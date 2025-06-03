@@ -17,7 +17,7 @@ namespace BusinessLayer
         public enMode Mode = enMode.AddNew;
 
 
-
+        public clsPerson PersonInfo;
         public int PersonID
         {
             get; set;
@@ -72,10 +72,7 @@ namespace BusinessLayer
             this.UserName = UserName;
             this.Password = Password;
             this.IsActive = IsActive;
-           
-
-
-
+            this.PersonInfo = clsPerson.FindByPersonID(PersonID);
 
             Mode = enMode.Update;
         }
@@ -108,10 +105,42 @@ namespace BusinessLayer
             }
 
         }
+        /////////////////////////////////////////////////////////////////////
+        public static clsUsers FindByUserID(int UserID)
+        {
+            int PersonID = -1;
+            string UserName = "", Password = "";
+            Byte IsActive = 0;
 
+            bool IsFound = clsDAUsers.GetUserInfoByUserID
+                                (UserID, ref PersonID, ref UserName, ref Password, ref IsActive);
 
+            if (IsFound)
+                //we return new object of that User with the right data
+                return new clsUsers(UserID, PersonID, UserName, Password, IsActive);
+            else
+                return null;
+        }
         /////////////////////////////////////////////////////////////////////
 
+        public static clsUsers FindByUsernameAndPassword(string UserName, string Password)
+        {
+            int UserID = -1;
+            int PersonID = -1;
+
+            Byte IsActive = 0;
+
+            bool IsFound = clsDAUsers.GetUserInfoByUsernameAndPassword
+                                (UserName, Password, ref UserID, ref PersonID, ref IsActive);
+
+            if (IsFound)
+                //we return new object of that User with the right data
+                return new clsUsers(UserID, PersonID, UserName, Password, IsActive);
+            else
+                return null;
+        }
+
+        /////////////////////////////////////////////////////////////////////
 
         private bool _AddNewUser()
         {
@@ -156,13 +185,7 @@ namespace BusinessLayer
         }
 
         /////////////////////////////////////////////////////////////////////
-        public static int GetCountUsers()
-        {
-
-            return clsDAUsers.GetUsersCount();
-
-
-        }
+       
 
         /////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////
@@ -208,20 +231,20 @@ namespace BusinessLayer
 
         /////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////
-        public static bool ValidateToLogIn(string UserName, string Password)
-        {
+        //public static bool ValidateToLogIn(string UserName, string Password)
+        //{
             
-          int CurrentUserID =  clsDAUsers.LogIn(UserName, Password);
+        //  int CurrentUserID =  clsDAUsers.LogIn(UserName, Password);
 
 
-            if(CurrentUserID != -1)
-            {
-                clsCurrentUser.FindCurrentUser(CurrentUserID.ToString());
+        //    if(CurrentUserID != -1)
+        //    {
+        //        clsCurrentUser.FindCurrentUser(CurrentUserID.ToString());
 
-            }
+        //    }
 
-            return (CurrentUserID != -1) ? true : false;
-        }
+        //    return (CurrentUserID != -1) ? true : false;
+        //}
 
 
         /////////////////////////////////////////////////////////////////////
@@ -254,7 +277,12 @@ namespace BusinessLayer
 
         }
 
+        ///   /////////////////////////////////////////////////////////////////////
+        public static int  GetPersonIDByUserID(int UserID)
+        {
+            return clsDAUsers.GetPersonIDByUserID(UserID);
 
+        }
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////

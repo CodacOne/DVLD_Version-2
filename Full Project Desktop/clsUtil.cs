@@ -62,7 +62,7 @@ namespace Full_Project_Desktop
             // project images foldr after renaming it
             // with GUID with the same extention, then it will update the sourceFileName with the new name.
 
-            string DestinationFolder = @"D:\GitHub Projects\DVLD_Version 2\New folder";
+            string DestinationFolder = @"D:\GitHub Projects\DVLD_Version 2\New folder\";
 
             if (!CreateFolderIfDoesNotExist(DestinationFolder))
             {

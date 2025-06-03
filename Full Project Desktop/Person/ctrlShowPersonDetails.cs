@@ -48,17 +48,41 @@ namespace Full_Project_Desktop
         {
 
         }
-        /*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*////
 
-        public void _LoadDataToForm(int PersonID)
+        /*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*////
+        public void LoadPersonInfo(string NationalNo)
+        {
+            _Person = clsPerson.FindByNationalNo(NationalNo);
+
+            if (_Person == null)    // if _PersonID is not Exist
+            {
+                ClearPersonInfo();
+                MessageBox.Show("No Person with National No. = " + _PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _FillPersonInfo();
+        }
+
+        /*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*////
+        public void LoadPersonInfo(int PersonID)
         {
             _Person = clsPerson.FindByPersonID(PersonID);
 
             _PersonID = PersonID;
 
-            if (_Person != null)
+            if (_Person == null)    // if _PersonID is not Exist
             {
+                ClearPersonInfo();
+                MessageBox.Show($"No Person with National No. = " + _PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            _FillPersonInfo();
+        }
+        /*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*////
+        private void _FillPersonInfo()
+        {
                 lblPersonID.Text = _PersonID.ToString();
                 lblName.Text = _Person.FirstName + " " + _Person.SecondName + " " + _Person.ThirdName + " " + _Person.LastName;
                 LblNationalNo.Text = _Person.NationalNo;
@@ -72,20 +96,10 @@ namespace Full_Project_Desktop
                 clsCountries Countries1 = clsCountries.Find(CountryID);
                 lblCountry.Text = Countries1.CountryName;
                 _LoadImagePerson();
-            }
-
-
-
-            else       // if _PersonID is not Exist
-
-            {
-                ClearPersonInfo();
-                MessageBox.Show("No Person with National No. = " + _PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            
 
         }
-
+        /*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*/////*/*////
         private void _LoadImagePerson()
         {
 
@@ -157,7 +171,7 @@ namespace Full_Project_Desktop
             frm.Show();
 
             // To refresh person info After Update 
-            _LoadDataToForm(_PersonID);
+            LoadPersonInfo(_PersonID);
 
         }
 

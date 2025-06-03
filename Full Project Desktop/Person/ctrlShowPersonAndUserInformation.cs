@@ -15,10 +15,15 @@ namespace Full_Project_Desktop
     public partial class ctrlShowPersonAndUserInformation : UserControl
     {
 
-        public string _Password = "";
-        public string _NewPassword = "";
+        private clsUsers _User;
+        private int _UserID = -1;
+        private string _Password = "";
+        public int UserID
+        {
+            get { return _UserID; }
+        }
 
-        public int _UserID = -1;
+       
 
         public ctrlShowPersonAndUserInformation()
         {
@@ -30,70 +35,38 @@ namespace Full_Project_Desktop
 
         }
 
-        public void _LoadUserDataToForm(int PersonID)
+        private void _ResetPersonInfo()
         {
-            DataTable Dt = clsUsers.GetPersonAndUserInformation(PersonID);
+
+            lblUserID.Text = "[???]";
+            lblUserName.Text = "[???]";
+            lblIsActive.Text = "[???]";
+        }
 
 
-            if(Dt != null && Dt.Rows.Count>0)
+        public void _LoadUserDataToForm(int UserID)
+        {
+              _UserID = UserID;
+              _User = clsUsers.FindByUserID(UserID);
+            if (_User == null)
             {
-                DataRow Row = Dt.Rows[0];
-
-                lblPersonID.Text = Row["PersonID"].ToString();
-                lblName.Text = Row["FirstName"].ToString() + " " + Row["SecondName"].ToString() + " " + Row["ThirdName"].ToString() + " " +
-                    Row["LastName"].ToString() + " ";
-                LblNationalNo.Text = Row["NationalNo"].ToString();
-
-               int Gender = Convert.ToInt32( Row["Gendor"]);
-                lblGender.Text = Gender == 0 ? "Male" : "Femal";
-
-                lblEmail.Text = Row["Email"].ToString();
-                lblAddress.Text = Row["Address"].ToString();
-               
-                lblDateOfBirth.Text = Row["DateOfBirth"].ToString();
-                lblPhone.Text = Row["Phone"].ToString();
-
-               string ImagePath = Row["ImagePath"].ToString();
-
-
-               
-                if (ImagePath != null && System.IO.File.Exists(ImagePath))
-                {
-                    pbforPerson.Image = Image.FromFile(ImagePath);
-
-                }
-
-                else
-
-                {
-                    if (Gender == 0)
-                    {
-                        pbforPerson.Image = Properties.Resources.male2;
-                    }
-
-                    else
-                    {
-                        pbforPerson.Image = Properties.Resources.Female2;
-
-                    }
-
-                }
-
-
-
-                lblCountry.Text = Row["CountryName"].ToString();
-
-                _UserID = Convert.ToInt32(Row["UserID"]);
-                lblUserID.Text = _UserID.ToString();
-
-                lblUserName.Text = Row["UserName"].ToString();
-                int Active = Convert.ToInt32(Row["IsActive"]);
-
-                lblIsActive.Text = Active == 1 ? "Yes" : "No";
-
-                _Password= Row["Password"].ToString();
+                _ResetPersonInfo();
+                MessageBox.Show("No User with UserID = " + UserID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
+            _FillUserInfo();
+
+        }
+
+        private void _FillUserInfo()
+        {
+            int _PersonID = clsUsers.GetPersonIDByUserID(_UserID);
+            ctrlPersonDetails1.LoadPersonInfo(_PersonID);
+            lblUserID.Text = _User.UserID.ToString();
+            lblUserName.Text = _User.UserName.ToString();
+
+            lblIsActive.Text = (_User.IsActive == 1) ? "Yes" : "No";
 
         }
 
@@ -109,6 +82,16 @@ namespace Full_Project_Desktop
         }
 
         private void CtrlPersonAndUserInformation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CtrlPersonDetails1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblUserName_Click(object sender, EventArgs e)
         {
 
         }

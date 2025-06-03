@@ -20,7 +20,10 @@ namespace Full_Project_Desktop
         private string _InputTextBox = "";
         private int _InputNumber = 0;
 
-        public int __PersonID = -1;
+        public int PersonID
+        {
+            get { return PersonID; }
+        }
 
         public int _PersonID
         {
@@ -44,6 +47,10 @@ namespace Full_Project_Desktop
             gbFilter.Enabled = false;
         }
 
+        public void FilterFocus()
+        {
+            txtBySearch.Focus();
+        }
 
         private void TxtBySearch_TextChanged(object sender, EventArgs e)
         {
@@ -64,7 +71,7 @@ namespace Full_Project_Desktop
                
                 _PersonID = Person.PersonID;
 
-                ctrlPersonDetails1._LoadDataToForm(_PersonID);
+                ctrlPersonDetails1.LoadPersonInfo(_PersonID);
                 //////////////////////////////////////////////////////////////////////
             }
 
@@ -145,21 +152,7 @@ namespace Full_Project_Desktop
         }
 
 
-        public int ValidatingforUser()
-        {
-
-            if (!clsUsers.IsUserExistOrNot(__PersonID))
-            {
-                return __PersonID;
-            }
-
-            else
-
-                return -2;
-
-
-        }
-
+     
         private void LblDateOfBirth_Click(object sender, EventArgs e)
         {
 
@@ -167,7 +160,7 @@ namespace Full_Project_Desktop
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddUpdateNewPerson frm = new AddUpdateNewPerson(__PersonID);
+            AddUpdateNewPerson frm = new AddUpdateNewPerson(_PersonID);
             frm.Show();
         }
 

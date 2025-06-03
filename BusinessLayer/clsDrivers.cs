@@ -77,7 +77,7 @@ namespace BusinessLayer
         private bool _AddNewLocalDrivingApplication()
         {
 
-            this.DriverID = clsIssuingLicense.AddNewDriver(this.PersonID, this.CreatedByUserID,this.CreatedDate);
+            this.DriverID = clsDAIssuingLicense.AddNewDriver(this.PersonID, this.CreatedByUserID,this.CreatedDate);
 
             return (this.DriverID != -1);
         }
@@ -117,7 +117,7 @@ namespace BusinessLayer
         public static int GetFeesOfLicenseClassTable(int LicenseClassID)
         {
 
-            return clsIssuingLicense.GetFeesOfLicenseClassTable(LicenseClassID);
+            return clsDAIssuingLicense.GetFeesOfLicenseClassTable(LicenseClassID);
 
 
         }
@@ -130,7 +130,7 @@ namespace BusinessLayer
     string Notes, byte IsActive)
         {
 
-            return clsIssuingLicense.InsertLicense( ApplicationID,  DriverID,  LicenseClassID,  IssueReason,
+            return clsDAIssuingLicense.InsertLicense( ApplicationID,  DriverID,  LicenseClassID,  IssueReason,
      PaidFees,  CreatedByUserID,  IssueDate,  ExpirationDate,
      Notes,  IsActive);
 
@@ -141,9 +141,9 @@ namespace BusinessLayer
         public static bool ValidationIFLicenseExistOrNot(int LocalDrivingLicenseApplicationID)
         {
 
-            int ApplicationID = clsIssuingLicense.GetApplicationIDByLocalDrivingID(LocalDrivingLicenseApplicationID);
+            int ApplicationID = clsDAIssuingLicense.GetApplicationIDByLocalDrivingID(LocalDrivingLicenseApplicationID);
 
-            return clsIssuingLicense.ValidateIfLicenseExistOrNOT(ApplicationID);
+            return clsDAIssuingLicense.ValidateIfLicenseExistOrNOT(ApplicationID);
         }
 
 
@@ -153,7 +153,7 @@ namespace BusinessLayer
         public static DataTable GetAllDriverInfo(int LicenseID)
         {
 
-            return clsIssuingLicense.GetAllDriverInfo(LicenseID);
+            return clsDAIssuingLicense.GetAllDriverInfo(LicenseID);
 
         }
 
@@ -163,7 +163,7 @@ namespace BusinessLayer
         public static DataTable GetDataForInternationalLicenseApplication(int LicenseID)
         {
 
-            return clsIssuingLicense.GetAllDriverInfo(LicenseID);
+            return clsDAIssuingLicense.GetAllDriverInfo(LicenseID);
 
         }
 
@@ -173,9 +173,9 @@ namespace BusinessLayer
         public static DataTable GetDriverInfoOnly(int ApplicationID)
         {
 
-            int LicenseID = clsIssuingLicense.GetLicenseIDByApplicatinID(ApplicationID);
+            int LicenseID = clsDAIssuingLicense.GetLicenseIDByApplicatinID(ApplicationID);
 
-            return clsIssuingLicense.GetDriverInfoOnlyForDgv(LicenseID);
+            return clsDAIssuingLicense.GetDriverInfoOnlyForDgv(LicenseID);
 
         }
         
@@ -187,7 +187,7 @@ namespace BusinessLayer
         {
 
            
-            return clsIssuingLicense.GetAllLicenseToThePersonForDgv(PersonID);
+            return clsDAIssuingLicense.GetAllLicenseToThePersonForDgv(PersonID);
 
         }
         
@@ -200,7 +200,7 @@ namespace BusinessLayer
         public static DataTable DriversWithLicensesFilter(int ColumnIndex, string Filter)
         {
 
-         return   clsIssuingLicense.DriversWithLicensesFilter(ColumnIndex, Filter);
+         return   clsDAIssuingLicense.DriversWithLicensesFilter(ColumnIndex, Filter);
 
         }
 

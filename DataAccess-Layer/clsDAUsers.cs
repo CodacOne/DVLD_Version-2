@@ -65,56 +65,124 @@ namespace DataAccess_Layer
             return Dt;
         }
         ////////////////////////////////////////////////////////////////
-   
+
 
 
         /// /**///*/*/*/*/*/*/////////////////*********************/////////////////////////////////
-        
+
 
         /////////////////////////////////////////////////////////////////////////////////////////////
-        public static int GetUsersCount()
+        public static bool GetUserInfoByUserID(int UserID, ref int PersonID, ref string UserName,
+            ref string Password, ref byte IsActive)
         {
+            bool isFound = false;
 
-            int Count = 0;
+            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            string query = "SELECT * FROM Users WHERE UserID = @UserID";
 
-            string query = "SELECT COUNT(*) FROM Users";
+            SqlCommand command = new SqlCommand(query, connection);
 
-            SqlCommand command = new SqlCommand(query, Connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
 
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    // The record was found
+                    isFound = true;
+                    PersonID = reader["PersonID"] != DBNull.Value ? Convert.ToInt32(reader["PersonID"]) : -1;
+                    UserName = reader["UserName"] != DBNull.Value ? reader["UserName"].ToString() : "";
+                    Password = reader["Password"] != DBNull.Value ? reader["Password"].ToString() : "";
+                    IsActive = reader["IsActive"] != DBNull.Value ? Convert.ToByte(reader["IsActive"]) : (byte)0;
+
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+        ////////////////////////////////////////////////////////////////
+        public static bool GetUserInfoByUsernameAndPassword(string UserName, string Password,
+           ref int UserID, ref int PersonID, ref byte IsActive)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+
+            string query = "SELECT * FROM Users WHERE Username = @Username and Password=@Password;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@Username", UserName);
+            command.Parameters.AddWithValue("@Password", Password);
 
 
             try
             {
-                Connection.Open();
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
 
-                object Result = command.ExecuteScalar();
+                if (reader.Read())
+                {
+                    // The record was found
+                   
 
-                Count = Convert.ToInt32(Result);
+                    isFound  = true;
+                    UserID   =   reader["UserID"] != DBNull.Value ? Convert.ToInt32(reader["UserID"]) : -1;
+                    PersonID = reader["PersonID"] != DBNull.Value ? Convert.ToInt32(reader["PersonID"]) : -1;
+                    UserName = reader["UserName"] != DBNull.Value ? reader["UserName"].ToString() : "";
+                    Password = reader["Password"] != DBNull.Value ? reader["Password"].ToString() : "";
+                    IsActive = reader["IsActive"] != DBNull.Value ? Convert.ToByte(reader["IsActive"]) : (byte)0;
 
-                return Count;
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
 
             }
-
-
             catch (Exception ex)
             {
-                Count = -1;
+                //Console.WriteLine("Error: " + ex.Message);
 
-
-                throw new Exception("Error : " + ex.Message);
+                isFound = false;
             }
-
             finally
             {
-                Connection.Close();
+                connection.Close();
             }
 
-            return Count;
+            return isFound;
         }
-
-
         ////////////////////////////////////////////////////////////////
 
         public static bool IsUserExistOrNot(int PersonID)
@@ -377,11 +445,66 @@ namespace DataAccess_Layer
             return IsFound;
         }
 
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        public static int GetPersonIDByUserID(int UserID)
+          
+        {
+            int PersonID = -1;
+
+            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+
+            string query = "SELECT PersonID  FROM Users WHERE UserID = @UserID";
+
+            SqlCommand command = new SqlCommand(query, Connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
+
+            try
+            {
+                Connection.Open();
+                SqlDataReader Reader = command.ExecuteReader();
+
+                if (Reader.Read())
+                {
+
+
+                    PersonID = Convert.ToInt32(Reader["PersonID"]);
+                  
+
+                }
+
+                else
+                {
+                    PersonID = -1;
+
+                }
+
+                Reader.Close();
+
+
+            }
+
+
+            catch (Exception ex)
+            {
+
+           
+                throw new Exception("Error : " + ex.Message);
+            }
+
+            finally
+            {
+                Connection.Close();
+            }
+
+            return PersonID;
+        }
+
         ///////////////////////////////////////////////////////////////////////////////
         /// <summary>
 
 
-       
+
         public static bool UpdateUser(int PersonID, string UserName, string Password, Byte IsActive)
 
         {
