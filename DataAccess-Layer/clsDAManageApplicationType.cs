@@ -53,54 +53,153 @@ namespace DataAccess_Layer
 
             return Dt;
         }
-        ////////////////////////////////////////////////////////////////
 
 
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        public static int GetApplicationTypesCount()
+        public static int AddNewApplicationType(string Title, float Fees)
         {
+            int ApplicationTypeID = -1;
 
-            int Count = 0;
+            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            string query = @"Insert Into ApplicationTypes (ApplicationTypeTitle,ApplicationFees)
+                            Values (@Title,@Fees)
+                            
+                            SELECT SCOPE_IDENTITY();";
 
-            string query = "SELECT COUNT(*) FROM ApplicationTypes";
+            SqlCommand command = new SqlCommand(query, connection);
 
-            SqlCommand command = new SqlCommand(query, Connection);
-
-
+            command.Parameters.AddWithValue("@ApplicationTypeTitle", Title);
+            command.Parameters.AddWithValue("@ApplicationFees", Fees);
 
             try
             {
-                Connection.Open();
+                connection.Open();
 
-                object Result = command.ExecuteScalar();
+                object result = command.ExecuteScalar();
 
-                Count = Convert.ToInt32(Result);
-
-                return Count;
-
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    ApplicationTypeID = insertedID;
+                }
             }
-
 
             catch (Exception ex)
             {
-                Count = -1;
+                //Console.WriteLine("Error: " + ex.Message);
 
-
-                throw new Exception("Error : " + ex.Message);
             }
 
             finally
             {
-                Connection.Close();
+                connection.Close();
             }
 
-            return Count;
+
+            return ApplicationTypeID;
+
         }
+
+        ////////////////////////////////////////////////////////////////
+        public static bool GetApplicationTypeInfoByID(int ApplicationTypeID,
+            ref string ApplicationTypeTitle, ref float ApplicationFees)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+
+            string query = "SELECT * FROM ApplicationTypes WHERE ApplicationTypeID = @ApplicationTypeID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+
+                    // The record was found
+                    isFound = true;
+
+                    ApplicationTypeTitle = (string)reader["ApplicationTypeTitle"];
+                    ApplicationFees = Convert.ToSingle(reader["ApplicationFees"]);
+
+
+
+
+
+                }
+                else
+                {
+                    // The record was not found
+                    isFound = false;
+                }
+
+                reader.Close();
+
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+
+        /////////////////////////////////////////////////////////////////////////////////////////////
+        public static bool EditApplicationType(int ApplicationTypeID, string Title, float Fees)
+        {
+
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+
+            string query = @"Update  ApplicationTypes  
+                            set ApplicationTypeTitle = @Title,
+                                ApplicationFees = @Fees
+                                where ApplicationTypeID = @ApplicationTypeID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+            command.Parameters.AddWithValue("@Title", Title);
+            command.Parameters.AddWithValue("@Fees", Fees);
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
+
 
 
         ////////////////////////////////////////////////////////////////
 
+        ////////////////////////////////////////////////////////////////
+        ///
+        ////////////////////////////////////////////////////////////////
     }
 }

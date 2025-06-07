@@ -33,7 +33,8 @@ namespace Full_Project_Desktop
 
         private void CToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Change_Password frmChange_Password = new Change_Password((int)dgvManageUsrs.CurrentRow.Cells[1].Value);
+            int UserID = (int)dgvManageUsrs.CurrentRow.Cells[0].Value;
+            Change_Password frmChange_Password = new Change_Password(UserID);
             frmChange_Password.ShowDialog();
         }
 
@@ -64,7 +65,7 @@ namespace Full_Project_Desktop
         {
             dgvManageUsrs.DataSource= clsUsers.GetAllUsers();
             dgvManageUsrs.Columns["FullName"].FillWeight = 200;
-           
+            cbFilter.SelectedIndex = 0;
             lblCountRecords.Text = dgvManageUsrs.Rows.Count.ToString();
         }
 
@@ -101,12 +102,7 @@ namespace Full_Project_Desktop
 
         private void TxtSearch_Validating(object sender, CancelEventArgs e)
         {
-            //if (!int.TryParse(txtSearch.Text, out int value))
-            //{
-            //    MessageBox.Show("Please enter a valid integer value.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    txtSearch.Focus();
-            //    return;
-            //}
+            
 
             if ((cbFilter.SelectedIndex==1 || cbFilter.SelectedIndex == 3 ) &&  !int.TryParse(txtSearch.Text, out _))
             {
@@ -120,8 +116,6 @@ namespace Full_Project_Desktop
                 e.Cancel = false;
                 errorProvider1.SetError(txtSearch, "");
             }
-
-
 
         }
 
@@ -176,12 +170,20 @@ namespace Full_Project_Desktop
 
         private void CbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            txtSearch.Visible = (cbFilter.Text != "None");  // to show textbox filter or disable
+            txtSearch.Clear();
         }
 
         private void PbRefresh_Click(object sender, EventArgs e)
         {
             _RefreshUsersList();
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //we allow number incase person id or user id is selected.
+            if (cbFilter.Text == "Person ID" || cbFilter.Text == "User ID")
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
 

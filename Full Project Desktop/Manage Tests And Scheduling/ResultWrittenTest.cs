@@ -18,7 +18,7 @@ namespace Full_Project_Desktop
         private DataTable _Dt = new DataTable();
         private int _LocalDrivingLicenseApplicationID = -1;
 
-        private int _CreatedByUserID = -1;
+        private int  _CreatedByUserID = -1;
         private int _TestAppID = -1;
 
         clsTests _Tests = new clsTests();
@@ -79,7 +79,7 @@ namespace Full_Project_Desktop
 
             _Tests.TestAppointementID = _TestAppID;
 
-            _Tests.TsetResult = (byte)(rbPass.Checked ? 1 : 0);
+            _Tests.TsetResult = rbPass.Checked ;
 
             _Tests.Notes = tbNotes.Text;
             _Tests.CreatedByUserID = _CreatedByUserID;

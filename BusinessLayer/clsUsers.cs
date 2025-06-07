@@ -187,12 +187,6 @@ namespace BusinessLayer
         /////////////////////////////////////////////////////////////////////
        
 
-        /////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////
-        /// <summary>
-
-
-
         public bool Save()
         {
             switch (Mode)
@@ -230,22 +224,7 @@ namespace BusinessLayer
         }
 
         /////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////
-        //public static bool ValidateToLogIn(string UserName, string Password)
-        //{
-            
-        //  int CurrentUserID =  clsDAUsers.LogIn(UserName, Password);
-
-
-        //    if(CurrentUserID != -1)
-        //    {
-        //        clsCurrentUser.FindCurrentUser(CurrentUserID.ToString());
-
-        //    }
-
-        //    return (CurrentUserID != -1) ? true : false;
-        //}
-
+       
 
         /////////////////////////////////////////////////////////////////////
         ///

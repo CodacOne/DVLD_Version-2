@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsGlobal.cs" />
-    <Compile Include="clsUtil.cs" />
-    <Compile Include="clsValidation.cs" />
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsUtil.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
     <Compile Include="User\AddUpdateNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,16 +181,10 @@
     <Compile Include="User\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditApplicationType.cs">
+    <Compile Include="Manage All App\ManageLocalDivingLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditApplicationType.Designer.cs">
-      <DependentUpon>EditApplicationType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ManageLocalDivingLicenseApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ManageLocalDivingLicenseApplication.Designer.cs">
+    <Compile Include="Manage All App\ManageLocalDivingLicenseApplication.Designer.cs">
       <DependentUpon>ManageLocalDivingLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalLicense\LocalLicense.cs">
@@ -205,16 +199,16 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginScreen.cs">
+    <Compile Include="Login\LoginScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginScreen.Designer.cs">
+    <Compile Include="Login\LoginScreen.Designer.cs">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage All App\ManageAplicationTypes.cs">
+    <Compile Include="Applications\ApplicationsTypes\ManageAplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage All App\ManageAplicationTypes.Designer.cs">
+    <Compile Include="Applications\ApplicationsTypes\ManageAplicationTypes.Designer.cs">
       <DependentUpon>ManageAplicationTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Person\ManagePeople.cs">
@@ -229,10 +223,10 @@
     <Compile Include="User\ManageUsers.Designer.cs">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage All App\ManageTestType.cs">
+    <Compile Include="Manage Tests And Scheduling\ManageTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage All App\ManageTestType.Designer.cs">
+    <Compile Include="Manage Tests And Scheduling\ManageTestType.Designer.cs">
       <DependentUpon>ManageTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -297,17 +291,17 @@
     <Compile Include="User\Update User.Designer.cs">
       <DependentUpon>Update User.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update\UpdateApplicationType.cs">
+    <Compile Include="Applications\ApplicationsTypes\EditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update\UpdateApplicationType.Designer.cs">
-      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    <Compile Include="Applications\ApplicationsTypes\EditApplicationType.Designer.cs">
+      <DependentUpon>EditApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Update\UpdateTestType.cs">
+    <Compile Include="Manage Tests And Scheduling\EditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Update\UpdateTestType.Designer.cs">
-      <DependentUpon>UpdateTestType.cs</DependentUpon>
+    <Compile Include="Manage Tests And Scheduling\EditTestType.Designer.cs">
+      <DependentUpon>EditTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Person\ctrlShowPersonDetails.cs">
       <SubType>UserControl</SubType>
@@ -393,10 +387,7 @@
     <EmbeddedResource Include="User\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditApplicationType.resx">
-      <DependentUpon>EditApplicationType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ManageLocalDivingLicenseApplication.resx">
+    <EmbeddedResource Include="Manage All App\ManageLocalDivingLicenseApplication.resx">
       <DependentUpon>ManageLocalDivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalLicense\LocalLicense.resx">
@@ -405,10 +396,10 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginScreen.resx">
+    <EmbeddedResource Include="Login\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage All App\ManageAplicationTypes.resx">
+    <EmbeddedResource Include="Applications\ApplicationsTypes\ManageAplicationTypes.resx">
       <DependentUpon>ManageAplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Person\ManagePeople.resx">
@@ -417,7 +408,7 @@
     <EmbeddedResource Include="User\ManageUsers.resx">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage All App\ManageTestType.resx">
+    <EmbeddedResource Include="Manage Tests And Scheduling\ManageTestType.resx">
       <DependentUpon>ManageTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -460,11 +451,11 @@
     <EmbeddedResource Include="User\Update User.resx">
       <DependentUpon>Update User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update\UpdateApplicationType.resx">
-      <DependentUpon>UpdateApplicationType.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ApplicationsTypes\EditApplicationType.resx">
+      <DependentUpon>EditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Update\UpdateTestType.resx">
-      <DependentUpon>UpdateTestType.cs</DependentUpon>
+    <EmbeddedResource Include="Manage Tests And Scheduling\EditTestType.resx">
+      <DependentUpon>EditTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Person\ctrlShowPersonDetails.resx">
       <DependentUpon>ctrlShowPersonDetails.cs</DependentUpon>
@@ -1013,5 +1004,6 @@
   <ItemGroup>
     <None Include="Resources\Save 321.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

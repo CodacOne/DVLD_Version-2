@@ -1,6 +1,6 @@
 ﻿namespace Full_Project_Desktop
 {
-    partial class UpdateTestType
+    partial class EditTestType
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tbFirstName = new System.Windows.Forms.TextBox();
+            this.txtFees = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnSaveurcl = new System.Windows.Forms.Button();
@@ -47,15 +47,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label5
+            // lblID
             // 
-            this.label5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(224, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 41);
-            this.label5.TabIndex = 84;
-            this.label5.Text = "??";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblID.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(224, 133);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(129, 41);
+            this.lblID.TabIndex = 84;
+            this.lblID.Text = "??";
+            this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -78,23 +78,23 @@
             this.label1.Text = "Update Test Type";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtFees
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(258, 354);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 27);
-            this.textBox1.TabIndex = 79;
+            this.txtFees.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFees.Location = new System.Drawing.Point(258, 354);
+            this.txtFees.Multiline = true;
+            this.txtFees.Name = "txtFees";
+            this.txtFees.Size = new System.Drawing.Size(281, 27);
+            this.txtFees.TabIndex = 79;
             // 
-            // tbFirstName
+            // txtTitle
             // 
-            this.tbFirstName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.Location = new System.Drawing.Point(258, 192);
-            this.tbFirstName.Multiline = true;
-            this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(281, 27);
-            this.tbFirstName.TabIndex = 78;
+            this.txtTitle.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(258, 192);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(281, 27);
+            this.txtTitle.TabIndex = 78;
             // 
             // label3
             // 
@@ -116,14 +116,14 @@
             this.label2.Text = "Title:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // txtDescription
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(258, 245);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 103);
-            this.textBox2.TabIndex = 87;
+            this.txtDescription.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(258, 245);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(281, 103);
+            this.txtDescription.TabIndex = 87;
             // 
             // label6
             // 
@@ -172,6 +172,7 @@
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseMnemonic = false;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox2
             // 
@@ -193,29 +194,30 @@
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
-            // UpdateTestType
+            // EditTestType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSaveurcl);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.tbFirstName);
+            this.Controls.Add(this.txtFees);
+            this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "UpdateTestType";
+            this.Name = "EditTestType";
             this.Text = "UpdateTestType";
+            this.Load += new System.EventHandler(this.EditTestType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -226,18 +228,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSaveurcl;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox tbFirstName;
+        private System.Windows.Forms.TextBox txtFees;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
     }

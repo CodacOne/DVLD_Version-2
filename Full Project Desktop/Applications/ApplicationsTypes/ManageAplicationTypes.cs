@@ -26,7 +26,8 @@ namespace Full_Project_Desktop
 
         private void EditApplicationTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            UpdateApplicationType frm = new UpdateApplicationType();
+           int ApplicaionTypeID= (int)dgvApplicaionType.CurrentRow.Cells[0].Value;
+            EditApplicationType frm = new EditApplicationType(ApplicaionTypeID);
             frm.Show();
         }
 
@@ -35,7 +36,7 @@ namespace Full_Project_Desktop
         private void  _RefreshApplicationList()
         {
          dgvApplicaionType.DataSource = clsLocalDrivingApplication.LocalDrivingApplictionType();
-
+            lblCountRecords.Text = dgvApplicaionType.Rows.Count.ToString();
         }
 
         /// ////////////////////////////////
@@ -43,7 +44,7 @@ namespace Full_Project_Desktop
         private void Manage_Aplication_Types_Load(object sender, EventArgs e)
         {
             _RefreshApplicationList();
-            lblCountRecords.Text = clsManageApplication.GetCountManageApplicationType().ToString();
+            
         }
 
         private void Button1_Click(object sender, EventArgs e)

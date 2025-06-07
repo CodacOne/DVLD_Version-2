@@ -79,7 +79,7 @@ namespace Full_Project_Desktop
 
             _Tests.TestAppointementID = _TestAppID;
 
-            _Tests.TsetResult = (byte)(rbPass.Checked ? 1 : 0);
+            _Tests.TsetResult = rbPass.Checked ;
 
             _Tests.Notes = tbNotes.Text;
             _Tests.CreatedByUserID = _CreatedByUserID;

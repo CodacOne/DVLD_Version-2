@@ -13,9 +13,11 @@ namespace Full_Project_Desktop
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        LoginScreen _frmloginScreen;
+        public MainForm(LoginScreen frmloginScreen)
         {
             InitializeComponent();
+            _frmloginScreen = frmloginScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,12 +33,10 @@ namespace Full_Project_Desktop
 
         private void SignOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            clsGlobal.CurrentUser = null;
+
+            _frmloginScreen.Show();
             this.Close();
-           
-
-            LoginScreen frmLogin = new LoginScreen();
-            frmLogin.Show();
-
         }
 
         private void UsersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -139,6 +139,14 @@ namespace Full_Project_Desktop
 
             ShowDetailsForPersonAndUser frm = new ShowDetailsForPersonAndUser(UserID);
             frm.ShowDialog();
+        }
+
+        private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int UserID = clsGlobal.CurrentUser.UserID;
+            Change_Password frm = new Change_Password(UserID);
+            frm.ShowDialog();
+
         }
     }
 }

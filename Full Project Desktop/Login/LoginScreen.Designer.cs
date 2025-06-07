@@ -145,7 +145,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.photo_2025_05_15_20_08_24;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 501);
@@ -177,6 +177,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginScreen";
             this.Text = "LoginScreen";
             this.Load += new System.EventHandler(this.LoginScreen_Load);

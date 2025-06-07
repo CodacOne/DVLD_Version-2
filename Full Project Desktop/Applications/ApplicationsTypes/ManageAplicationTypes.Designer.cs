@@ -113,6 +113,7 @@
             // lblCountRecords
             // 
             this.lblCountRecords.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountRecords.ForeColor = System.Drawing.Color.Red;
             this.lblCountRecords.Location = new System.Drawing.Point(144, 472);
             this.lblCountRecords.Name = "lblCountRecords";
             this.lblCountRecords.Size = new System.Drawing.Size(100, 23);

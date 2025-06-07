@@ -71,6 +71,7 @@
             this.txtSearch.Size = new System.Drawing.Size(173, 23);
             this.txtSearch.TabIndex = 14;
             this.txtSearch.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             this.txtSearch.Validating += new System.ComponentModel.CancelEventHandler(this.TxtSearch_Validating);
             // 
             // cbFilter

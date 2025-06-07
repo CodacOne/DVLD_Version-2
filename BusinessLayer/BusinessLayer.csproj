@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsAddAppointementVision.cs" />
+    <Compile Include="clsApplicationType.cs" />
     <Compile Include="clsCountries.cs" />
     <Compile Include="clsCurrentUser.cs" />
     <Compile Include="clsDetainLicense.cs" />
@@ -50,7 +51,7 @@
     <Compile Include="clsLocalDrivingApplication.cs" />
     <Compile Include="clsIssuedLicense.cs" />
     <Compile Include="clsManageApplication.cs" />
-    <Compile Include="clsManageTestTypes.cs" />
+    <Compile Include="clsTestTypes.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsTests.cs" />
     <Compile Include="clsUsers.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace Full_Project_Desktop
 {
-    partial class UpdateApplicationType
+    partial class EditApplicationType
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tbFirstName = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.txtFees = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,27 +40,31 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtFees
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(207, 240);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 27);
-            this.textBox1.TabIndex = 22;
+            this.txtFees.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFees.Location = new System.Drawing.Point(207, 240);
+            this.txtFees.Multiline = true;
+            this.txtFees.Name = "txtFees";
+            this.txtFees.Size = new System.Drawing.Size(281, 27);
+            this.txtFees.TabIndex = 22;
+            this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
             // 
-            // tbFirstName
+            // txtTitle
             // 
-            this.tbFirstName.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFirstName.Location = new System.Drawing.Point(207, 168);
-            this.tbFirstName.Multiline = true;
-            this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(281, 27);
-            this.tbFirstName.TabIndex = 21;
+            this.txtTitle.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(207, 168);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(281, 27);
+            this.txtTitle.TabIndex = 21;
+            this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitle_Validating);
             // 
             // label3
             // 
@@ -127,6 +132,7 @@
             this.btnSaveurcl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveurcl.UseMnemonic = false;
             this.btnSaveurcl.UseVisualStyleBackColor = true;
+            this.btnSaveurcl.Click += new System.EventHandler(this.btnSaveurcl_Click);
             // 
             // btnClose
             // 
@@ -141,6 +147,7 @@
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseMnemonic = false;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox2
             // 
@@ -164,7 +171,11 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
-            // UpdateApplicationType
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // EditApplicationType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,16 +187,18 @@
             this.Controls.Add(this.btnSaveurcl);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.tbFirstName);
+            this.Controls.Add(this.txtFees);
+            this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "UpdateApplicationType";
-            this.Text = "UpdateApplicationType";
+            this.Name = "EditApplicationType";
+            this.Text = "EditApplicationType";
+            this.Load += new System.EventHandler(this.EditApplicationType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,8 +206,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox tbFirstName;
+        private System.Windows.Forms.TextBox txtFees;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
@@ -204,5 +217,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

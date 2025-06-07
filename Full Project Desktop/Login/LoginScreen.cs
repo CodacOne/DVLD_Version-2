@@ -26,7 +26,16 @@ namespace Full_Project_Desktop
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
+            string UserName = "", Password = "";
 
+            if (clsGlobal.GetStoredCredential(ref UserName, ref Password))
+            {
+                txtUserName.Text = UserName;
+                txtPassword.Text = Password;
+                cbRememberMe.Checked = true;
+            }
+            else
+                cbRememberMe.Checked = false;
         }
 
         private void PictureBox1_Click(object sender, EventArgs e)
@@ -42,38 +51,44 @@ namespace Full_Project_Desktop
         private void BtnLogin_Click(object sender, EventArgs e)
         {
            
-           
-            //// To Avoid transfer To Main Screen before to Login
-            if (string.IsNullOrWhiteSpace(txtUserName.Text))
-            {
-                MessageBox.Show("Please enter the username.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUserName.Focus();
-                return;
-            }
-
-            if (string.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                MessageBox.Show("Please enter the password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtPassword.Focus();
-                return;
-            }
-
+         
             clsUsers user = clsUsers.FindByUsernameAndPassword(txtUserName.Text.Trim(), txtPassword.Text.Trim());
 
             
             if (user != null )
             {
+                if(cbRememberMe.Checked)
+                {
+                     clsGlobal.RememberUsernameAndPassword(txtUserName.Text.Trim(),txtPassword.Text.Trim());
+                }
+
+                else
+                {
+                    //store empty username and password
+                    clsGlobal.RememberUsernameAndPassword("", "");
+                }
+
+                //incase the user is not active
+                if (user.IsActive!=1)
+                {
+
+                    txtUserName.Focus();
+                    MessageBox.Show("Your accound is not Active, Contact Admin.", "In Active Account", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // if user not Null will open the system
                 clsGlobal.CurrentUser = user;
-                MainForm frm = new MainForm();
-                   frm.ShowDialog();
-                   this.Hide();
+                MainForm frm = new MainForm(this);
+                frm.ShowDialog();
+                this.Hide();
 
             }
 
-
             else
             {
-                MessageBox.Show("Invalid UserName,Password");
+                txtUserName.Focus();
+                MessageBox.Show("Invalid Username/Password.", "Wrong Credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
               
 

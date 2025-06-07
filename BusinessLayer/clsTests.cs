@@ -36,7 +36,7 @@ namespace BusinessLayer
         }
 
       
-        public Byte TsetResult
+        public bool TsetResult
         {
             get; set;
         }
@@ -48,7 +48,7 @@ namespace BusinessLayer
             this.TestAppointementID = -1;
             this.CreatedByUserID = -1;
             this.Notes = ""; 
-            this.TsetResult = 0;
+            this.TsetResult = false;
 
 
             Mode = enMode.AddNew;
@@ -57,7 +57,7 @@ namespace BusinessLayer
 
         /*/////*/////*/////*/////*/////*/////*/////*////
 
-        private clsTests(int TestID, int TestAppointmentID, int CreatedByUserID, byte TestResult, string Notes)
+        private clsTests(int TestID, int TestAppointmentID, int CreatedByUserID, bool TestResult, string Notes)
         {
             this.TestID = TestID;
             this.TestAppointementID = TestAppointmentID ;
@@ -82,9 +82,43 @@ namespace BusinessLayer
 
 
         /////////////////////////////////////////////////////////////////////
-        ///
-        /////////////////////////////////////////////////////////////////////
+        private bool _UpdateTest()
+        {
+            //call DataAccess Layer 
 
+            return clsDATestTypesAppointement.UpdateTest(this.TestID, this.TestAppointementID,
+                this.TsetResult, this.Notes, this.CreatedByUserID);
+        }
+
+        /////////////////////////////////////////////////////////////////////
+        public static clsTests Find(int TestID)
+        {
+            int TestAppointmentID = -1;
+            bool TestResult = false; string Notes = ""; int CreatedByUserID = -1;
+
+            if (clsDATestTypesAppointement.GetTestInfoByID(TestID,
+            ref TestAppointmentID, ref TestResult,
+            ref Notes, ref CreatedByUserID))
+
+                return new clsTests(TestID,
+                        TestAppointmentID, CreatedByUserID, TestResult,
+                        Notes );
+            else
+                return null;
+
+        }
+
+        /////////////////////////////////////////////////////////////////////
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
+        {
+            return clsDATestTypesAppointement.GetPassedTestCount(LocalDrivingLicenseApplicationID);
+        }
+
+        public static bool PassedAllTests(int LocalDrivingLicenseApplicationID)
+        {
+            //if total passed test less than 3 it will return false otherwise will return true
+            return GetPassedTestCount(LocalDrivingLicenseApplicationID) == 3;
+        }
 
         /////////////////////////////////////////////////////////////////////
 
@@ -111,7 +145,7 @@ namespace BusinessLayer
 
                 case enMode.Update:
                     {
-                        // return _UpdateUser();
+                        return _UpdateTest();
                         return false;
 
                     }

@@ -1,0 +1,771 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clstesttypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|d:\\github projects\\dvld_version 2\\full project desktop\\manage tests and scheduling\\edittesttype.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\edittesttype.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|d:\\github projects\\dvld_version 2\\full project desktop\\manage tests and scheduling\\edittesttype.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\edittesttype.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|d:\\github projects\\dvld_version 2\\full project desktop\\applications\\applicationstypes\\editapplicationtype.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:applications\\applicationstypes\\editapplicationtype.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|d:\\github projects\\dvld_version 2\\full project desktop\\applications\\applicationstypes\\editapplicationtype.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:applications\\applicationstypes\\editapplicationtype.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|d:\\github projects\\dvld_version 2\\full project desktop\\manage tests and scheduling\\edittesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\edittesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\manage tests and scheduling\\managetesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\managetesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\applications\\applicationstypes\\manageaplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:applications\\applicationstypes\\manageaplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\applications\\applicationstypes\\manageaplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:applications\\applicationstypes\\manageaplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\manage tests and scheduling\\managetesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\managetesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\manage all app\\managelocaldivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage all app\\managelocaldivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31501F93-11A1-49D4-8C5F-2C5565151E8E}|..\\DataAccess-Layer\\DataAccess-Layer.csproj|d:\\github projects\\dvld_version 2\\dataaccess-layer\\clsdatesttypesappointement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\manage tests and scheduling\\resultwrittentest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\resultwrittentest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\manage tests and scheduling\\resultstreettest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\resultstreettest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\manage tests and scheduling\\resultvisiontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\resultvisiontest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clsusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clsaddappointementvision.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\manage tests and scheduling\\edittesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:manage tests and scheduling\\edittesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\applications\\applicationstypes\\editapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:applications\\applicationstypes\\editapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\applications\\applicationstypes\\editapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:applications\\applicationstypes\\editapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\global classes\\clsvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:global classes\\clsvalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clslocaldrivingapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clsmanageapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clsapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31501F93-11A1-49D4-8C5F-2C5565151E8E}|..\\DataAccess-Layer\\DataAccess-Layer.csproj|d:\\github projects\\dvld_version 2\\dataaccess-layer\\clsdamanageapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\global classes\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:global classes\\clsglobal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clsissuedlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\login\\loginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:login\\loginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\login\\loginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:login\\loginscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ADB45649-317B-40C5-9767-DB1C13EECD46}|..\\BusinessLayer\\BusinessLayer.csproj|d:\\github projects\\dvld_version 2\\businesslayer\\clscurrentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\user\\manageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:user\\manageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\user\\manageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:user\\manageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\person\\managepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:person\\managepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\person\\managepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:person\\managepeople.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\user\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:user\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\user\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:user\\changepassword.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\all show details\\showlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:all show details\\showlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\datain and release\\detainlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:datain and release\\detainlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\person\\ctrlshowpersonanduserinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:person\\ctrlshowpersonanduserinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\person\\ctrlshowpersonanduserinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:person\\ctrlshowpersonanduserinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\person\\ctrlshowpersondetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:person\\ctrlshowpersondetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\user control\\ctrldriverinternationallicenseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:user control\\ctrldriverinternationallicenseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\user\\addupdatenewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:user\\addupdatenewuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\user\\update user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E48937D6-E0E6-44FF-B976-F40E6FFA9A2B}|Full Project Desktop- Presentation.csproj|solutionrelative:user\\update user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\clsUtil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:clsUtil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditTestType.Designer.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.Designer.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\EditTestType.Designer.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.Designer.cs",
+              "RelativeToolTip": "Manage Tests And Scheduling\\EditTestType.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:05:04.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditTestType.resx",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.resx",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\EditTestType.resx",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.resx",
+              "RelativeToolTip": "Manage Tests And Scheduling\\EditTestType.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-06T20:05:04.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditApplicationType.Designer.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.Designer.cs",
+              "RelativeDocumentMoniker": "Applications\\ApplicationsTypes\\EditApplicationType.Designer.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.Designer.cs",
+              "RelativeToolTip": "Applications\\ApplicationsTypes\\EditApplicationType.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T20:05:03.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditApplicationType.resx",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.resx",
+              "RelativeDocumentMoniker": "Applications\\ApplicationsTypes\\EditApplicationType.resx",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.resx",
+              "RelativeToolTip": "Applications\\ApplicationsTypes\\EditApplicationType.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-06T20:05:03.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditTestType.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\EditTestType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.cs",
+              "RelativeToolTip": "Manage Tests And Scheduling\\EditTestType.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:48:16.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsTests.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsTests.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsTests.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsTests.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsTests.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAMwHsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:26:06.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsTestTypes.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsTestTypes.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsTestTypes.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsTestTypes.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsTestTypes.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAMwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:01:35.244Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManageTestType.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ManageTestType.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\ManageTestType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ManageTestType.cs*",
+              "RelativeToolTip": "Manage Tests And Scheduling\\ManageTestType.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAIAwwB8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:45:35.971Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ManageTestType.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ManageTestType.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\ManageTestType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ManageTestType.cs [Design]*",
+              "RelativeToolTip": "Manage Tests And Scheduling\\ManageTestType.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:44:21.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ManageLocalDivingLicenseApplication.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage All App\\ManageLocalDivingLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Manage All App\\ManageLocalDivingLicenseApplication.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage All App\\ManageLocalDivingLicenseApplication.cs [Design]",
+              "RelativeToolTip": "Manage All App\\ManageLocalDivingLicenseApplication.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:43:49.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ResultVisionTest.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ResultVisionTest.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\ResultVisionTest.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ResultVisionTest.cs",
+              "RelativeToolTip": "Manage Tests And Scheduling\\ResultVisionTest.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAMwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:35:42.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ManageAplicationTypes.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\ManageAplicationTypes.cs",
+              "RelativeDocumentMoniker": "Applications\\ApplicationsTypes\\ManageAplicationTypes.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\ManageAplicationTypes.cs [Design]",
+              "RelativeToolTip": "Applications\\ApplicationsTypes\\ManageAplicationTypes.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:15:31.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ManageAplicationTypes.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\ManageAplicationTypes.cs",
+              "RelativeDocumentMoniker": "Applications\\ApplicationsTypes\\ManageAplicationTypes.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\ManageAplicationTypes.cs",
+              "RelativeToolTip": "Applications\\ApplicationsTypes\\ManageAplicationTypes.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:59:02.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ResultWrittenTest.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ResultWrittenTest.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\ResultWrittenTest.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ResultWrittenTest.cs",
+              "RelativeToolTip": "Manage Tests And Scheduling\\ResultWrittenTest.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAApwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:35:55.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ResultStreetTest.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ResultStreetTest.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\ResultStreetTest.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\ResultStreetTest.cs",
+              "RelativeToolTip": "Manage Tests And Scheduling\\ResultStreetTest.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAMwFEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:35:06.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EditTestType.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.cs",
+              "RelativeDocumentMoniker": "Manage Tests And Scheduling\\EditTestType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Manage Tests And Scheduling\\EditTestType.cs [Design]*",
+              "RelativeToolTip": "Manage Tests And Scheduling\\EditTestType.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:24:21.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "clsDATestTypesAppointement.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\DataAccess-Layer\\clsDATestTypesAppointement.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess-Layer\\clsDATestTypesAppointement.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\DataAccess-Layer\\clsDATestTypesAppointement.cs",
+              "RelativeToolTip": "..\\DataAccess-Layer\\clsDATestTypesAppointement.cs",
+              "ViewState": "AgIAAMoBAAAAAAAAAAAmwM4BAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T19:19:12.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EditApplicationType.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.cs",
+              "RelativeDocumentMoniker": "Applications\\ApplicationsTypes\\EditApplicationType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.cs",
+              "RelativeToolTip": "Applications\\ApplicationsTypes\\EditApplicationType.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:18:39.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EditApplicationType.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.cs",
+              "RelativeDocumentMoniker": "Applications\\ApplicationsTypes\\EditApplicationType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Applications\\ApplicationsTypes\\EditApplicationType.cs [Design]",
+              "RelativeToolTip": "Applications\\ApplicationsTypes\\EditApplicationType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:16:12.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "clsAddAppointementVision.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsAddAppointementVision.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsAddAppointementVision.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsAddAppointementVision.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsAddAppointementVision.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAQwLAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:09:28.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "clsUsers.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsUsers.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsUsers.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsUsers.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsUsers.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAAwLwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:31:38.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "clsValidation.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Global Classes\\clsValidation.cs",
+              "RelativeDocumentMoniker": "Global Classes\\clsValidation.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Global Classes\\clsValidation.cs",
+              "RelativeToolTip": "Global Classes\\clsValidation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:31:22.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "clsManageApplication.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsManageApplication.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsManageApplication.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsManageApplication.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsManageApplication.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAhwHYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:58:33.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "clsGlobal.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Global Classes\\clsGlobal.cs",
+              "RelativeDocumentMoniker": "Global Classes\\clsGlobal.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Global Classes\\clsGlobal.cs",
+              "RelativeToolTip": "Global Classes\\clsGlobal.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAwwDcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:22:39.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "clsApplicationType.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsApplicationType.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsApplicationType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsApplicationType.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsApplicationType.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAjwA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:02:32.54Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:10:05.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\MainForm.cs",
+              "RelativeToolTip": "MainForm.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwDIAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:10:07.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "clsLocalDrivingApplication.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsLocalDrivingApplication.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsLocalDrivingApplication.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsLocalDrivingApplication.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsLocalDrivingApplication.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:58:41.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "clsIssuedLicense.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsIssuedLicense.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsIssuedLicense.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsIssuedLicense.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsIssuedLicense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T18:01:29.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "clsDAManageApplicationType.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\DataAccess-Layer\\clsDAManageApplicationType.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess-Layer\\clsDAManageApplicationType.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\DataAccess-Layer\\clsDAManageApplicationType.cs",
+              "RelativeToolTip": "..\\DataAccess-Layer\\clsDAManageApplicationType.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAmwDsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:57:35.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "clsCurrentUser.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsCurrentUser.cs",
+              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsCurrentUser.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\BusinessLayer\\clsCurrentUser.cs",
+              "RelativeToolTip": "..\\BusinessLayer\\clsCurrentUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T17:22:22.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "LoginScreen.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Login\\LoginScreen.cs",
+              "RelativeDocumentMoniker": "Login\\LoginScreen.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Login\\LoginScreen.cs",
+              "RelativeToolTip": "Login\\LoginScreen.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwDYAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T15:43:56.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "LoginScreen.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Login\\LoginScreen.cs",
+              "RelativeDocumentMoniker": "Login\\LoginScreen.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Login\\LoginScreen.cs [Design]",
+              "RelativeToolTip": "Login\\LoginScreen.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T15:40:56.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ManageUsers.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ManageUsers.cs",
+              "RelativeDocumentMoniker": "User\\ManageUsers.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ManageUsers.cs",
+              "RelativeToolTip": "User\\ManageUsers.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAowHUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:52:34.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "ManagePeople.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ManagePeople.cs",
+              "RelativeDocumentMoniker": "Person\\ManagePeople.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ManagePeople.cs",
+              "RelativeToolTip": "Person\\ManagePeople.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAhwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T15:26:58.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ManagePeople.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ManagePeople.cs",
+              "RelativeDocumentMoniker": "Person\\ManagePeople.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ManagePeople.cs [Design]",
+              "RelativeToolTip": "Person\\ManagePeople.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T15:26:57.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DetainLicense.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Datain And Release\\DetainLicense.cs",
+              "RelativeDocumentMoniker": "Datain And Release\\DetainLicense.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Datain And Release\\DetainLicense.cs",
+              "RelativeToolTip": "Datain And Release\\DetainLicense.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwBwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:45:02.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "clsUtil.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\clsUtil.cs",
+              "RelativeDocumentMoniker": "clsUtil.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\clsUtil.cs",
+              "RelativeToolTip": "clsUtil.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowAYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:44:59.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ChangePassword.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ChangePassword.cs",
+              "RelativeDocumentMoniker": "User\\ChangePassword.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ChangePassword.cs",
+              "RelativeToolTip": "User\\ChangePassword.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAhwEQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:12:39.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ManageUsers.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ManageUsers.cs",
+              "RelativeDocumentMoniker": "User\\ManageUsers.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ManageUsers.cs [Design]",
+              "RelativeToolTip": "User\\ManageUsers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:10:02.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ShowLicenseHistory.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\All Show Details\\ShowLicenseHistory.cs",
+              "RelativeDocumentMoniker": "All Show Details\\ShowLicenseHistory.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\All Show Details\\ShowLicenseHistory.cs",
+              "RelativeToolTip": "All Show Details\\ShowLicenseHistory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAgwBEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:45:06.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ctrlDriverInternationalLicenseInfo.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User Control\\ctrlDriverInternationalLicenseInfo.cs",
+              "RelativeDocumentMoniker": "User Control\\ctrlDriverInternationalLicenseInfo.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User Control\\ctrlDriverInternationalLicenseInfo.cs [Design]",
+              "RelativeToolTip": "User Control\\ctrlDriverInternationalLicenseInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:17:57.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ChangePassword.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ChangePassword.cs",
+              "RelativeDocumentMoniker": "User\\ChangePassword.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\ChangePassword.cs [Design]",
+              "RelativeToolTip": "User\\ChangePassword.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:11:20.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ctrlShowPersonDetails.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ctrlShowPersonDetails.cs",
+              "RelativeDocumentMoniker": "Person\\ctrlShowPersonDetails.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ctrlShowPersonDetails.cs [Design]",
+              "RelativeToolTip": "Person\\ctrlShowPersonDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:18:08.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ctrlShowPersonAndUserInformation.cs",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ctrlShowPersonAndUserInformation.cs",
+              "RelativeDocumentMoniker": "Person\\ctrlShowPersonAndUserInformation.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ctrlShowPersonAndUserInformation.cs",
+              "RelativeToolTip": "Person\\ctrlShowPersonAndUserInformation.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAMwDoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:18:12.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ctrlShowPersonAndUserInformation.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ctrlShowPersonAndUserInformation.cs",
+              "RelativeDocumentMoniker": "Person\\ctrlShowPersonAndUserInformation.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\Person\\ctrlShowPersonAndUserInformation.cs [Design]",
+              "RelativeToolTip": "Person\\ctrlShowPersonAndUserInformation.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:18:09.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "AddUpdateNewUser.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\AddUpdateNewUser.cs",
+              "RelativeDocumentMoniker": "User\\AddUpdateNewUser.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\AddUpdateNewUser.cs [Design]",
+              "RelativeToolTip": "User\\AddUpdateNewUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:10:01.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Update User.cs [Design]",
+              "DocumentMoniker": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\Update User.cs",
+              "RelativeDocumentMoniker": "User\\Update User.cs",
+              "ToolTip": "D:\\GitHub Projects\\DVLD_Version 2\\Full Project Desktop\\User\\Update User.cs [Design]",
+              "RelativeToolTip": "User\\Update User.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-06T14:09:59.802Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

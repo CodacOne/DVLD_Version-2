@@ -88,6 +88,7 @@
             this.txtNewPassword.Size = new System.Drawing.Size(151, 27);
             this.txtNewPassword.TabIndex = 24;
             this.txtNewPassword.TextChanged += new System.EventHandler(this.TxtNewPassword_TextChanged);
+            this.txtNewPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtNewPassword_Validating);
             // 
             // label9
             // 
