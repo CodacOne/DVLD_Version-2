@@ -45,7 +45,7 @@
     <Compile Include="clsDataAccessCountries.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsDAManageApplicationType.cs" />
-    <Compile Include="clsDAManageTestTypes.cs" />
+    <Compile Include="clsDATestTypes.cs" />
     <Compile Include="clsDAPerson.cs" />
     <Compile Include="clsDATestTypesAppointement.cs" />
     <Compile Include="clsDAUsers.cs" />

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,9 +43,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID
@@ -84,8 +87,9 @@
             this.txtFees.Location = new System.Drawing.Point(258, 354);
             this.txtFees.Multiline = true;
             this.txtFees.Name = "txtFees";
-            this.txtFees.Size = new System.Drawing.Size(281, 27);
+            this.txtFees.Size = new System.Drawing.Size(369, 27);
             this.txtFees.TabIndex = 79;
+            this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
             // 
             // txtTitle
             // 
@@ -93,8 +97,9 @@
             this.txtTitle.Location = new System.Drawing.Point(258, 192);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(281, 27);
+            this.txtTitle.Size = new System.Drawing.Size(369, 27);
             this.txtTitle.TabIndex = 78;
+            this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitle_Validating);
             // 
             // label3
             // 
@@ -122,8 +127,9 @@
             this.txtDescription.Location = new System.Drawing.Point(258, 245);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(281, 103);
+            this.txtDescription.Size = new System.Drawing.Size(369, 103);
             this.txtDescription.TabIndex = 87;
+            this.txtDescription.Validating += new System.ComponentModel.CancelEventHandler(this.txtDescription_Validating);
             // 
             // label6
             // 
@@ -158,6 +164,7 @@
             this.btnSaveurcl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSaveurcl.UseMnemonic = false;
             this.btnSaveurcl.UseVisualStyleBackColor = true;
+            this.btnSaveurcl.Click += new System.EventHandler(this.btnSaveurcl_Click);
             // 
             // btnClose
             // 
@@ -194,6 +201,10 @@
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // EditTestType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +254,6 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

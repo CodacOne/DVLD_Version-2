@@ -22,13 +22,13 @@ namespace Full_Project_Desktop
         private void _RefreshTestTypeList()
         {
             dgvTestType.DataSource = clsTestTypes.GetAllTestTypes();
-
+            lblCountRecords.Text = dgvTestType.RowCount.ToString();
         }
 
 
         private void EditTestTypeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int TestTypeID= (int)dgvTestType.CurrentRow.Cells[0].Value;
+            clsTestTypes.enTestType TestTypeID = (clsTestTypes.enTestType)dgvTestType.CurrentRow.Cells[0].Value;
             EditTestType frm = new EditTestType(TestTypeID);
             frm.Show();
         }
@@ -41,7 +41,7 @@ namespace Full_Project_Desktop
         private void ManageTestType_Load(object sender, EventArgs e)
         {
             _RefreshTestTypeList();
-            lblCountRecords.Text = clsTestTypes.GetTestTypesCount().ToString();
+          
         }
 
 

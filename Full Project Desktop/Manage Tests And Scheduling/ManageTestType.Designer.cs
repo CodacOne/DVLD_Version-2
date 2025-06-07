@@ -47,6 +47,7 @@
             // lblCountRecords
             // 
             this.lblCountRecords.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountRecords.ForeColor = System.Drawing.Color.Red;
             this.lblCountRecords.Location = new System.Drawing.Point(153, 545);
             this.lblCountRecords.Name = "lblCountRecords";
             this.lblCountRecords.Size = new System.Drawing.Size(100, 23);
@@ -78,13 +79,13 @@
             this.cmsManageTestTypes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editTestTypeToolStripMenuItem});
             this.cmsManageTestTypes.Name = "cmsManageTestTypes";
-            this.cmsManageTestTypes.Size = new System.Drawing.Size(145, 26);
+            this.cmsManageTestTypes.Size = new System.Drawing.Size(181, 48);
             // 
             // editTestTypeToolStripMenuItem
             // 
             this.editTestTypeToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.edit_32;
             this.editTestTypeToolStripMenuItem.Name = "editTestTypeToolStripMenuItem";
-            this.editTestTypeToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.editTestTypeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editTestTypeToolStripMenuItem.Text = "Edit Test Type";
             this.editTestTypeToolStripMenuItem.Click += new System.EventHandler(this.EditTestTypeToolStripMenuItem_Click);
             // 
@@ -130,6 +131,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTestType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTestType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTestType.ContextMenuStrip = this.cmsManageTestTypes;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

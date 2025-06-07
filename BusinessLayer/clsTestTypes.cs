@@ -45,23 +45,23 @@ namespace BusinessLayer
         {
             //call DataAccess Layer 
 
-            this.ID = (clsTestTypes.enTestType)clsTestTypeData.AddNewTestType(this.Title, this.Description, this.Fees);
+            this.ID = (clsTestTypes.enTestType)clsDATestTypes.AddNewTestType(this.Title, this.Description, this.Fees);
 
             return (this.Title != "");
-        }
-
+        }   
+          
         private bool _UpdateTestType()
         {
             //call DataAccess Layer 
 
-            return clsTestTypeData.UpdateTestType((int)this.ID, this.Title, this.Description, this.Fees);
+            return clsDATestTypes.UpdateTestType((int)this.ID, this.Title, this.Description, this.Fees);
         }
 
         public static clsTestTypes Find(clsTestTypes.enTestType TestTypeID)
         {
             string Title = "", Description = ""; float Fees = 0;
 
-            if (clsTestTypeData.GetTestTypeInfoByID((int)TestTypeID, ref Title, ref Description, ref Fees))
+            if (clsDATestTypes.GetTestTypeInfoByID((int)TestTypeID, ref Title, ref Description, ref Fees))
 
                 return new clsTestTypes(TestTypeID, Title, Description, Fees);
             else
@@ -102,18 +102,12 @@ namespace BusinessLayer
         /////////////////////////////////////////////////////////////////////
         public static DataTable GetAllTestTypes()
         {
-            return clsDAManageTestTypes.GetAllTestTypes();
+            return clsDATestTypes.GetAllTestTypes();
 
         }
 
         /////////////////////////////////////////////////////////////////////
-        public static int GetTestTypesCount()
-        {
-
-            return clsDAManageTestTypes.GetTestTypesCount();
-
-
-        }
+       
 
         /////////////////////////////////////////////////////////////////////
 
