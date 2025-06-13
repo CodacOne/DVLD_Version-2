@@ -27,8 +27,8 @@ namespace Full_Project_Desktop
         private int _LicenseClassID = -1;
         clsDetainLicense _DetainLicense = new clsDetainLicense();
 
-        clsManageApplication _Application = new clsManageApplication();
-        clsIssuedLicense _NewLicense = new clsIssuedLicense();
+        clsApplication _Application = new clsApplication();
+        clsLicense _NewLicense = new clsLicense();
         clsLocalDrivingApplication _LocalDrivingApplication = new clsLocalDrivingApplication();
 
 
@@ -105,7 +105,7 @@ namespace Full_Project_Desktop
                 
                 _Application.ApplicationDate = DateTime.Now;
                 _Application.ApplicationTypeID = 5;    //  Release  نوع الطلب 
-                _Application.ApplicationStatus = 3;    //  Completed حالة الطلب جديد 
+            //    _Application.ApplicationStatus = 3;    //  Completed حالة الطلب جديد 
                 _Application.LastStatusDate = DateTime.Now;
                 _Application.PaidFees =15;           // $5 Renew رسوم التجديد     
                 _Application.CreatedByUserID = clsCurrentUser.CurrentUserID;

@@ -1,21 +1,3 @@
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\bin\Debug\BusinessLayer.dll
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\bin\Debug\BusinessLayer.pdb
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\obj\Debug\BusinessLayer.dll
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\obj\Debug\BusinessLayer.pdb
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\bin\Debug\DataAccess-Layer.dll
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\bin\Debug\DataAccess-Layer.pdb
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Debug\BusinessLayer.dll
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Debug\BusinessLayer.pdb
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Debug\DataAccess-Layer.dll
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\bin\Debug\DataAccess-Layer.pdb
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.dll
-D:\Abu hadhoud\abu hadhoud\Course  19  Full Real Project\Full Project DVLD\BusinessLayer\obj\Debug\BusinessLayer.pdb
 D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\BusinessLayer.dll
 D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\BusinessLayer.pdb
 D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\DataAccess-Layer.dll
@@ -23,5 +5,5 @@ D:\GitHub Projects\DVLD_Version 2\BusinessLayer\bin\Debug\DataAccess-Layer.pdb
 D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.pdb
-D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
-D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+D:\GitHub Projects\DVLD_Version 2\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete

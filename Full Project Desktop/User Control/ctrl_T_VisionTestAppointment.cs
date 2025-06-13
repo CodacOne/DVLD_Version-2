@@ -107,8 +107,8 @@ namespace Full_Project_Desktop
 
         private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ShowDetails frm = new ShowDetails(_PersonID);
-            frm.Show();
+          //  ShowDetails frm = new ShowDetails(_PersonID);
+          //  frm.Show();
         }
 
         private void GroupBox2_Enter(object sender, EventArgs e)

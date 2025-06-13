@@ -69,11 +69,7 @@ namespace BusinessLayer
 
         }
 
-        //public static DataTable GetAllTestTypes()
-        //{
-        //    return clsTestTypeData.GetAllTestTypes();
-
-        //}
+       
 
         public bool Save()
         {

@@ -69,10 +69,7 @@ namespace Full_Project_Desktop
 
         private void ShowPersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int PersonID = clsInternationalLicense.GetPersonIDByDriverID(_DriverID);
-            ShowDetails frm = new ShowDetails(PersonID);
-            frm.Show();
-
+           
         }
 
         private void Label1_Click(object sender, EventArgs e)

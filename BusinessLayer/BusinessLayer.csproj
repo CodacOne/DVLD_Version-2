@@ -48,9 +48,10 @@
     <Compile Include="clsDetainLicense.cs" />
     <Compile Include="clsDrivers.cs" />
     <Compile Include="clsInternationalLicense.cs" />
+    <Compile Include="clsLicenseClass.cs" />
     <Compile Include="clsLocalDrivingApplication.cs" />
-    <Compile Include="clsIssuedLicense.cs" />
-    <Compile Include="clsManageApplication.cs" />
+    <Compile Include="clsLicense.cs" />
+    <Compile Include="clsApplication.cs" />
     <Compile Include="clsTestTypes.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsTests.cs" />

@@ -41,7 +41,7 @@ namespace DataAccess_Layer
          
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
         
                    string query = @"SELECT
            People.PersonID,
@@ -110,7 +110,7 @@ namespace DataAccess_Layer
 
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"select * from Countries ";
 
@@ -158,7 +158,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"select found=1 from People 
                                where NationalNo=@NationalNo";
@@ -200,7 +200,7 @@ namespace DataAccess_Layer
         public static int AddNewPerson(string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth,
             byte Gendor, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Insert into People (NationalNo,FirstName,SecondName,ThirdName,LastName,DateOfBirth,Gendor,Address,Phone,Email,NationalityCountryID,ImagePath) 
            Values (@NationalNo,@FirstName,@SecondName,@ThirdName,@LastName,@DateOfBirth,@Gendor,@Address,@Phone,@Email,@NationalityCountryID,@ImagePath); 
@@ -286,7 +286,7 @@ namespace DataAccess_Layer
 
            
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
             string query = "SELECT * FROM People WHERE PersonID = @PersonID";
             SqlCommand command = new SqlCommand(query, Connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
@@ -342,7 +342,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT * FROM People WHERE NationalNo = @NationalNo";
 
@@ -402,12 +402,7 @@ namespace DataAccess_Layer
         }
 
         ///////////////////////////////////////////////////////////////////////////////
-        /// <summary>
-
-
-
-     
-
+        
         public static bool UpdatePerson(int PersonID, string NationalNo,  string FirstName,
              string SecondName,  string ThirdName,
              string LastName,  DateTime DateOfBirth,  Byte Gendor,  string Address,
@@ -418,7 +413,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Update People 
                   set  NationalNo=@NationalNo,
@@ -504,20 +499,12 @@ namespace DataAccess_Layer
         ////////////////////////////////////////////////////////////////
        
 
-
-
-        /////////////////////////////////////////////////////////////////////////////////////////////
-      
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-        ///
-        ////////////////////////////////////////////////////////////////
-
         public static bool DeleteContactPerson(int PersonID)
         {
             // bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Delete People 
                          where PersonID=@PersonID ";
@@ -573,7 +560,7 @@ namespace DataAccess_Layer
 
         //    bool IsFound = false;
 
-        //    SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+        //    SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
         //    SqlCommand command = null;
 
 
@@ -738,7 +725,7 @@ namespace DataAccess_Layer
         //{
         //    DataTable Dt = new DataTable();
         //    string query = "";
-        //    SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+        //    SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
         //    SqlCommand command;
 
         //    //if (string.IsNullOrWhiteSpace(Filter))
@@ -865,7 +852,7 @@ namespace DataAccess_Layer
                 ELSE NULL
             END = @Filter";
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
             SqlCommand command = new SqlCommand(query, Connection);
 
             // إضافة المعاملات للفلتر
@@ -899,13 +886,6 @@ namespace DataAccess_Layer
 
         ////////////////////////////////////////////////////////////////////////////////////////////////*
        
-
-
-        // **//
-       
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-
         ////////////////////////////////////////////////////////////////////////////////////////////////
         /**/
 

@@ -36,7 +36,7 @@ namespace Full_Project_Desktop
             lblExpirationDate.Text = Convert.ToDateTime(DateTime.Now).AddYears(1).ToString("dd/MM/yyyy");
             lblFees.Text = "50";
             lblCreatedBy.Text = clsCurrentUser.CurrentUserName;
-            lblLocalLicenseID.Text = licenseID.ToString();
+            lblLocalDrivingLicenseApplicationID.Text = licenseID.ToString();
             //*
         }
 
@@ -64,7 +64,7 @@ namespace Full_Project_Desktop
 
                 _InternationalLicense.ApplicationID = AppID;
                 _InternationalLicense.DriverID = DriverID;
-                _InternationalLicense.IssuedUsingLocalLicenseID = _licenseID;
+                _InternationalLicense.IssuedUsingLocalDrivingLicenseApplicationID = _licenseID;
 
                 _InternationalLicense.IssueDate = DateTime.Now;
                 _InternationalLicense.ExpirationDate = DateTime.Now.AddYears(1);

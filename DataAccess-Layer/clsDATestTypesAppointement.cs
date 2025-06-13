@@ -38,7 +38,7 @@ namespace DataAccess_Layer
               
               ";
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
             SqlCommand command = new SqlCommand(query, Connection);
 
             command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
@@ -77,7 +77,7 @@ namespace DataAccess_Layer
 
             int Count = 0;
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT COUNT(*) FROM TestAppointments";
 
@@ -128,7 +128,7 @@ namespace DataAccess_Layer
         VALUES (@TestTypeID, @LocalDrivingLicenseApplicationID, @AppointmentDate, @PaidFees, @CreatedByUserID, @IsLocked, @RetakeTestApplicationID);
         SELECT SCOPE_IDENTITY();";
 
-            using (SqlConnection connection = new SqlConnection(clsConnectionString.connectionString))
+            using (SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
@@ -194,7 +194,7 @@ namespace DataAccess_Layer
                          RetakeTestApplicationID = @RetakeTestApplicationID
                      WHERE TestAppointmentID = @TestAppointmentID";
 
-            using (SqlConnection connection = new SqlConnection(clsConnectionString.connectionString))
+            using (SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
@@ -239,7 +239,7 @@ namespace DataAccess_Layer
         {
             DateTime appointmentDate = DateTime.MinValue;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"SELECT AppointmentDate FROM TestAppointments WHERE TestAppointmentID = @TestAppointmentID";
 
@@ -276,7 +276,7 @@ namespace DataAccess_Layer
         {
            
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
                
              string query = @"
                SELECT  
@@ -325,7 +325,7 @@ namespace DataAccess_Layer
 
         public static bool UpdateAppointmentDate(int TestAppointmentID, DateTime NewAppointmentDate)
         {
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"UPDATE TestAppointments 
                      SET AppointmentDate = @NewAppointmentDate 
@@ -371,7 +371,7 @@ namespace DataAccess_Layer
         VALUES (@TestAppointmentID, @TestResult, @Notes, @CreatedByUserID);
         SELECT SCOPE_IDENTITY();";
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
@@ -411,7 +411,7 @@ namespace DataAccess_Layer
 
         public static bool ChechIfTestAppointmentIsActiveOrNot(int TestAppointmentID)
         {
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"select IsLocked from TestAppointments
                                     where TestAppointmentID=@TestAppointmentID";
@@ -462,7 +462,7 @@ namespace DataAccess_Layer
         {
             byte PassedTestCount = 0;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"SELECT PassedTestCount = count(TestTypeID)
                          FROM Tests INNER JOIN
@@ -510,7 +510,7 @@ namespace DataAccess_Layer
 
         public static bool CancelTheAppointmentAfterPassingOrFailing(int TestAppointmentID)
         {
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
             
             string query = @"UPDATE TestAppointments 
                      SET IsLocked = 1 
@@ -564,7 +564,7 @@ namespace DataAccess_Layer
 
         public static int GetResultForTestIfPassingOrFailing(int TestAppointmentID)
         {
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"select TestResult from Tests
                           where TestAppointmentID=@TestAppointmentID";
@@ -616,7 +616,7 @@ namespace DataAccess_Layer
         {
 
             int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Update  Tests  
                             set TestAppointmentID = @TestAppointmentID,
@@ -659,7 +659,7 @@ namespace DataAccess_Layer
         {
             bool isFound = false;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT * FROM Tests WHERE TestID = @TestID";
 

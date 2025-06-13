@@ -510,4 +510,16 @@ WHERE DL.LicenseID = 25;
 
 						 select * from DetainedLicenses
 
-						 sp_help Licenses;
+						
+
+		SELECT ActiveApplicationID=Applications.ApplicationID  
+                      From
+                      Applications INNER JOIN
+                      LocalDrivingLicenseApplications ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+                      WHERE ApplicantPersonID = ApplicantPersonID 
+                      and ApplicationTypeID=ApplicationTypeID 
+		and LocalDrivingLicenseApplications.LicenseClassID = LicenseClassID
+                      and ApplicationStatus=1
+
+
+					   sp_help Licenses;

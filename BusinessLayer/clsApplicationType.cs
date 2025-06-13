@@ -40,7 +40,7 @@ namespace BusinessLayer
         {
             //call DataAccess Layer 
 
-            this.ID = clsDAManageApplicationType.AddNewApplicationType(this.Title, this.Fees);
+            this.ID = clsDAApplicationType.AddNewApplicationType(this.Title, this.Fees);
 
 
             return (this.ID != -1);
@@ -50,14 +50,14 @@ namespace BusinessLayer
         {
             //call DataAccess Layer 
 
-            return clsDAManageApplicationType.EditApplicationType(this.ID, this.Title, this.Fees);
+            return clsDAApplicationType.EditApplicationType(this.ID, this.Title, this.Fees);
         }
 
         public static clsApplicationType Find(int ID)
         {
             string Title = ""; float Fees = 0;
 
-            if (clsDAManageApplicationType.GetApplicationTypeInfoByID((int)ID, ref Title, ref Fees))
+            if (clsDAApplicationType.GetApplicationTypeInfoByID((int)ID, ref Title, ref Fees))
 
                 return new clsApplicationType(ID, Title, Fees);
             else

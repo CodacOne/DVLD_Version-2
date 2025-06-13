@@ -1,12 +1,11 @@
-﻿using System;
+﻿using DataAccess_Layer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
-
-
-using DataAccess_Layer;
+using static BusinessLayer.clsApplication;
 
 namespace BusinessLayer
 {
@@ -38,14 +37,32 @@ namespace BusinessLayer
             get; set;
         }
 
-      
 
+        public enApplicationStatus ApplicationStatus { set; get; }
         public Byte IsActive
         {
             get; set;
         }
 
-      
+        public string StatusText
+        {
+            get
+            {
+
+                switch (ApplicationStatus)
+                {
+                    case enApplicationStatus.New:
+                        return "New";
+                    case enApplicationStatus.Cancelled:
+                        return "Cancelled";
+                    case enApplicationStatus.Completed:
+                        return "Completed";
+                    default:
+                        return "Unknown";
+                }
+            }
+
+        }
 
         /////////////////////////////////////////////////////////////////////
         public clsUsers()
@@ -165,17 +182,7 @@ namespace BusinessLayer
 
         /////////////////////////////////////////////////////////////////////
 
-        public static bool UpdateUser(int UserID,string Password)
-        {
 
-            return clsDAUsers.UpdateUser(UserID, Password);
-
-
-        }
-
-
-
-        /////////////////////////////////////////////////////////////////////
 
         /////////////////////////////////////////////////////////////////////
         public static DataTable GetAllUsers()
@@ -248,13 +255,7 @@ namespace BusinessLayer
 
 
         /////////////////////////////////////////////////////////////////////
-        ///
-        ///   /////////////////////////////////////////////////////////////////////
-        public static DataTable GetPersonAndUserInformation(int PersonID)
-        {
-            return clsDAUsers.GetPersonAndUserInformation(PersonID);
-
-        }
+       
 
         ///   /////////////////////////////////////////////////////////////////////
         public static int  GetPersonIDByUserID(int UserID)

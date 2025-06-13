@@ -10,7 +10,7 @@ namespace DataAccess_Layer
 {
    static class clsConnectionString
     {
-        public static string connectionString = "Server=.;Database=DVLDAbu_Hadhoud2;User Id=sa;Password=123456;"; //
+        public static string ConnectionString = "Server=.;Database=DVLDAbu_Hadhoud2;User Id=sa;Password=123456;"; //
 
     }
 }

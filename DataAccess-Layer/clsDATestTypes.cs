@@ -17,7 +17,7 @@ namespace DataAccess_Layer
 
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"SELECT * from TestTypes";
 
@@ -60,7 +60,7 @@ namespace DataAccess_Layer
         {
             bool isFound = false;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT * FROM TestTypes WHERE TestTypeID = @TestTypeID";
 
@@ -111,7 +111,7 @@ namespace DataAccess_Layer
         {
             int TestTypeID = -1;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Insert Into TestTypes (TestTypeTitle,TestTypeTitle,TestTypeFees)
                             Values (@TestTypeTitle,@TestTypeDescription,@ApplicationFees)
@@ -156,7 +156,7 @@ namespace DataAccess_Layer
         {
 
             int rowsAffected = 0;
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Update  TestTypes  
                             set TestTypeTitle = @TestTypeTitle,

@@ -103,7 +103,7 @@ namespace Full_Project_Desktop
 
                 tpLoginInfo.Enabled = true;
                 btnSaveurcl.Enabled = true;
-                ctrl2PersonalInfoWithFilter1.ChangeModeToUpdate();
+                ctrlPeronDetailsWithFilterNew1.ChangeModeToUpdate();
 
             }
 
@@ -142,13 +142,13 @@ namespace Full_Project_Desktop
             }
 
 
-            //incase of add new mode.
-            if (clsUsers.IsUserExistOrNot(ctrl2PersonalInfoWithFilter1._PersonID))
-            {
+            ////incase of add new mode.
+            //if (clsUsers.IsUserExistOrNot(ctrl2PersonalInfoWithFilter1._PersonID))
+            //{
 
-                MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                ctrl2PersonalInfoWithFilter1.FilterFocus();
-            }
+            //    MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    ctrl2PersonalInfoWithFilter1.FilterFocus();
+            //}
 
             else
             {
@@ -214,7 +214,7 @@ namespace Full_Project_Desktop
             }
 
             // Load data person to form 
-            ctrl2PersonalInfoWithFilter1._LoadDataToForm(person);
+            ctrlPeronDetailsWithFilterNew1._LoadDataToForm(person);
 
             // Find And Load data User to form 
             clsUsers User = clsUsers.Find(person.PersonID);

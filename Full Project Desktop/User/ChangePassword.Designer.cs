@@ -42,7 +42,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ctrlPersonAndUserInformation1 = new Full_Project_Desktop.ctrlShowPersonAndUserInformation();
+            this.ctrlPersonAndUserDeteils1 = new Full_Project_Desktop.CtrlPersonAndUserDeteils();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,7 +63,7 @@
             // txtCurrentPassword
             // 
             this.txtCurrentPassword.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentPassword.Location = new System.Drawing.Point(318, 569);
+            this.txtCurrentPassword.Location = new System.Drawing.Point(365, 501);
             this.txtCurrentPassword.Multiline = true;
             this.txtCurrentPassword.Name = "txtCurrentPassword";
             this.txtCurrentPassword.Size = new System.Drawing.Size(151, 27);
@@ -73,7 +73,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(59, 569);
+            this.label8.Location = new System.Drawing.Point(106, 501);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(170, 27);
             this.label8.TabIndex = 19;
@@ -82,7 +82,7 @@
             // txtNewPassword
             // 
             this.txtNewPassword.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword.Location = new System.Drawing.Point(318, 622);
+            this.txtNewPassword.Location = new System.Drawing.Point(365, 554);
             this.txtNewPassword.Multiline = true;
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(151, 27);
@@ -93,7 +93,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(59, 622);
+            this.label9.Location = new System.Drawing.Point(106, 554);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 23);
             this.label9.TabIndex = 22;
@@ -102,7 +102,7 @@
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(318, 676);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(365, 608);
             this.txtConfirmPassword.Multiline = true;
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(151, 27);
@@ -113,7 +113,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(59, 676);
+            this.label10.Location = new System.Drawing.Point(106, 608);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(170, 23);
             this.label10.TabIndex = 25;
@@ -128,7 +128,7 @@
             this.btnSave.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Image = global::Full_Project_Desktop.Properties.Resources.Save_32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSave.Location = new System.Drawing.Point(972, 667);
+            this.btnSave.Location = new System.Drawing.Point(933, 581);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 40);
             this.btnSave.TabIndex = 36;
@@ -143,7 +143,7 @@
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::Full_Project_Desktop.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClose.Location = new System.Drawing.Point(837, 667);
+            this.btnClose.Location = new System.Drawing.Point(798, 581);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 40);
             this.btnClose.TabIndex = 35;
@@ -157,7 +157,7 @@
             // 
             this.pictureBox3.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Number_32;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(266, 676);
+            this.pictureBox3.Location = new System.Drawing.Point(313, 608);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 24);
             this.pictureBox3.TabIndex = 26;
@@ -167,7 +167,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Number_32;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(266, 622);
+            this.pictureBox1.Location = new System.Drawing.Point(313, 554);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 24);
             this.pictureBox1.TabIndex = 23;
@@ -177,19 +177,18 @@
             // 
             this.pictureBox2.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Number_32;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(266, 569);
+            this.pictureBox2.Location = new System.Drawing.Point(313, 501);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(30, 24);
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
-            // ctrlPersonAndUserInformation1
+            // ctrlPersonAndUserDeteils1
             // 
-            this.ctrlPersonAndUserInformation1.Location = new System.Drawing.Point(36, 86);
-            this.ctrlPersonAndUserInformation1.Name = "ctrlPersonAndUserInformation1";
-            this.ctrlPersonAndUserInformation1.Size = new System.Drawing.Size(1065, 477);
-            this.ctrlPersonAndUserInformation1.TabIndex = 37;
-            this.ctrlPersonAndUserInformation1.Load += new System.EventHandler(this.CtrlPersonAndUserInformation1_Load);
+            this.ctrlPersonAndUserDeteils1.Location = new System.Drawing.Point(85, 75);
+            this.ctrlPersonAndUserDeteils1.Name = "ctrlPersonAndUserDeteils1";
+            this.ctrlPersonAndUserDeteils1.Size = new System.Drawing.Size(962, 407);
+            this.ctrlPersonAndUserDeteils1.TabIndex = 37;
             // 
             // Change_Password
             // 
@@ -197,8 +196,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1129, 747);
-            this.Controls.Add(this.ctrlPersonAndUserInformation1);
+            this.ClientSize = new System.Drawing.Size(1074, 747);
+            this.Controls.Add(this.ctrlPersonAndUserDeteils1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtConfirmPassword);
@@ -236,7 +235,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private ctrlShowPersonAndUserInformation ctrlPersonAndUserInformation1;
+     
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private CtrlPersonAndUserDeteils ctrlPersonAndUserDeteils1;
     }
 }

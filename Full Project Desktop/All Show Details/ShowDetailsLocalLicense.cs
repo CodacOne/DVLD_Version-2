@@ -70,7 +70,7 @@ namespace Full_Project_Desktop
             // الحالة
             lblIsActive.Text = (Convert.ToBoolean(row["IsActive"])) ? "Yes" : "No";
 
-            if(clsIssuedLicense.IsLicenseDetainedOrNotDetained(LicenseID))
+            if(clsLicense.IsLicenseDetainedOrNotDetained(LicenseID))
             {
                 lblIsDetained.Text = "Yes";
             }

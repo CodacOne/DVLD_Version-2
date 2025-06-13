@@ -35,7 +35,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblExpirationDate = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.lblLocalLicenseID = new System.Windows.Forms.Label();
+            this.lblLocalDrivingLicenseApplicationID = new System.Windows.Forms.Label();
             this.lblInternationalLicenseID = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblApplicationDate = new System.Windows.Forms.Label();
@@ -72,7 +72,7 @@
             this.gbApplicationInfo.Controls.Add(this.pictureBox4);
             this.gbApplicationInfo.Controls.Add(this.lblExpirationDate);
             this.gbApplicationInfo.Controls.Add(this.pictureBox22);
-            this.gbApplicationInfo.Controls.Add(this.lblLocalLicenseID);
+            this.gbApplicationInfo.Controls.Add(this.lblLocalDrivingLicenseApplicationID);
             this.gbApplicationInfo.Controls.Add(this.lblInternationalLicenseID);
             this.gbApplicationInfo.Controls.Add(this.pictureBox7);
             this.gbApplicationInfo.Controls.Add(this.lblApplicationDate);
@@ -160,14 +160,14 @@
             this.pictureBox22.TabIndex = 50;
             this.pictureBox22.TabStop = false;
             // 
-            // lblLocalLicenseID
+            // lblLocalDrivingLicenseApplicationID
             // 
-            this.lblLocalLicenseID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalLicenseID.Location = new System.Drawing.Point(766, 68);
-            this.lblLocalLicenseID.Name = "lblLocalLicenseID";
-            this.lblLocalLicenseID.Size = new System.Drawing.Size(100, 23);
-            this.lblLocalLicenseID.TabIndex = 72;
-            this.lblLocalLicenseID.Text = "??";
+            this.lblLocalDrivingLicenseApplicationID.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDrivingLicenseApplicationID.Location = new System.Drawing.Point(766, 68);
+            this.lblLocalDrivingLicenseApplicationID.Name = "lblLocalDrivingLicenseApplicationID";
+            this.lblLocalDrivingLicenseApplicationID.Size = new System.Drawing.Size(100, 23);
+            this.lblLocalDrivingLicenseApplicationID.TabIndex = 72;
+            this.lblLocalDrivingLicenseApplicationID.Text = "??";
             // 
             // lblInternationalLicenseID
             // 
@@ -362,7 +362,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblExpirationDate;
         private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.Label lblLocalLicenseID;
+        private System.Windows.Forms.Label lblLocalDrivingLicenseApplicationID;
         private System.Windows.Forms.Label lblInternationalLicenseID;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label lblApplicationDate;

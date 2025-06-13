@@ -103,6 +103,13 @@ namespace BusinessLayer
             get; set;
         }
 
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + SecondName + " "+ ThirdName + " "+ LastName;
+            }
+        }
         public clsPerson()
         {
             this.PersonID = -1;

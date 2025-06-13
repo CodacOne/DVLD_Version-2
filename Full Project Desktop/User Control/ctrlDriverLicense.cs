@@ -39,19 +39,19 @@ namespace Full_Project_Desktop
         public void FillDataToForm(int PersonID)
         {
            
-            RefreshDataLocalLicense(PersonID);
+            RefreshDataLocalDrivingLicenseApplication(PersonID);
 
 
         }
         /*/*//*/********************************//*/*/
 
-        public void RefreshDataLocalLicense(int PersonID)
+        public void RefreshDataLocalDrivingLicenseApplication(int PersonID)
         {
             _PersonID = PersonID;
-            dgvLocalLicenseHistory.DataSource = clsDrivers.GetAllLicenseToThePersonForDgv(PersonID);
+            dgvLocalDrivingLicenseApplicationHistory.DataSource = clsDrivers.GetAllLicenseToThePersonForDgv(PersonID);
 
            
-            int realRowCount = dgvLocalLicenseHistory.Rows.Cast<DataGridViewRow>()
+            int realRowCount = dgvLocalDrivingLicenseApplicationHistory.Rows.Cast<DataGridViewRow>()
                 .Count(row => !row.IsNewRow);
 
             lblCountRecords.Text = realRowCount.ToString();
@@ -59,7 +59,7 @@ namespace Full_Project_Desktop
 
         /*/*//*/********************************//*/*/
 
-        private void DgvLocalLicenseHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DgvLocalDrivingLicenseApplicationHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -113,7 +113,7 @@ namespace Full_Project_Desktop
         {
            
 
-            ShowDetailsLicense frm = new ShowDetailsLicense((int)dgvLocalLicenseHistory.CurrentRow.Cells[0].Value);
+            ShowDetailsLicense frm = new ShowDetailsLicense((int)dgvLocalDrivingLicenseApplicationHistory.CurrentRow.Cells[0].Value);
             frm.Show();
         }
 

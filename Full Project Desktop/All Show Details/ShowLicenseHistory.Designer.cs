@@ -30,7 +30,7 @@
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrlShowPersonalInfoWithFilter();
+           
             this.label8 = new System.Windows.Forms.Label();
             this.ctrlDriverLicense1 = new Full_Project_Desktop.ctrlDriverLicense();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -63,13 +63,7 @@
             // 
             // ctrl2PersonalInfoWithFilter1
             // 
-            this.ctrl2PersonalInfoWithFilter1._PersonID = 0;
-            this.ctrl2PersonalInfoWithFilter1.Location = new System.Drawing.Point(187, 53);
-            this.ctrl2PersonalInfoWithFilter1.Name = "ctrl2PersonalInfoWithFilter1";
-            this.ctrl2PersonalInfoWithFilter1.Size = new System.Drawing.Size(946, 488);
-            this.ctrl2PersonalInfoWithFilter1.TabIndex = 67;
-            this.ctrl2PersonalInfoWithFilter1.Load += new System.EventHandler(this.Ctrl2PersonalInfoWithFilter1_Load);
-            // 
+          
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,7 +93,7 @@
             this.Controls.Add(this.ctrlDriverLicense1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.ctrl2PersonalInfoWithFilter1);
+          
             this.Controls.Add(this.pictureBox10);
             this.Name = "ShowLicenseHistory";
             this.Text = "ShowLicenseHistory";
@@ -112,7 +106,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox10;
-        private ctrlShowPersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
+     
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label8;
         private ctrlDriverLicense ctrlDriverLicense1;

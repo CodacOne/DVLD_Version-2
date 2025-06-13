@@ -31,7 +31,7 @@ namespace BusinessLayer
             get; set;
         }
 
-        public int IssuedUsingLocalLicenseID
+        public int IssuedUsingLocalDrivingLicenseApplicationID
         {
             get; set;
         }
@@ -69,7 +69,7 @@ namespace BusinessLayer
             this.InternationalLicenseID = -1;
             this.ApplicationID = -1;
             this.DriverID = -1;
-            this.IssuedUsingLocalLicenseID = -1;
+            this.IssuedUsingLocalDrivingLicenseApplicationID = -1;
             this.IssueDate = DateTime.Now;
             this.ExpirationDate = DateTime.Now;
             this.IsActive = 0;
@@ -85,12 +85,12 @@ namespace BusinessLayer
         /*/////*/////*/////*/////*/////*/////*/////*////
 
         private clsInternationalLicense(int InternationalLicenseID, int ApplicationID, int DriverID,
-            int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, Byte IsActive, int CreatedByUserID)
+            int IssuedUsingLocalDrivingLicenseApplicationID, DateTime IssueDate, DateTime ExpirationDate, Byte IsActive, int CreatedByUserID)
         {
             this.InternationalLicenseID = InternationalLicenseID;
             this.ApplicationID = ApplicationID;
             this.DriverID = DriverID;
-            this.IssuedUsingLocalLicenseID = IssuedUsingLocalLicenseID;
+            this.IssuedUsingLocalDrivingLicenseApplicationID = IssuedUsingLocalDrivingLicenseApplicationID;
             this.IssueDate = IssueDate;
             this.ExpirationDate = ExpirationDate;
             this.IsActive = IsActive;
@@ -108,7 +108,7 @@ namespace BusinessLayer
             this.InternationalLicenseID =clsDAIssuingLicense.AddNewInternationalLicense(
                 this.ApplicationID,
                 this.DriverID,
-                this.IssuedUsingLocalLicenseID,
+                this.IssuedUsingLocalDrivingLicenseApplicationID,
                 this.IssueDate,
                 this.ExpirationDate,
                 this.IsActive,
@@ -136,10 +136,10 @@ namespace BusinessLayer
         ///  /////////////////////////////////////////////////////////////////////
         ///
 
-        public static bool CheckIfLocalLicenseExistsAndAndLicenseClassWorth_3(int LicenseID)
+        public static bool CheckIfLocalDrivingLicenseApplicationExistsAndAndLicenseClassWorth_3(int LicenseID)
         {
 
-            return clsDAIssuingLicense.CheckIfLocalLicenseExistsAndAndLicenseClassWorth_3(LicenseID);
+            return clsDAIssuingLicense.CheckIfLocalDrivingLicenseApplicationExistsAndAndLicenseClassWorth_3(LicenseID);
 
 
         }
@@ -198,10 +198,10 @@ namespace BusinessLayer
         /////////////////////////////////////////////////////////////////////
         /////////////////////////////////////////////////////////////////////
         ///
-        public static DataTable GetAllLocalLicenseInfoForRenewLicense(int LicenseID)
+        public static DataTable GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(int LicenseID)
         {
 
-            return clsDAIssuingLicense.GetAllLocalLicenseInfoForRenewLicense(LicenseID);
+            return clsDAIssuingLicense.GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(LicenseID);
 
         }
 
@@ -227,7 +227,7 @@ namespace BusinessLayer
         public static int GetPersonIDByLocalDrivingID(int LocalDrivingLicenseApplicationID)
         {
             
-            return clsDAManageLocalDrivingApplication.GetPersonIDByLocalDrivingID(LocalDrivingLicenseApplicationID);
+            return clsDAApplication.GetPersonIDByLocalDrivingID(LocalDrivingLicenseApplicationID);
 
 
         }

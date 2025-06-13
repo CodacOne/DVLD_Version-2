@@ -17,7 +17,7 @@ namespace DataAccess_Layer
         ///
         public static int AddNewDriver(int PersonID, int CreatedByUserID, DateTime CreatedDate)
         {
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"DECLARE @DriverID INT;
                     
@@ -83,7 +83,7 @@ namespace DataAccess_Layer
         {
 
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
                SELECT  
@@ -144,7 +144,7 @@ namespace DataAccess_Layer
     int PaidFees, int CreatedByUserID, DateTime IssueDate, DateTime ExpirationDate,
     string Notes, byte IsActive)
         {
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
         INSERT INTO Licenses 
@@ -200,7 +200,7 @@ namespace DataAccess_Layer
         {
             int newLicenseID = -1; // القيمة الافتراضية في حال الفشل
 
-            using (SqlConnection connection = new SqlConnection(clsConnectionString.connectionString))
+            using (SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString))
             {
                 string query = @"
             INSERT INTO Licenses 
@@ -258,7 +258,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
            
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT ApplicationID FROM LocalDrivingLicenseApplications " +
                 "WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
@@ -321,7 +321,7 @@ namespace DataAccess_Layer
             
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"SELECT 
                  Licenses.LicenseID AS [LicID],
@@ -406,7 +406,7 @@ namespace DataAccess_Layer
 
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
                  string query = @"  SELECT Licenses.LicenseID,
           Applications.ApplicationID,
@@ -475,7 +475,7 @@ namespace DataAccess_Layer
 
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"SELECT 
                  Licenses.LicenseID AS [Lic ID],
@@ -544,7 +544,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"select  * from Licenses
                   where  ApplicationID=@ApplicationID
@@ -595,7 +595,7 @@ namespace DataAccess_Layer
         {
 
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
                SELECT  
@@ -682,7 +682,7 @@ namespace DataAccess_Layer
         )
     ";
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
             SqlCommand command = new SqlCommand(query, Connection);
 
             command.Parameters.AddWithValue("@ColumnIndex", ColumnIndex);
@@ -715,21 +715,21 @@ namespace DataAccess_Layer
         /// //////////////////////////*****************************************/////////////////////////
         ///////////////////////////////////////////////////////////////////
         /// 
-        public static int AddNewInternationalLicense(int ApplicationID, int DriverID, int IssuedUsingLocalLicenseID,
+        public static int AddNewInternationalLicense(int ApplicationID, int DriverID, int IssuedUsingLocalDrivingLicenseApplicationID,
             DateTime IssueDate, DateTime ExpirationDate, int IsActive, int CreatedByUserID)
         {
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"INSERT INTO InternationalLicenses 
-                     (ApplicationID, DriverID, IssuedUsingLocalLicenseID, IssueDate, ExpirationDate, IsActive, CreatedByUserID)
-                     VALUES (@ApplicationID, @DriverID, @IssuedUsingLocalLicenseID, @IssueDate, @ExpirationDate, @IsActive, @CreatedByUserID);
+                     (ApplicationID, DriverID, IssuedUsingLocalDrivingLicenseApplicationID, IssueDate, ExpirationDate, IsActive, CreatedByUserID)
+                     VALUES (@ApplicationID, @DriverID, @IssuedUsingLocalDrivingLicenseApplicationID, @IssueDate, @ExpirationDate, @IsActive, @CreatedByUserID);
                      SELECT SCOPE_IDENTITY();";
 
             SqlCommand Command = new SqlCommand(query, Connection);
 
             Command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
             Command.Parameters.AddWithValue("@DriverID", DriverID);
-            Command.Parameters.AddWithValue("@IssuedUsingLocalLicenseID", IssuedUsingLocalLicenseID);
+            Command.Parameters.AddWithValue("@IssuedUsingLocalDrivingLicenseApplicationID", IssuedUsingLocalDrivingLicenseApplicationID);
             Command.Parameters.AddWithValue("@IssueDate", IssueDate);
             Command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
             Command.Parameters.AddWithValue("@IsActive", IsActive);
@@ -767,21 +767,21 @@ namespace DataAccess_Layer
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
         ///
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        public static bool CheckIfLicenseExistsInInternationalCertificates(int IssuedUsingLocalLicenseID)
+        public static bool CheckIfLicenseExistsInInternationalCertificates(int IssuedUsingLocalDrivingLicenseApplicationID)
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
-                SELECT IssuedUsingLocalLicenseID 
+                SELECT IssuedUsingLocalDrivingLicenseApplicationID 
                 FROM InternationalLicenses 
-                WHERE IssuedUsingLocalLicenseID = @IssuedUsingLocalLicenseID
+                WHERE IssuedUsingLocalDrivingLicenseApplicationID = @IssuedUsingLocalDrivingLicenseApplicationID
             ";
 
             SqlCommand command = new SqlCommand(query, Connection);
 
-            command.Parameters.AddWithValue("@IssuedUsingLocalLicenseID", IssuedUsingLocalLicenseID);
+            command.Parameters.AddWithValue("@IssuedUsingLocalDrivingLicenseApplicationID", IssuedUsingLocalDrivingLicenseApplicationID);
 
             try
             {
@@ -818,14 +818,14 @@ namespace DataAccess_Layer
         {
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
         SELECT TOP 1
             InternationalLicenses.InternationalLicenseID,
             InternationalLicenses.DriverID,
             InternationalLicenses.ApplicationID,
-            InternationalLicenses.IssuedUsingLocalLicenseID,
+            InternationalLicenses.IssuedUsingLocalDrivingLicenseApplicationID,
             InternationalLicenses.IssueDate,
             InternationalLicenses.ExpirationDate,
             InternationalLicenses.IsActive,
@@ -844,7 +844,7 @@ namespace DataAccess_Layer
 
         FROM Licenses
         INNER JOIN InternationalLicenses 
-            ON Licenses.LicenseID = InternationalLicenses.IssuedUsingLocalLicenseID
+            ON Licenses.LicenseID = InternationalLicenses.IssuedUsingLocalDrivingLicenseApplicationID
         INNER JOIN Drivers 
             ON Licenses.DriverID = Drivers.DriverID 
             AND InternationalLicenses.DriverID = Drivers.DriverID
@@ -886,14 +886,14 @@ namespace DataAccess_Layer
         {
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
                        
                 select InternationalLicenseID as [Int.LicenseID] ,
                 ApplicationID  as [Application ID] ,
                 DriverID as [Driver ID],
-                 IssuedUsingLocalLicenseID as [L.License ID],
+                 IssuedUsingLocalDrivingLicenseApplicationID as [L.License ID],
                  IssueDate as [Issue Date],
                  ExpirationDate as [Expiration Date],
                  IsActive as [Is Active] 
@@ -933,14 +933,14 @@ namespace DataAccess_Layer
         {
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
                        
                 select InternationalLicenseID as [Int.LicenseID] ,
                 ApplicationID  as [Application ID] ,
                 DriverID as [Driver ID],
-                 IssuedUsingLocalLicenseID as [L.License ID],
+                 IssuedUsingLocalDrivingLicenseApplicationID as [L.License ID],
                  IssueDate as [Issue Date],
                  ExpirationDate as [Expiration Date],
                  IsActive as [Is Active] 
@@ -985,7 +985,7 @@ namespace DataAccess_Layer
         {
 
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
               SELECT LocalDrivingLicenseApplicationID FROM LocalDrivingLicenseApplications
@@ -1040,11 +1040,11 @@ namespace DataAccess_Layer
         ///////////////////////////////////////////////////////////////////////////////////////////////
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        public static bool CheckIfLocalLicenseExistsAndAndLicenseClassWorth_3(int LicenseID)
+        public static bool CheckIfLocalDrivingLicenseApplicationExistsAndAndLicenseClassWorth_3(int LicenseID)
         {
             bool IsFound = false;
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
                 SELECT * 
@@ -1098,7 +1098,7 @@ namespace DataAccess_Layer
         {
 
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
               SELECT PersonID FROM Drivers
@@ -1156,7 +1156,7 @@ namespace DataAccess_Layer
 
         public static bool IsLicenseValid(int LicenseID)
         {
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"SELECT ExpirationDate FROM Licenses WHERE LicenseID = @LicenseID";
 
@@ -1198,11 +1198,11 @@ namespace DataAccess_Layer
 
         /*/***********************************************************
        /// //////////////////////////*****************************************/////////////////////////
-        public static DataTable GetAllLocalLicenseInfoForRenewLicense(int LicenseID)
+        public static DataTable GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(int LicenseID)
         {
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"select * from Licenses
                     where LicenseID=@LicenseID";
@@ -1242,7 +1242,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Update Licenses 
                   set  IsActive=0
@@ -1297,7 +1297,7 @@ namespace DataAccess_Layer
         public static DataTable GetAllInternationalLicenseByPersonID(int PersonID)
         {
             DataTable Dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
                   string Query = @"
           SELECT InternationalLicenses.InternationalLicenseID,
           Applications.ApplicationID,
@@ -1343,7 +1343,7 @@ namespace DataAccess_Layer
             int IsActive = -1;
 
             
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT * FROM Licenses " +
                 "WHERE LicenseID = @LicenseID";
@@ -1399,7 +1399,7 @@ namespace DataAccess_Layer
         {
             bool IsDetained = false;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
              string query = @"
          select * from  DetainedLicenses
@@ -1457,7 +1457,7 @@ namespace DataAccess_Layer
         {
             bool IsActive = false;
            
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
          select IsActive from  Licenses
@@ -1506,6 +1506,53 @@ namespace DataAccess_Layer
             return IsActive;
         }
         //////////////////////////*****************************************/////////////////////////
+        public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
+        {
+            int LicenseID = -1;
+
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
+
+            string query = @"SELECT        Licenses.LicenseID
+                            FROM Licenses INNER JOIN
+                                                     Drivers ON Licenses.DriverID = Drivers.DriverID
+                            WHERE  
+                             
+                             Licenses.LicenseClass = @LicenseClass 
+                              AND Drivers.PersonID = @PersonID
+                              And IsActive=1;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@LicenseClass", LicenseClassID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    LicenseID = insertedID;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return LicenseID;
+        }
+
 
         //////////////////////////*****************************************/////////////////////////
         //////////////////////////*****************************************/////////////////////////

@@ -19,8 +19,8 @@ namespace Full_Project_Desktop
         private int _OldlicenseID = -1;
        
 
-        clsManageApplication _Application = new clsManageApplication();
-        clsIssuedLicense _NewLicense = new clsIssuedLicense();
+        clsApplication _Application = new clsApplication();
+        clsLicense _NewLicense = new clsLicense();
         clsLocalDrivingApplication _LocalDrivingApplication = new clsLocalDrivingApplication();
 
         private int _NewLicenseID = -1;
@@ -84,7 +84,7 @@ namespace Full_Project_Desktop
 
                
                 //  Renew نوع الطلب 
-                _Application.ApplicationStatus = 3;    //  Completed حالة الطلب جديد 
+           //     _Application.ApplicationStatus = 3;    //  Completed حالة الطلب جديد 
                 _Application.LastStatusDate = DateTime.Now;
                   
                 _Application.CreatedByUserID = clsCurrentUser.CurrentUserID;
@@ -200,7 +200,7 @@ namespace Full_Project_Desktop
         private void DisabledOldLicense(int OldlicenseID)
         {
 
-            clsIssuedLicense.DisabledOldLicense(OldlicenseID);
+            clsLicense.DisabledOldLicense(OldlicenseID);
 
         }
         private void ReplacementForLostOrDamagedLicense_Load(object sender, EventArgs e)
@@ -235,7 +235,7 @@ namespace Full_Project_Desktop
             _DtAllInfoToReplacementLicense = DtAllInfoToReplacementLicense;
             _OldlicenseID = licenseID;
 
-            _DtInfoLicenseTable = clsInternationalLicense.GetAllLocalLicenseInfoForRenewLicense(_OldlicenseID);
+            _DtInfoLicenseTable = clsInternationalLicense.GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(_OldlicenseID);
 
             if (_DtInfoLicenseTable.Rows.Count > 0)
             {

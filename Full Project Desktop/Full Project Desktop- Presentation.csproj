@@ -46,9 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="User\CtrlPersonAndUserDeteils.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User\CtrlPersonAndUserDeteils.Designer.cs">
+      <DependentUpon>CtrlPersonAndUserDeteils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicense\AddUpdateNewLocalDrivingAppl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalLicense\AddUpdateNewLocalDrivingAppl.Designer.cs">
+      <DependentUpon>AddUpdateNewLocalDrivingAppl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\CtrlPeronDetailsWithFilterNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Person\CtrlPeronDetailsWithFilterNew.Designer.cs">
+      <DependentUpon>CtrlPeronDetailsWithFilterNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\CtrlPersonDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Person\CtrlPersonDetails.Designer.cs">
+      <DependentUpon>CtrlPersonDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global Classes\clsFormat.cs" />
     <Compile Include="Global Classes\clsGlobal.cs" />
     <Compile Include="Global Classes\clsUtil.cs" />
     <Compile Include="Global Classes\clsValidation.cs" />
+    <Compile Include="Person\ShowPersonDetailsNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\ShowPersonDetailsNew.Designer.cs">
+      <DependentUpon>ShowPersonDetailsNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\AddUpdateNewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,12 +91,6 @@
     </Compile>
     <Compile Include="Person\AddUpdateNewPerson.Designer.cs">
       <DependentUpon>AddUpdateNewPerson.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Person\ctrlShowPersonalInfoWithFilter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Person\ctrlShowPersonalInfoWithFilter.Designer.cs">
-      <DependentUpon>ctrlShowPersonalInfoWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\ctrlApplicationInfo.cs">
       <SubType>UserControl</SubType>
@@ -90,12 +115,6 @@
     </Compile>
     <Compile Include="User Control\ctrlDriverLicenseWithFilter.Designer.cs">
       <DependentUpon>ctrlDriverLicenseWithFilter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Person\ctrlShowPersonAndUserInformation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Person\ctrlShowPersonAndUserInformation.Designer.cs">
-      <DependentUpon>ctrlShowPersonAndUserInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\ctrl_T_VisionTestAppointment.cs">
       <SubType>UserControl</SubType>
@@ -181,17 +200,11 @@
     <Compile Include="User\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage All App\ManageLocalDivingLicenseApplication.cs">
+    <Compile Include="LocalLicense\ManageLocalDivingLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage All App\ManageLocalDivingLicenseApplication.Designer.cs">
+    <Compile Include="LocalLicense\ManageLocalDivingLicenseApplication.Designer.cs">
       <DependentUpon>ManageLocalDivingLicenseApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LocalLicense\LocalLicense.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LocalLicense\LocalLicense.Designer.cs">
-      <DependentUpon>LocalLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -231,12 +244,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Person\ShowDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Person\ShowDetails.Designer.cs">
-      <DependentUpon>ShowDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Person\ShowDetailsForPersonAndUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,12 +292,6 @@
     <Compile Include="Manage Tests And Scheduling\ResultVisionTest.Designer.cs">
       <DependentUpon>ResultVisionTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Update User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\Update User.Designer.cs">
-      <DependentUpon>Update User.cs</DependentUpon>
-    </Compile>
     <Compile Include="Applications\ApplicationsTypes\EditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,12 +303,6 @@
     </Compile>
     <Compile Include="Manage Tests And Scheduling\EditTestType.Designer.cs">
       <DependentUpon>EditTestType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Person\ctrlShowPersonDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Person\ctrlShowPersonDetails.Designer.cs">
-      <DependentUpon>ctrlShowPersonDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage Tests And Scheduling\ResultWrittenTest.cs">
       <SubType>Form</SubType>
@@ -321,14 +316,26 @@
     <Compile Include="Manage Tests And Scheduling\T_WrittenTestAppointment.Designer.cs">
       <DependentUpon>T_WrittenTestAppointment.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User\CtrlPersonAndUserDeteils.resx">
+      <DependentUpon>CtrlPersonAndUserDeteils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicense\AddUpdateNewLocalDrivingAppl.resx">
+      <DependentUpon>AddUpdateNewLocalDrivingAppl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\CtrlPeronDetailsWithFilterNew.resx">
+      <DependentUpon>CtrlPeronDetailsWithFilterNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\CtrlPersonDetails.resx">
+      <DependentUpon>CtrlPersonDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\ShowPersonDetailsNew.resx">
+      <DependentUpon>ShowPersonDetailsNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\AddUpdateNewUser.resx">
       <DependentUpon>AddUpdateNewUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Person\AddUpdateNewPerson.resx">
       <DependentUpon>AddUpdateNewPerson.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Person\ctrlShowPersonalInfoWithFilter.resx">
-      <DependentUpon>ctrlShowPersonalInfoWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\ctrlApplicationInfo.resx">
       <DependentUpon>ctrlApplicationInfo.cs</DependentUpon>
@@ -341,9 +348,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\ctrlDriverLicenseWithFilter.resx">
       <DependentUpon>ctrlDriverLicenseWithFilter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Person\ctrlShowPersonAndUserInformation.resx">
-      <DependentUpon>ctrlShowPersonAndUserInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\ctrl_T_VisionTestAppointment.resx">
       <DependentUpon>ctrl_T_VisionTestAppointment.cs</DependentUpon>
@@ -387,11 +391,8 @@
     <EmbeddedResource Include="User\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage All App\ManageLocalDivingLicenseApplication.resx">
+    <EmbeddedResource Include="LocalLicense\ManageLocalDivingLicenseApplication.resx">
       <DependentUpon>ManageLocalDivingLicenseApplication.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LocalLicense\LocalLicense.resx">
-      <DependentUpon>LocalLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -421,9 +422,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Person\ShowDetails.resx">
-      <DependentUpon>ShowDetails.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Person\ShowDetailsForPersonAndUser.resx">
       <DependentUpon>ShowDetailsForPersonAndUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -448,17 +446,11 @@
     <EmbeddedResource Include="Manage Tests And Scheduling\ResultVisionTest.resx">
       <DependentUpon>ResultVisionTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Update User.resx">
-      <DependentUpon>Update User.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Applications\ApplicationsTypes\EditApplicationType.resx">
       <DependentUpon>EditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Tests And Scheduling\EditTestType.resx">
       <DependentUpon>EditTestType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Person\ctrlShowPersonDetails.resx">
-      <DependentUpon>ctrlShowPersonDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage Tests And Scheduling\ResultWrittenTest.resx">
       <DependentUpon>ResultWrittenTest.cs</DependentUpon>

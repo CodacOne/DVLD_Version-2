@@ -197,7 +197,7 @@ namespace Full_Project_Desktop
         private void ShowDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int PersonID = (int)dgvManagePeople.CurrentRow.Cells[0].Value;
-            ShowDetails frm = new ShowDetails(PersonID);
+            ShowPersonDetailsNew frm = new ShowPersonDetailsNew(PersonID);
             frm.Show();
 
 

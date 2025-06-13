@@ -24,7 +24,7 @@ namespace Full_Project_Desktop
 
         private void ShowDetailsForPersonAndUser_Load(object sender, EventArgs e)
         {
-            ctrlShowPersonAndUserInformation1._LoadUserDataToForm(_UserID);
+            ctrlPersonAndUserDeteils1.LoadUserDataToForm(_UserID);
 
            
         }

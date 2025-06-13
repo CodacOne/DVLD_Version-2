@@ -38,7 +38,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.lblCountRecords = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgvLocalLicenseHistory = new System.Windows.Forms.DataGridView();
+            this.dgvLocalDrivingLicenseApplicationHistory = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvManageInternational = new System.Windows.Forms.DataGridView();
@@ -48,7 +48,7 @@
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicenseHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplicationHistory)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageInternational)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -80,7 +80,7 @@
             // 
             this.tabPage1.Controls.Add(this.lblCountRecords);
             this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.dgvLocalLicenseHistory);
+            this.tabPage1.Controls.Add(this.dgvLocalDrivingLicenseApplicationHistory);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
@@ -110,14 +110,14 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "# Records :";
             // 
-            // dgvLocalLicenseHistory
+            // dgvLocalDrivingLicenseApplicationHistory
             // 
-            this.dgvLocalLicenseHistory.AllowUserToAddRows = false;
-            this.dgvLocalLicenseHistory.AllowUserToDeleteRows = false;
-            this.dgvLocalLicenseHistory.AllowUserToOrderColumns = true;
-            this.dgvLocalLicenseHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvLocalLicenseHistory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvLocalLicenseHistory.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.dgvLocalDrivingLicenseApplicationHistory.AllowUserToAddRows = false;
+            this.dgvLocalDrivingLicenseApplicationHistory.AllowUserToDeleteRows = false;
+            this.dgvLocalDrivingLicenseApplicationHistory.AllowUserToOrderColumns = true;
+            this.dgvLocalDrivingLicenseApplicationHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLocalDrivingLicenseApplicationHistory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvLocalDrivingLicenseApplicationHistory.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,9 +125,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLocalLicenseHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvLocalLicenseHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLocalLicenseHistory.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvLocalDrivingLicenseApplicationHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLocalDrivingLicenseApplicationHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalDrivingLicenseApplicationHistory.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -135,13 +135,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLocalLicenseHistory.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvLocalLicenseHistory.Location = new System.Drawing.Point(19, 35);
-            this.dgvLocalLicenseHistory.Name = "dgvLocalLicenseHistory";
-            this.dgvLocalLicenseHistory.ReadOnly = true;
-            this.dgvLocalLicenseHistory.Size = new System.Drawing.Size(914, 133);
-            this.dgvLocalLicenseHistory.TabIndex = 2;
-            this.dgvLocalLicenseHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLocalLicenseHistory_CellContentClick);
+            this.dgvLocalDrivingLicenseApplicationHistory.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLocalDrivingLicenseApplicationHistory.Location = new System.Drawing.Point(19, 35);
+            this.dgvLocalDrivingLicenseApplicationHistory.Name = "dgvLocalDrivingLicenseApplicationHistory";
+            this.dgvLocalDrivingLicenseApplicationHistory.ReadOnly = true;
+            this.dgvLocalDrivingLicenseApplicationHistory.Size = new System.Drawing.Size(914, 133);
+            this.dgvLocalDrivingLicenseApplicationHistory.TabIndex = 2;
+            this.dgvLocalDrivingLicenseApplicationHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLocalDrivingLicenseApplicationHistory_CellContentClick);
             // 
             // label1
             // 
@@ -235,7 +235,7 @@
             this.groupBox1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicenseHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocalDrivingLicenseApplicationHistory)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvManageInternational)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -250,7 +250,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dgvLocalLicenseHistory;
+        private System.Windows.Forms.DataGridView dgvLocalDrivingLicenseApplicationHistory;
         private System.Windows.Forms.Label lblCountRecords;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;

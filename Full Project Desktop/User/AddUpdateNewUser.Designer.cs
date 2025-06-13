@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
+            this.ctrlPeronDetailsWithFilterNew1 = new Full_Project_Desktop.CtrlPeronDetailsWithFilterNew();
             this.btnNext = new System.Windows.Forms.Button();
-            this.ctrl2PersonalInfoWithFilter1 = new Full_Project_Desktop.ctrlShowPersonalInfoWithFilter();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.cbIsActive = new System.Windows.Forms.CheckBox();
             this.lblUserID = new System.Windows.Forms.Label();
@@ -48,9 +48,9 @@
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnSaveurcl = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
@@ -69,29 +69,38 @@
             this.tabControl1.Location = new System.Drawing.Point(9, 44);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1366, 720);
+            this.tabControl1.Size = new System.Drawing.Size(1187, 649);
             this.tabControl1.TabIndex = 0;
             // 
             // tpPersonalInfo
             // 
             this.tpPersonalInfo.AutoScroll = true;
+            this.tpPersonalInfo.Controls.Add(this.ctrlPeronDetailsWithFilterNew1);
             this.tpPersonalInfo.Controls.Add(this.btnNext);
-            this.tpPersonalInfo.Controls.Add(this.ctrl2PersonalInfoWithFilter1);
-            this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpPersonalInfo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 32);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(1358, 684);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(1179, 613);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
             this.tpPersonalInfo.UseVisualStyleBackColor = true;
+            // 
+            // ctrlPeronDetailsWithFilterNew1
+            // 
+            this.ctrlPeronDetailsWithFilterNew1._PersonID = 0;
+            this.ctrlPeronDetailsWithFilterNew1.Location = new System.Drawing.Point(4, 17);
+            this.ctrlPeronDetailsWithFilterNew1.Margin = new System.Windows.Forms.Padding(4);
+            this.ctrlPeronDetailsWithFilterNew1.Name = "ctrlPeronDetailsWithFilterNew1";
+            this.ctrlPeronDetailsWithFilterNew1.Size = new System.Drawing.Size(1138, 539);
+            this.ctrlPeronDetailsWithFilterNew1.TabIndex = 70;
             // 
             // btnNext
             // 
             this.btnNext.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Image = global::Full_Project_Desktop.Properties.Resources.Next_32;
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.btnNext.Location = new System.Drawing.Point(948, 628);
+            this.btnNext.Location = new System.Drawing.Point(1004, 567);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(124, 40);
             this.btnNext.TabIndex = 69;
@@ -99,16 +108,6 @@
             this.btnNext.UseMnemonic = false;
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.TxtNext_Click);
-            // 
-            // ctrl2PersonalInfoWithFilter1
-            // 
-            this.ctrl2PersonalInfoWithFilter1._PersonID = 0;
-            this.ctrl2PersonalInfoWithFilter1.Location = new System.Drawing.Point(19, 19);
-            this.ctrl2PersonalInfoWithFilter1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.ctrl2PersonalInfoWithFilter1.Name = "ctrl2PersonalInfoWithFilter1";
-            this.ctrl2PersonalInfoWithFilter1.Size = new System.Drawing.Size(1302, 600);
-            this.ctrl2PersonalInfoWithFilter1.TabIndex = 0;
-            this.ctrl2PersonalInfoWithFilter1.Load += new System.EventHandler(this.Ctrl2PersonalInfoWithFilter1_Load);
             // 
             // tpLoginInfo
             // 
@@ -129,7 +128,7 @@
             this.tpLoginInfo.Location = new System.Drawing.Point(4, 32);
             this.tpLoginInfo.Name = "tpLoginInfo";
             this.tpLoginInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLoginInfo.Size = new System.Drawing.Size(1358, 684);
+            this.tpLoginInfo.Size = new System.Drawing.Size(1179, 613);
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "LoginInfo";
             this.tpLoginInfo.UseVisualStyleBackColor = true;
@@ -277,12 +276,16 @@
             this.lblHeader.Text = "Add New User";
             this.lblHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // btnSaveurcl
             // 
             this.btnSaveurcl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveurcl.Image = global::Full_Project_Desktop.Properties.Resources.Save_32;
             this.btnSaveurcl.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSaveurcl.Location = new System.Drawing.Point(1044, 780);
+            this.btnSaveurcl.Location = new System.Drawing.Point(1052, 714);
             this.btnSaveurcl.Name = "btnSaveurcl";
             this.btnSaveurcl.Size = new System.Drawing.Size(97, 40);
             this.btnSaveurcl.TabIndex = 66;
@@ -297,7 +300,7 @@
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::Full_Project_Desktop.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClose.Location = new System.Drawing.Point(909, 780);
+            this.btnClose.Location = new System.Drawing.Point(917, 714);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 40);
             this.btnClose.TabIndex = 65;
@@ -307,14 +310,12 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click_1);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // Add_New_User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1427, 881);
             this.Controls.Add(this.btnSaveurcl);
             this.Controls.Add(this.btnClose);
@@ -357,8 +358,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.CheckBox cbIsActive;
-        private ctrlShowPersonalInfoWithFilter ctrl2PersonalInfoWithFilter1;
+    
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private CtrlPeronDetailsWithFilterNew ctrlPeronDetailsWithFilterNew1;
     }
 }

@@ -66,7 +66,7 @@ namespace Full_Project_Desktop
             _DtAllInfoToDetainLicense = DtAllInfoToDetainLicense;
             _licenseID = licenseID;
 
-            _DtInfoLicenseTable = clsInternationalLicense.GetAllLocalLicenseInfoForRenewLicense(_licenseID);
+            _DtInfoLicenseTable = clsInternationalLicense.GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(_licenseID);
 
             if (_DtInfoLicenseTable.Rows.Count > 0)
             {

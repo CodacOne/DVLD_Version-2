@@ -42,15 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsDADetainAndRelease.cs" />
-    <Compile Include="clsDataAccessCountries.cs" />
+    <Compile Include="clsDACountries.cs" />
+    <Compile Include="clsDALicenseClass.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
-    <Compile Include="clsDAManageApplicationType.cs" />
+    <Compile Include="clsDAApplicationType.cs" />
     <Compile Include="clsDATestTypes.cs" />
     <Compile Include="clsDAPerson.cs" />
     <Compile Include="clsDATestTypesAppointement.cs" />
     <Compile Include="clsDAUsers.cs" />
-    <Compile Include="clsDAManageLocalDrivingApplication.cs" />
+    <Compile Include="clsDAApplication.cs" />
     <Compile Include="clsDAIssuingLicense.cs" />
+    <Compile Include="clsDALocalDrivingApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

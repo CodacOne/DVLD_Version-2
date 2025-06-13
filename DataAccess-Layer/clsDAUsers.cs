@@ -20,7 +20,7 @@ namespace DataAccess_Layer
 
             DataTable Dt = new DataTable();
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"SELECT 
                Users.UserID,
@@ -77,7 +77,7 @@ namespace DataAccess_Layer
         {
             bool isFound = false;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT * FROM Users WHERE UserID = @UserID";
 
@@ -131,7 +131,7 @@ namespace DataAccess_Layer
         {
             bool isFound = false;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT * FROM Users WHERE Username = @Username and Password=@Password;";
 
@@ -190,7 +190,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"select found=1 from Users 
                                where PersonID=@PersonID";
@@ -233,7 +233,7 @@ namespace DataAccess_Layer
         ///
         public static int AddNewUser( int PersonID, string UserName, string Password, Byte IsActive)
         {
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Insert into Users (PersonID,UserName,Password,IsActive) 
            Values (@PersonID,@UserName,@Password,@IsActive); 
@@ -359,7 +359,7 @@ namespace DataAccess_Layer
 
             }
 
-            using (SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString))
+            using (SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString))
             {
                 command.Connection = Connection;
                 command.CommandText = query;
@@ -395,7 +395,7 @@ namespace DataAccess_Layer
            
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT * FROM Users WHERE PersonID = @PersonID";
 
@@ -452,7 +452,7 @@ namespace DataAccess_Layer
         {
             int PersonID = -1;
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = "SELECT PersonID  FROM Users WHERE UserID = @UserID";
 
@@ -511,7 +511,7 @@ namespace DataAccess_Layer
             bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Update Users 
                   set  UserName=@UserName,
@@ -573,7 +573,7 @@ namespace DataAccess_Layer
             // bool IsFound = false;
 
 
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"Delete Users 
                          where UserID=@UserID ";
@@ -619,181 +619,6 @@ namespace DataAccess_Layer
 
             return false;
         }
-
-
-        ////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////
-        /// <summary>
-        /// 
-        public static DataTable GetPersonAndUserInformation(int PersonID)
-        {
-
-            DataTable Dt = new DataTable();
-
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
-
-                   string query = @"
-                 SELECT        U.*,
-                 P.PersonID , P.NationalNo, P.FirstName, P.SecondName, P.ThirdName, P.LastName, P.DateOfBirth, 
-                 P.Gendor, P.Address, P.Phone, P.Email, 
-                 P.ImagePath, C.CountryName
-
-        FROM      People P INNER JOIN
-                  Users U 
-                  ON P.PersonID = U.PersonID INNER JOIN
-                  Countries C 
-                  ON P.NationalityCountryID = C.CountryID
-
-                     where  P.PersonID = @PersonID  ";
-
-
-            SqlCommand command = new SqlCommand(query, Connection);
-
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-
-            try
-            {
-                Connection.Open();
-                SqlDataReader Reader = command.ExecuteReader();
-
-                if (Reader.HasRows)
-                {
-                    Dt.Load(Reader);
-
-                }
-
-                Reader.Close();
-            }
-
-
-            catch (Exception ex)
-            {
-
-
-                throw new Exception("Error : " + ex.Message);
-            }
-
-            finally
-            {
-                Connection.Close();
-            }
-
-            return Dt;
-        }
-
-
-        ////////////////////////////////////////////////////////////////
-
-        public static bool UpdateUser(int UserID,  string Password )
-
-        {
-            bool IsFound = false;
-
-
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
-
-            string query = @"Update Users 
-                  set  Password=@Password
-                      
-                       where UserID=@UserID ";
-
-
-            SqlCommand command = new SqlCommand(query, Connection);
-
-            command.Parameters.AddWithValue("@UserID", UserID);
-            command.Parameters.AddWithValue("@Password", Password);
-
-            try
-            {
-                Connection.Open();
-                int RowAffected = command.ExecuteNonQuery();
-
-                if (RowAffected > 0)
-                {
-                    IsFound = true;
-
-                }
-
-                else
-                {
-                    return false;
-
-                }
-
-
-            }
-
-
-            catch (Exception ex)
-            {
-
-                IsFound = false;
-                throw new Exception("Error : " + ex.Message);
-            }
-
-            finally
-            {
-                Connection.Close();
-            }
-
-            return IsFound;
-        }
-
-        /////////////////////////////////////////////////////////////////////////////////////////////
-        public static int LogIn(string UserName , string Password)
-        {
-            int UserID = -1;
-           
-            SqlConnection Connection = new SqlConnection(clsConnectionString.connectionString);
-
-            string query = @"
-                   select * from Users
-                   where UserName =@UserName and Password =@Password and IsActive=1 ";
-
-            SqlCommand command = new SqlCommand(query, Connection);
-
-            command.Parameters.AddWithValue("@UserName", UserName);
-            command.Parameters.AddWithValue("@Password", Password);
-
-            try
-            {
-                Connection.Open();
-
-                object Result = command.ExecuteScalar();
-
-                UserID = Convert.ToInt32(Result);
-
-                return UserID;
-
-            }
-
-
-            catch (Exception ex)
-            {
-                UserID = -1;
-
-
-                throw new Exception("Error : " + ex.Message);
-            }
-
-            finally
-            {
-                Connection.Close();
-            }
-
-            return UserID;
-        }
-
-        ///////////////////////////////////////////////////////////////////////////////
-        ///
-
-
-        ////////////////////////////////////////////////////////////////////////////////////////////////*
-        ///
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-        ///
-
-
 
 
 

@@ -54,7 +54,7 @@ namespace BusinessLayer
             string CountryName = "";
 
 
-            if (clsDataAccessCountries.GetCountryInfoByID(CountryID, ref CountryName))
+            if (clsDACountries.GetCountryInfoByID(CountryID, ref CountryName))
             {
 
                 return new clsCountries(CountryID, CountryName);
@@ -78,7 +78,7 @@ namespace BusinessLayer
             int CountryID = -1;
 
             
-            if (clsDataAccessCountries.GetCountryInfoByName(ref CountryID, CountryName))
+            if (clsDACountries.GetCountryInfoByName(ref CountryID, CountryName))
             {
 
                 return new clsCountries(CountryID, CountryName);

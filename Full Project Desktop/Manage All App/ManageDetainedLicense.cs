@@ -126,8 +126,8 @@ namespace Full_Project_Desktop
 
         private void ShowDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowDetails frm = new ShowDetails((int)dgvManageDetain.CurrentRow.Cells[6].Value);
-            frm.Show();
+         //   ShowDetails frm = new ShowDetails((int)dgvManageDetain.CurrentRow.Cells[6].Value);
+          //  frm.Show();
         }
     }
 }

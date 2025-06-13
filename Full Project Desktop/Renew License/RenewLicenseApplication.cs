@@ -17,8 +17,8 @@ namespace Full_Project_Desktop
 {
     public partial class RenewLicenseApplication : Form
     {
-        clsManageApplication _Application = new clsManageApplication();
-        clsIssuedLicense _NewLicense = new clsIssuedLicense();
+        clsApplication _Application = new clsApplication();
+        clsLicense _NewLicense = new clsLicense();
         clsLocalDrivingApplication _LocalDrivingApplication = new clsLocalDrivingApplication();
 
         private int  _NewLicenseID = -1;
@@ -62,7 +62,7 @@ namespace Full_Project_Desktop
 
                 _Application.ApplicationDate = DateTime.Now;
                 _Application.ApplicationTypeID = 2;    //  Renew نوع الطلب 
-                _Application.ApplicationStatus = 3;    //  Completed حالة الطلب جديد 
+             //   _Application.ApplicationStatus = 3;    //  Completed حالة الطلب جديد 
                 _Application.LastStatusDate= DateTime.Now;
                 _Application.PaidFees = 5;           // $5 Renew رسوم التجديد     
                 _Application.CreatedByUserID = clsCurrentUser.CurrentUserID;
@@ -161,7 +161,7 @@ namespace Full_Project_Desktop
         private void DisabledOldLicense(int OldlicenseID)
         {
 
-            clsIssuedLicense.DisabledOldLicense(OldlicenseID);
+            clsLicense.DisabledOldLicense(OldlicenseID);
 
         }
 
@@ -230,7 +230,7 @@ namespace Full_Project_Desktop
                 _DtAllInfoToRenewLicense = DtAllInfoToRenewLicense;
 
              _OldlicenseID = licenseID;
-            _DtInfoLicenseTable = clsInternationalLicense.GetAllLocalLicenseInfoForRenewLicense(_OldlicenseID);
+            _DtInfoLicenseTable = clsInternationalLicense.GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(_OldlicenseID);
            
             if (_DtInfoLicenseTable.Rows.Count > 0)
             {

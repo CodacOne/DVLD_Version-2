@@ -63,7 +63,7 @@ namespace Full_Project_Desktop
 
         private void CToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            LocalLicense frm = new LocalLicense();
+            AddUpdateNewLocalDrivingAppl frm = new AddUpdateNewLocalDrivingAppl();
             frm.Show();
         }
 
@@ -146,6 +146,11 @@ namespace Full_Project_Desktop
             int UserID = clsGlobal.CurrentUser.UserID;
             Change_Password frm = new Change_Password(UserID);
             frm.ShowDialog();
+
+        }
+
+        private void AccountSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

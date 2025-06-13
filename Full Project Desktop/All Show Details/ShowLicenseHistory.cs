@@ -38,7 +38,7 @@ namespace Full_Project_Desktop
             if (_Person != null)
             {
 
-                ctrl2PersonalInfoWithFilter1._LoadDataToForm(_Person);
+             //   ctrl2PersonalInfoWithFilter1._LoadDataToForm(_Person);
 
             }
 
@@ -60,7 +60,7 @@ namespace Full_Project_Desktop
             if (_Person != null)
             {
 
-                ctrl2PersonalInfoWithFilter1._LoadDataToForm(_Person);
+            //    ctrl2PersonalInfoWithFilter1._LoadDataToForm(_Person);
 
             }
 

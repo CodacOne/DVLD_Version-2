@@ -121,7 +121,7 @@ namespace Full_Project_Desktop
                 // الحالة
                 lblIsActive.Text = (Convert.ToBoolean(row["IsActive"])) ? "Yes" : "No";
 
-                if (clsIssuedLicense.IsLicenseDetainedOrNotDetained(LicenseID))
+                if (clsLicense.IsLicenseDetainedOrNotDetained(LicenseID))
                 {
                     lblIsDetained.Text = "Yes";
                 }
@@ -246,8 +246,8 @@ namespace Full_Project_Desktop
         {
             // مثال: التأكد من أن الرخصة نشطة وغير محجوزة
 
-            bool isLicenseDetained = clsIssuedLicense.IsLicenseDetainedOrNotDetained(licenseID);
-            bool isLicenseActive = clsIssuedLicense.IsLicenseDisactivatedOrNotDisactivated(licenseID);
+            bool isLicenseDetained = clsLicense.IsLicenseDetainedOrNotDetained(licenseID);
+            bool isLicenseActive = clsLicense.IsLicenseDisactivatedOrNotDisactivated(licenseID);
 
             // مثال: التأكد من أن الرخصة محجوزة  isLicenseDetained = true  معناه ان الرخصة محجوزة
 
@@ -277,7 +277,7 @@ namespace Full_Project_Desktop
 
         private void ValidateOfFormReleaseLicense(int licenseID)
         {
-            bool isLicenseDetained = clsIssuedLicense.IsLicenseDetainedOrNotDetained(licenseID);
+            bool isLicenseDetained = clsLicense.IsLicenseDetainedOrNotDetained(licenseID);
             // مثال: التأكد من أن الرخصة محجوزة  isLicenseDetained = true  معناه ان الرخصة محجوزة
             if (!isLicenseDetained)
             {
@@ -306,7 +306,7 @@ namespace Full_Project_Desktop
         {
            
                 // مثال: التحقق من ان الرخصة فعالة ام لا 
-        if (clsIssuedLicense.ValidationIfLicenseActiveOrNotActive(LicenseID)!=1)
+        if (clsLicense.ValidationIfLicenseActiveOrNotActive(LicenseID)!=1)
             {
                 MessageBox.Show("The selected license is currently inactive. Kindly choose an appropriate and active license.", "Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 OnReplacementDisabled(true); // أو أي منطق تريده
@@ -338,7 +338,7 @@ namespace Full_Project_Desktop
             private void ValidateOfFormInternationalLicense(int LicenseID)
         {
             // التحقق من إذا كانت الرخصة من الفئة الثالثة
-            if (!clsInternationalLicense.CheckIfLocalLicenseExistsAndAndLicenseClassWorth_3(LicenseID))
+            if (!clsInternationalLicense.CheckIfLocalDrivingLicenseApplicationExistsAndAndLicenseClassWorth_3(LicenseID))
             {
                 MessageBox.Show("License does exist but there is no ordinary license!", "Validation Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 OnSaveDisabled();

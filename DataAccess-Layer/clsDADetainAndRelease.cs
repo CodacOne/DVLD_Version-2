@@ -19,7 +19,7 @@ namespace DataAccess_Layer
                        int CreatedByUserID, bool IsReleased, DateTime? ReleaseDate,
                        int? ReleasedByUserID, int? ReleaseApplicationID)
         {
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"INSERT INTO DetainedLicenses 
             (LicenseID, DetainDate, FineFees, CreatedByUserID, 
@@ -93,7 +93,7 @@ namespace DataAccess_Layer
         public static DataTable GetAllDetainInfoByLicenseID(int LicenseID)
         {
             DataTable Dt = new DataTable();
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
             string Query = @"
           SELECT *  from DetainedLicenses
                wHERE LicenseID=@LicenseID ";
@@ -132,7 +132,7 @@ namespace DataAccess_Layer
         {
             bool isUpdated = false;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
         UPDATE DetainedLicenses
@@ -190,7 +190,7 @@ namespace DataAccess_Layer
         {
             bool isUpdated = false;
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
     UPDATE DetainedLicenses
@@ -235,7 +235,7 @@ namespace DataAccess_Layer
         {
             DataTable Dt = new DataTable();
 
-            SqlConnection connection = new SqlConnection(clsConnectionString.connectionString);
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
 
             string query = @"
        SELECT 

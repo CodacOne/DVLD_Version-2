@@ -53,10 +53,10 @@ namespace Full_Project_Desktop
                 
             }
 
-            // Load data to form 
-            ctrlPersonAndUserInformation1._LoadUserDataToForm(_UserID);
+            // Load data to form
+            ctrlPersonAndUserDeteils1.LoadUserDataToForm(_UserID);
 
-           
+
         }
 
         private void CtrlPersonAndUserInformation1_Load(object sender, EventArgs e)
