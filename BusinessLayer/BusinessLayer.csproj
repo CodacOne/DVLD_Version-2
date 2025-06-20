@@ -41,7 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsAddAppointementVision.cs" />
+    <Compile Include="clsTestAppointement.cs" />
     <Compile Include="clsApplicationType.cs" />
     <Compile Include="clsCountries.cs" />
     <Compile Include="clsCurrentUser.cs" />

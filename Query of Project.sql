@@ -342,6 +342,9 @@ INNER JOIN Licenses ON Drivers.DriverID = Licenses.DriverID
 INNER JOIN People ON Drivers.PersonID = People.PersonID
 
 
+
+
+
 		------------------------****************************----------------------------------
 		
  SELECT LocalDrivingLicenseApplicationID FROM LocalDrivingLicenseApplications
@@ -363,19 +366,6 @@ WHERE ApplicationID =1122;
 SELECT * FROM Applications WHERE ApplicationID > 115;
 
 
-select * from ApplicationTypes;
-
-
-SELECT * FROM TestAppointments
-
-SELECT * FROM Applications
-
-SELECT * FROM LocalDrivingLicenseApplications
-
-
-select * from LocalDrivingLicenseApplications;
-
-select * from TestTypes;
 
 select TestTypeFees from TestTypes
 where TestTypeID=2;
@@ -383,12 +373,7 @@ select * from LicenseClasses;
 
 DELETE FROM Licenses
 WHERE LicenseID=26;
-select * from Drivers;
 
-select * from DetainedLicenses
-
-select * from Licenses;
-select * from InternationalLicenses;
 
 select InternationalLicenseID as [Int.LicenseID] ,
 ApplicationID  as [Application ID] ,
@@ -400,12 +385,116 @@ DriverID as [Driver ID],
  from InternationalLicenses
 
 
+ 
+select * from ApplicationTypes;
+
+SELECT * FROM Applications
+
+
+
+
+select * from LocalDrivingLicenseApplications;
+
+select * from TestTypes;
+
 select  * from People;
 
 select * from TestTypes;
 
-select * from Tests;
+
 select * from TestAppointments;
+
+
+select * from DetainedLicenses
+select * from Drivers;
+select * from Licenses;
+select * from InternationalLicenses;
+
+select * from Tests;
+SELECT * FROM TestAppointments
+SELECT * FROM LocalDrivingLicenseApplications
+------------------------****************************----------------------------------
+SELECT  top 1 Tests.TestID, 
+                Tests.TestAppointmentID, Tests.TestResult, 
+			    Tests.Notes, Tests.CreatedByUserID, Applications.ApplicantPersonID
+                FROM            LocalDrivingLicenseApplications INNER JOIN
+                                         Tests INNER JOIN
+                                         TestAppointments ON Tests.TestAppointmentID = TestAppointments.TestAppointmentID ON LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID INNER JOIN
+                                         Applications ON LocalDrivingLicenseApplications.ApplicationID = Applications.ApplicationID
+                WHERE        (Applications.ApplicantPersonID =1) 
+                        AND (LocalDrivingLicenseApplications.LicenseClassID = LicenseClassID)
+                        AND ( TestAppointments.TestTypeID=TestTypeID)
+                ORDER BY Tests.TestAppointmentID DESC
+
+				------------------------****************************----------------------------------
+
+SELECT TestAppointmentID, AppointmentDate,PaidFees, IsLocked
+                        FROM TestAppointments
+                        WHERE  
+                        (TestTypeID = TestTypeID) 
+                        AND (LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID)
+                        order by TestAppointmentID desc;
+
+
+						------------------------****************************----------------------------------
+  SELECT top 1 TestResult
+                    FROM LocalDrivingLicenseApplications 
+					INNER JOIN
+                         TestAppointments ON
+						 LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID 
+				    INNER JOIN
+                         Tests ON
+						 TestAppointments.TestAppointmentID = Tests.TestAppointmentID
+                    WHERE
+                    (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = 41)
+                    AND(TestAppointments.TestTypeID = TestTypeID)
+                    ORDER BY TestAppointments.TestAppointmentID desc
+
+------------------------****************************----------------------------------
+  SELECT        Licenses.LicenseID
+                            FROM Licenses INNER JOIN
+                                                     Drivers ON Licenses.DriverID = Drivers.DriverID
+                            WHERE  
+                             
+                             Licenses.LicenseClass = LicenseClass 
+                              AND Drivers.PersonID = PersonID
+                              And IsActive=1
+ ------------------------****************************----------------------------------
+
+ SELECT *
+                              FROM LocalDrivingLicenseApplications_View
+                              order by ApplicationDate Desc
+			
+SELECT        dbo.LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID, dbo.LicenseClasses.ClassName, dbo.People.NationalNo, dbo.People.FirstName + ' ' + dbo.People.SecondName + ' ' + ISNULL(dbo.People.ThirdName, '') 
+                         + ' ' + dbo.People.LastName AS FullName, dbo.Applications.ApplicationDate,
+                             (SELECT        COUNT(dbo.TestAppointments.TestTypeID) AS PassedTestCount
+                                FROM            dbo.Tests INNER JOIN
+                                                         dbo.TestAppointments ON dbo.Tests.TestAppointmentID = dbo.TestAppointments.TestAppointmentID
+                                WHERE        (dbo.TestAppointments.LocalDrivingLicenseApplicationID = dbo.LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID) AND (dbo.Tests.TestResult = 1)) AS PassedTestCount, 
+                         CASE
+						 WHEN Applications.ApplicationStatus = 1 THEN 'New'
+						 WHEN Applications.ApplicationStatus = 2 THEN 'Cancelled' 
+						 WHEN Applications.ApplicationStatus = 3 THEN 'Completed' 
+						 END AS Status
+FROM            dbo.LocalDrivingLicenseApplications INNER JOIN
+                         dbo.Applications ON dbo.LocalDrivingLicenseApplications.ApplicationID = dbo.Applications.ApplicationID INNER JOIN
+                         dbo.LicenseClasses ON dbo.LocalDrivingLicenseApplications.LicenseClassID = dbo.LicenseClasses.LicenseClassID INNER JOIN
+                         dbo.People ON dbo.Applications.ApplicantPersonID = dbo.People.PersonID
+
+
+
+------------------------****************************----------------------------------
+
+						  SELECT top 1 Found=1
+                            FROM LocalDrivingLicenseApplications 
+							INNER JOIN
+                                 TestAppointments ON LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = TestAppointments.LocalDrivingLicenseApplicationID 
+						    INNER JOIN
+                                 Tests ON TestAppointments.TestAppointmentID = Tests.TestAppointmentID
+                            WHERE
+                            (LocalDrivingLicenseApplications.LocalDrivingLicenseApplicationID = 41) 
+                            AND(TestAppointments.TestTypeID = TestTypeID)
+                            ORDER BY TestAppointments.TestAppointmentID desc
 
 ------------------------****************************----------------------------------
 SELECT 
@@ -523,3 +612,6 @@ WHERE DL.LicenseID = 25;
 
 
 					   sp_help Licenses;
+
+
+					 

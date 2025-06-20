@@ -96,7 +96,7 @@ namespace Full_Project_Desktop
                 MessageBox.Show("Please Select a Person", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ctrlPeronDetailsWithFilterNew1.FilterFocus();
             }
-            tcApplicationInfo.SelectedIndex = 1;
+           
         }
 
         //**/*//*/*/*/**********************////////////////////////////

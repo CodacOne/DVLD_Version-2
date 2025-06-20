@@ -21,7 +21,15 @@ namespace BusinessLayer
             ReplaceDamagedDrivingLicense = 4, ReleaseDetainedDrivingLicsense = 5, NewInternationalLicense = 6, RetakeTest = 7
         };
 
-      
+
+        public string ApplicantFullName
+        {
+            get
+            {
+                return clsPerson.FindByPersonID(ApplicantPersonID).FullName;
+            }
+        }
+
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 };
 
         public static int _ApplicationID;
@@ -71,7 +79,29 @@ namespace BusinessLayer
         {
             get; set;
         }
+
       
+
+        public string StatusText
+        {
+            get
+            {
+
+                switch (ApplicationStatus)
+                {
+                    case enApplicationStatus.New:
+                        return "New";
+                    case enApplicationStatus.Cancelled:
+                        return "Cancelled";
+                    case enApplicationStatus.Completed:
+                        return "Completed";
+                    default:
+                        return "Unknown";
+                }
+            }
+
+        }
+
         public clsApplication()
         {
             this.ApplicationID = -1;
@@ -98,13 +128,12 @@ namespace BusinessLayer
             this.ApplicantPersonID = ApplicantPersonID;
             this.ApplicationDate = ApplicationDate;
             this.ApplicationTypeID = ApplicationTypeID;
+            this.ApplicationTypeInfo = clsApplicationType.Find(ApplicationTypeID);
             this.ApplicationStatus = ApplicationStatus;
-            this.ApplicationTypeInfo = clsApplicationType.Find(ApplicationID);
-            this.CreateByUserInfo = clsUsers.FindByUserID(CreatedByUserID);
-            this.PersonInfo = clsPerson.FindByPersonID(ApplicantPersonID);
+            this.LastStatusDate = LastStatusDate;
             this.PaidFees = PaidFees;
             this.CreatedByUserID = CreatedByUserID;
-            this.LastStatusDate = LastStatusDate;
+            this.CreateByUserInfo = clsUsers.FindByUserID(CreatedByUserID);
             Mode = enMode.Update;
         }
 

@@ -31,6 +31,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.tcApplicationInfo = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
+            this.ctrlPeronDetailsWithFilterNew1 = new Full_Project_Desktop.CtrlPeronDetailsWithFilterNew();
             this.btnApplicationInfoNext = new System.Windows.Forms.Button();
             this.tpApplicationInfo = new System.Windows.Forms.TabPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -50,7 +51,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.ctrlPeronDetailsWithFilterNew1 = new Full_Project_Desktop.CtrlPeronDetailsWithFilterNew();
             this.tcApplicationInfo.SuspendLayout();
             this.tpPersonalInfo.SuspendLayout();
             this.tpApplicationInfo.SuspendLayout();
@@ -94,6 +94,14 @@
             this.tpPersonalInfo.Text = "Personal Info";
             this.tpPersonalInfo.UseVisualStyleBackColor = true;
             this.tpPersonalInfo.Click += new System.EventHandler(this.TpPersonalInfo_Click);
+            // 
+            // ctrlPeronDetailsWithFilterNew1
+            // 
+            this.ctrlPeronDetailsWithFilterNew1._PersonID = 0;
+            this.ctrlPeronDetailsWithFilterNew1.Location = new System.Drawing.Point(17, 15);
+            this.ctrlPeronDetailsWithFilterNew1.Name = "ctrlPeronDetailsWithFilterNew1";
+            this.ctrlPeronDetailsWithFilterNew1.Size = new System.Drawing.Size(984, 444);
+            this.ctrlPeronDetailsWithFilterNew1.TabIndex = 120;
             // 
             // btnApplicationInfoNext
             // 
@@ -177,6 +185,7 @@
             // 
             this.lblFees.AutoSize = true;
             this.lblFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFees.ForeColor = System.Drawing.Color.Red;
             this.lblFees.Location = new System.Drawing.Point(267, 174);
             this.lblFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFees.Name = "lblFees";
@@ -198,10 +207,12 @@
             // cbLicenseClass
             // 
             this.cbLicenseClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLicenseClass.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLicenseClass.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.cbLicenseClass.FormattingEnabled = true;
             this.cbLicenseClass.Location = new System.Drawing.Point(267, 135);
             this.cbLicenseClass.Name = "cbLicenseClass";
-            this.cbLicenseClass.Size = new System.Drawing.Size(270, 21);
+            this.cbLicenseClass.Size = new System.Drawing.Size(270, 24);
             this.cbLicenseClass.TabIndex = 134;
             // 
             // label15
@@ -241,6 +252,7 @@
             // 
             this.lblLocalDrivingLicebseApplicationID.AutoSize = true;
             this.lblLocalDrivingLicebseApplicationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDrivingLicebseApplicationID.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lblLocalDrivingLicebseApplicationID.Location = new System.Drawing.Point(267, 58);
             this.lblLocalDrivingLicebseApplicationID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocalDrivingLicebseApplicationID.Name = "lblLocalDrivingLicebseApplicationID";
@@ -317,14 +329,6 @@
             this.btnClose.UseMnemonic = false;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
-            // ctrlPeronDetailsWithFilterNew1
-            // 
-            this.ctrlPeronDetailsWithFilterNew1._PersonID = 0;
-            this.ctrlPeronDetailsWithFilterNew1.Location = new System.Drawing.Point(17, 15);
-            this.ctrlPeronDetailsWithFilterNew1.Name = "ctrlPeronDetailsWithFilterNew1";
-            this.ctrlPeronDetailsWithFilterNew1.Size = new System.Drawing.Size(984, 444);
-            this.ctrlPeronDetailsWithFilterNew1.TabIndex = 120;
             // 
             // AddUpdateNewLocalDrivingAppl
             // 

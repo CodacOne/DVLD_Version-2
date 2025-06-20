@@ -46,9 +46,10 @@
     <Compile Include="clsDALicenseClass.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsDAApplicationType.cs" />
+    <Compile Include="clsDATests.cs" />
     <Compile Include="clsDATestTypes.cs" />
     <Compile Include="clsDAPerson.cs" />
-    <Compile Include="clsDATestTypesAppointement.cs" />
+    <Compile Include="clsDATestAppointement.cs" />
     <Compile Include="clsDAUsers.cs" />
     <Compile Include="clsDAApplication.cs" />
     <Compile Include="clsDAIssuingLicense.cs" />

@@ -44,11 +44,11 @@
             this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemForAllTests = new System.Windows.Forms.ToolStripMenuItem();
-            this.schduleVisionTestToolStripMenuItemVisionTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.schduleVisionTestChoice = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleWrittenTestChoice = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleStreetTestChoice = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.issueDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.issueDrivingLicenseForFirstTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
@@ -136,14 +136,15 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItemForAllTests,
             this.toolStripMenuItem3,
-            this.issueDrivingLicenseToolStripMenuItem,
+            this.issueDrivingLicenseForFirstTimeToolStripMenuItem,
             this.toolStripMenuItem4,
             this.showLicenseToolStripMenuItem,
             this.toolStripMenuItem5,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.cmsLocalDriving.Name = "contextMenuStrip1";
             this.cmsLocalDriving.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.cmsLocalDriving.Size = new System.Drawing.Size(293, 226);
+            this.cmsLocalDriving.Size = new System.Drawing.Size(293, 248);
+            this.cmsLocalDriving.Opening += new System.ComponentModel.CancelEventHandler(this.cmsLocalDriving_Opening);
             // 
             // showDetailsToolStripMenuItem
             // 
@@ -190,7 +191,7 @@
             // toolStripMenuItemForAllTests
             // 
             this.toolStripMenuItemForAllTests.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.schduleVisionTestToolStripMenuItemVisionTest,
+            this.schduleVisionTestChoice,
             this.scheduleWrittenTestChoice,
             this.scheduleStreetTestChoice});
             this.toolStripMenuItemForAllTests.Image = global::Full_Project_Desktop.Properties.Resources.Schedule_Test_32;
@@ -199,13 +200,13 @@
             this.toolStripMenuItemForAllTests.Text = "Schedule Tests";
             this.toolStripMenuItemForAllTests.Click += new System.EventHandler(this.ToolStripMenuItem6_Click);
             // 
-            // schduleVisionTestToolStripMenuItemVisionTest
+            // schduleVisionTestChoice
             // 
-            this.schduleVisionTestToolStripMenuItemVisionTest.Image = global::Full_Project_Desktop.Properties.Resources.Microsoft_Fluentui_Emoji_Flat_Eye_Flat_96;
-            this.schduleVisionTestToolStripMenuItemVisionTest.Name = "schduleVisionTestToolStripMenuItemVisionTest";
-            this.schduleVisionTestToolStripMenuItemVisionTest.Size = new System.Drawing.Size(221, 24);
-            this.schduleVisionTestToolStripMenuItemVisionTest.Text = "Schedule Vision Test";
-            this.schduleVisionTestToolStripMenuItemVisionTest.Click += new System.EventHandler(this.SchduleVisionTestToolStripMenuItem_Click);
+            this.schduleVisionTestChoice.Image = global::Full_Project_Desktop.Properties.Resources.Microsoft_Fluentui_Emoji_Flat_Eye_Flat_96;
+            this.schduleVisionTestChoice.Name = "schduleVisionTestChoice";
+            this.schduleVisionTestChoice.Size = new System.Drawing.Size(221, 24);
+            this.schduleVisionTestChoice.Text = "Schedule Vision Test";
+            this.schduleVisionTestChoice.Click += new System.EventHandler(this.SchduleVisionTestToolStripMenuItem_Click);
             // 
             // scheduleWrittenTestChoice
             // 
@@ -228,13 +229,13 @@
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(289, 6);
             // 
-            // issueDrivingLicenseToolStripMenuItem
+            // issueDrivingLicenseForFirstTimeToolStripMenuItem
             // 
-            this.issueDrivingLicenseToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.IssueDrivingLicense_32;
-            this.issueDrivingLicenseToolStripMenuItem.Name = "issueDrivingLicenseToolStripMenuItem";
-            this.issueDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
-            this.issueDrivingLicenseToolStripMenuItem.Text = "Issue Driving License (First Time)";
-            this.issueDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.IssueDrivingLicenseToolStripMenuItem_Click);
+            this.issueDrivingLicenseForFirstTimeToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.IssueDrivingLicense_32;
+            this.issueDrivingLicenseForFirstTimeToolStripMenuItem.Name = "issueDrivingLicenseForFirstTimeToolStripMenuItem";
+            this.issueDrivingLicenseForFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(292, 24);
+            this.issueDrivingLicenseForFirstTimeToolStripMenuItem.Text = "Issue Driving License (First Time)";
+            this.issueDrivingLicenseForFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.IssueDrivingLicenseToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
@@ -420,7 +421,7 @@
         private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicenseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem issueDrivingLicenseForFirstTimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem showLicenseToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
@@ -428,7 +429,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemForAllTests;
         private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem schedulingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem schduleVisionTestToolStripMenuItemVisionTest;
+        private System.Windows.Forms.ToolStripMenuItem schduleVisionTestChoice;
         private System.Windows.Forms.ToolStripMenuItem scheduleWrittenTestChoice;
         private System.Windows.Forms.ToolStripMenuItem scheduleStreetTestChoice;
         private System.Windows.Forms.DataGridView dgvLocalDrivingLicenseApplication;

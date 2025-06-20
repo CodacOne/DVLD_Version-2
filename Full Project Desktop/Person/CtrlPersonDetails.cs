@@ -145,5 +145,10 @@ namespace Full_Project_Desktop
             //refresh
             LoadPersonInfo(_PersonID);
         }
+
+        private void lblPhone_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

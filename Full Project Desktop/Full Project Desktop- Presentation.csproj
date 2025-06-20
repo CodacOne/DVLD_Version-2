@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageTestsAndScheduling\frmListTestAppointement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\frmListTestAppointement.Designer.cs">
+      <DependentUpon>frmListTestAppointement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\frmSchedueTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\frmSchedueTest.Designer.cs">
+      <DependentUpon>frmSchedueTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\CtrlSchedueTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\CtrlSchedueTest.Designer.cs">
+      <DependentUpon>CtrlSchedueTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicense\CtrlApplicationBasciInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalLicense\CtrlApplicationBasciInfo.Designer.cs">
+      <DependentUpon>CtrlApplicationBasciInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicense\ShowDrivingLicenseApplicationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalLicense\ShowDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>ShowDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\CtrlPersonAndUserDeteils.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,10 +146,10 @@
     <Compile Include="User Control\ctrlDriverLicenseWithFilter.Designer.cs">
       <DependentUpon>ctrlDriverLicenseWithFilter.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\ctrl_T_VisionTestAppointment.cs">
+    <Compile Include="LocalLicense\ctrl_T_VisionTestAppointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\ctrl_T_VisionTestAppointment.Designer.cs">
+    <Compile Include="LocalLicense\ctrl_T_VisionTestAppointment.Designer.cs">
       <DependentUpon>ctrl_T_VisionTestAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Datain And Release\DetainLicense.cs">
@@ -182,18 +212,6 @@
     <Compile Include="Release License\ReplacementForLostOrDamagedLicense.Designer.cs">
       <DependentUpon>ReplacementForLostOrDamagedLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\ScheduleStreetTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ScheduleStreetTest.Designer.cs">
-      <DependentUpon>ScheduleStreetTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ScheduleVisionTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ScheduleVisionTest.Designer.cs">
-      <DependentUpon>ScheduleVisionTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="User\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,10 +254,10 @@
     <Compile Include="User\ManageUsers.Designer.cs">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\ManageTestType.cs">
+    <Compile Include="ManageTestsAndScheduling\ManageTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\ManageTestType.Designer.cs">
+    <Compile Include="ManageTestsAndScheduling\ManageTestType.Designer.cs">
       <DependentUpon>ManageTestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -262,34 +280,16 @@
     <Compile Include="All Show Details\ShowLicenseHistory.Designer.cs">
       <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\ResultStreetTest.cs">
+    <Compile Include="ManageTestsAndScheduling\ResultStreetTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\ResultStreetTest.Designer.cs">
+    <Compile Include="ManageTestsAndScheduling\ResultStreetTest.Designer.cs">
       <DependentUpon>ResultStreetTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\T_StreetTestAppointment.cs">
+    <Compile Include="ManageTestsAndScheduling\ResultVisionTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\T_StreetTestAppointment.Designer.cs">
-      <DependentUpon>T_StreetTestAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\T_VisionTestAppointment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\T_VisionTestAppointment.Designer.cs">
-      <DependentUpon>T_VisionTestAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ScheduleWrittenTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ScheduleWrittenTest.Designer.cs">
-      <DependentUpon>ScheduleWrittenTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ResultVisionTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\ResultVisionTest.Designer.cs">
+    <Compile Include="ManageTestsAndScheduling\ResultVisionTest.Designer.cs">
       <DependentUpon>ResultVisionTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\ApplicationsTypes\EditApplicationType.cs">
@@ -298,24 +298,33 @@
     <Compile Include="Applications\ApplicationsTypes\EditApplicationType.Designer.cs">
       <DependentUpon>EditApplicationType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\EditTestType.cs">
+    <Compile Include="ManageTestsAndScheduling\EditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\EditTestType.Designer.cs">
+    <Compile Include="ManageTestsAndScheduling\EditTestType.Designer.cs">
       <DependentUpon>EditTestType.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\ResultWrittenTest.cs">
+    <Compile Include="ManageTestsAndScheduling\ResultWrittenTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\ResultWrittenTest.Designer.cs">
+    <Compile Include="ManageTestsAndScheduling\ResultWrittenTest.Designer.cs">
       <DependentUpon>ResultWrittenTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Tests And Scheduling\T_WrittenTestAppointment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manage Tests And Scheduling\T_WrittenTestAppointment.Designer.cs">
-      <DependentUpon>T_WrittenTestAppointment.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="ManageTestsAndScheduling\frmListTestAppointement.resx">
+      <DependentUpon>frmListTestAppointement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTestsAndScheduling\frmSchedueTest.resx">
+      <DependentUpon>frmSchedueTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTestsAndScheduling\CtrlSchedueTest.resx">
+      <DependentUpon>CtrlSchedueTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicense\CtrlApplicationBasciInfo.resx">
+      <DependentUpon>CtrlApplicationBasciInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicense\ShowDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>ShowDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\CtrlPersonAndUserDeteils.resx">
       <DependentUpon>CtrlPersonAndUserDeteils.cs</DependentUpon>
     </EmbeddedResource>
@@ -349,7 +358,7 @@
     <EmbeddedResource Include="User Control\ctrlDriverLicenseWithFilter.resx">
       <DependentUpon>ctrlDriverLicenseWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\ctrl_T_VisionTestAppointment.resx">
+    <EmbeddedResource Include="LocalLicense\ctrl_T_VisionTestAppointment.resx">
       <DependentUpon>ctrl_T_VisionTestAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Datain And Release\DetainLicense.resx">
@@ -382,12 +391,6 @@
     <EmbeddedResource Include="Release License\ReplacementForLostOrDamagedLicense.resx">
       <DependentUpon>ReplacementForLostOrDamagedLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ScheduleStreetTest.resx">
-      <DependentUpon>ScheduleStreetTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ScheduleVisionTest.resx">
-      <DependentUpon>ScheduleVisionTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,7 +412,7 @@
     <EmbeddedResource Include="User\ManageUsers.resx">
       <DependentUpon>ManageUsers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ManageTestType.resx">
+    <EmbeddedResource Include="ManageTestsAndScheduling\ManageTestType.resx">
       <DependentUpon>ManageTestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -431,32 +434,20 @@
     <EmbeddedResource Include="All Show Details\ShowLicenseHistory.resx">
       <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ResultStreetTest.resx">
+    <EmbeddedResource Include="ManageTestsAndScheduling\ResultStreetTest.resx">
       <DependentUpon>ResultStreetTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\T_StreetTestAppointment.resx">
-      <DependentUpon>T_StreetTestAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\T_VisionTestAppointment.resx">
-      <DependentUpon>T_VisionTestAppointment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ScheduleWrittenTest.resx">
-      <DependentUpon>ScheduleWrittenTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ResultVisionTest.resx">
+    <EmbeddedResource Include="ManageTestsAndScheduling\ResultVisionTest.resx">
       <DependentUpon>ResultVisionTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ApplicationsTypes\EditApplicationType.resx">
       <DependentUpon>EditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\EditTestType.resx">
+    <EmbeddedResource Include="ManageTestsAndScheduling\EditTestType.resx">
       <DependentUpon>EditTestType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\ResultWrittenTest.resx">
+    <EmbeddedResource Include="ManageTestsAndScheduling\ResultWrittenTest.resx">
       <DependentUpon>ResultWrittenTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Manage Tests And Scheduling\T_WrittenTestAppointment.resx">
-      <DependentUpon>T_WrittenTestAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -996,6 +987,17 @@
   <ItemGroup>
     <None Include="Resources\Save 321.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\driving-test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision 5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vision 5122.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

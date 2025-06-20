@@ -161,6 +161,7 @@
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(150, 27);
             this.lblPhone.TabIndex = 60;
+            this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
             // 
             // label4
             // 

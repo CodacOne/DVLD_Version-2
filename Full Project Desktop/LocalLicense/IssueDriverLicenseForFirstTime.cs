@@ -33,7 +33,7 @@ namespace Full_Project_Desktop
             _Dt = clsLocalDrivingApplication.GetAllDataToSchedulingTest(_LocalDrivingLicenseApplicationID);
 
 
-            ctrl_T_VisionTestAppointment1.LoadDataToForm(_Dt);
+        //    ctrl_T_VisionTestAppointment1.LoadDataToForm(_Dt);
 
             //DataRow row = _DtInfoDetainTable.Rows[0];
 

@@ -3,4 +3,4 @@ D:\GitHub Projects\DVLD_Version 2\DataAccess-Layer\bin\Debug\DataAccess-Layer.pd
 D:\GitHub Projects\DVLD_Version 2\DataAccess-Layer\obj\Debug\DataAccess-Layer.csproj.CoreCompileInputs.cache
 D:\GitHub Projects\DVLD_Version 2\DataAccess-Layer\obj\Debug\DataAccess-Layer.dll
 D:\GitHub Projects\DVLD_Version 2\DataAccess-Layer\obj\Debug\DataAccess-Layer.pdb
-D:\GitHub Projects\DVLD_Version 2\DataAccess-Layer\obj\Debug\DataAccess-Layer.csprojAssemblyReference.cache
+D:\GitHub Projects\DVLD_Version 2\DataAccess-Layer\obj\Debug\DataAccess-Layer.csproj.AssemblyReference.cache
