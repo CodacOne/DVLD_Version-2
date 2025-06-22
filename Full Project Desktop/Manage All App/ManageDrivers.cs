@@ -30,7 +30,7 @@ namespace Full_Project_Desktop
         /*/*//***************************************//*/*//*//*/
         private void RefreshList()
         {
-            dgvManageDrivers.DataSource = clsDrivers.DriversWithLicensesFilter(_SelectedIndex, _InputText);
+            dgvManageDrivers.DataSource = clsDriver.DriversWithLicensesFilter(_SelectedIndex, _InputText);
 
 
             dgvManageDrivers.Columns["DriverID"].FillWeight = 40;
@@ -84,7 +84,7 @@ namespace Full_Project_Desktop
                 }
             }
 
-            dgvManageDrivers.DataSource = clsDrivers.DriversWithLicensesFilter(_SelectedIndex, _InputText);
+            dgvManageDrivers.DataSource = clsDriver.DriversWithLicensesFilter(_SelectedIndex, _InputText);
         }
 
         private void PbRefresh_Click(object sender, EventArgs e)

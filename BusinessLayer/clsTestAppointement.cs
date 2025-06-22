@@ -140,12 +140,7 @@ namespace BusinessLayer
 
         }
 
-        /////////////////////////////////////////////////////////////////////
-        public static int GetTestAppointementIDToUpdate(int LocalDrivingLicenseApplicationID)
-        {
-            return clsDATestAppointement.GetTestAppointementIDToUpdate(LocalDrivingLicenseApplicationID);
-        }
-
+       
 
         /////////////////////////////////////////////////////////////////////
         public static clsTestAppointement Find(int TestAppointmentID)

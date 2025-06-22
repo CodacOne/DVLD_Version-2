@@ -28,24 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlSchedueTest1 = new Full_Project_Desktop.CtrlSchedueTest();
             this.btnClose = new System.Windows.Forms.Button();
+            this.ctrlSchedueTest1 = new Full_Project_Desktop.CtrlSchedueTest();
             this.SuspendLayout();
-            // 
-            // ctrlSchedueTest1
-            // 
-            this.ctrlSchedueTest1.Location = new System.Drawing.Point(28, 12);
-            this.ctrlSchedueTest1.Name = "ctrlSchedueTest1";
-            this.ctrlSchedueTest1.Size = new System.Drawing.Size(780, 808);
-            this.ctrlSchedueTest1.TabIndex = 0;
-            this.ctrlSchedueTest1.TestTypeID = BusinessLayer.clsTestTypes.enTestType.WrittenTest;
             // 
             // btnClose
             // 
             this.btnClose.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Image = global::Full_Project_Desktop.Properties.Resources.Close_32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnClose.Location = new System.Drawing.Point(486, 826);
+            this.btnClose.Location = new System.Drawing.Point(706, 788);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(97, 40);
             this.btnClose.TabIndex = 110;
@@ -54,6 +46,14 @@
             this.btnClose.UseMnemonic = false;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // ctrlSchedueTest1
+            // 
+            this.ctrlSchedueTest1.Location = new System.Drawing.Point(57, 12);
+            this.ctrlSchedueTest1.Name = "ctrlSchedueTest1";
+            this.ctrlSchedueTest1.Size = new System.Drawing.Size(780, 780);
+            this.ctrlSchedueTest1.TabIndex = 0;
+            this.ctrlSchedueTest1.TestTypeID = BusinessLayer.clsTestTypes.enTestType.WrittenTest;
             // 
             // frmSchedueTest
             // 

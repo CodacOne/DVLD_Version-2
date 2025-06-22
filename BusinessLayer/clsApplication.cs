@@ -21,6 +21,11 @@ namespace BusinessLayer
             ReplaceDamagedDrivingLicense = 4, ReleaseDetainedDrivingLicsense = 5, NewInternationalLicense = 6, RetakeTest = 7
         };
 
+        public bool Delete()
+        {
+            return clsDAApplication.DeleteApplication(this.ApplicationID);
+        }
+
 
         public string ApplicantFullName
         {

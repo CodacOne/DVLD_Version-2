@@ -54,7 +54,7 @@ namespace BusinessLayer
         private bool _AddNewTest()
         {
 
-            this.TestID = clsDATestAppointement.AddNewTest(this.TestAppointmentID, this.CreatedByUserID, this.TestResult, this.Notes);
+            this.TestID = clsDATests.AddNewTest(this.TestAppointmentID, this.CreatedByUserID, this.TestResult, this.Notes);
 
             return (this.TestID != -1);
         }
@@ -65,7 +65,7 @@ namespace BusinessLayer
         {
             //call DataAccess Layer 
 
-            return clsDATestAppointement.UpdateTest(this.TestID, this.TestAppointmentID,
+            return clsDATests.UpdateTest(this.TestID, this.TestAppointmentID,
                 this.TestResult, this.Notes, this.CreatedByUserID);
         }
 
@@ -75,7 +75,7 @@ namespace BusinessLayer
             int TestAppointmentID = -1;
             bool TestResult = false; string Notes = ""; int CreatedByUserID = -1;
 
-            if (clsDATestAppointement.GetTestInfoByID(TestID,
+            if (clsDATests.GetTestInfoByID(TestID,
             ref TestAppointmentID, ref TestResult,
             ref Notes, ref CreatedByUserID))
 
@@ -111,7 +111,7 @@ namespace BusinessLayer
         ///
         public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
         {
-            return clsDATestAppointement.GetPassedTestCount(LocalDrivingLicenseApplicationID);
+            return clsDATests.GetPassedTestCount(LocalDrivingLicenseApplicationID);
         }
 
         public static bool PassedAllTests(int LocalDrivingLicenseApplicationID)
@@ -121,13 +121,6 @@ namespace BusinessLayer
         }
 
         /////////////////////////////////////////////////////////////////////
-
-
-
-        /////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////
-        /// <summary>
-
 
 
         public bool Save()
@@ -146,8 +139,7 @@ namespace BusinessLayer
                 case enMode.Update:
                     {
                         return _UpdateTest();
-                        return false;
-
+                     
                     }
 
 

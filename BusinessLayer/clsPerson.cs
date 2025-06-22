@@ -159,7 +159,7 @@ namespace BusinessLayer
         // ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅
         public static DataTable GetAllPeople()
         {
-            return clsDataAccess.GetAllPeople();
+            return clsDAPerson.GetAllPeople();
 
         }
 
@@ -169,7 +169,7 @@ namespace BusinessLayer
 
         public static DataTable GetAllCountries()
         {
-            return clsDataAccess.GetAllListCountries();
+            return clsDAPerson.GetAllListCountries();
 
         }
 
@@ -179,7 +179,7 @@ namespace BusinessLayer
         public static bool IsNationalNumber(string NationalNo)
         {
 
-            return clsDataAccess.IsNationalNumberExistOrNot(NationalNo);
+            return clsDAPerson.IsNationalNumberExistOrNot(NationalNo);
         }
 
         /////////////////////////////////////////////////////////////////////
@@ -188,7 +188,7 @@ namespace BusinessLayer
         private  bool _AddNewPerson()
         {
 
-         this.PersonID =   clsDataAccess.AddNewPerson(this.NationalNo ,this.FirstName, this.SecondName, this.ThirdName,
+         this.PersonID =   clsDAPerson.AddNewPerson(this.NationalNo ,this.FirstName, this.SecondName, this.ThirdName,
                 this.LastName, this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email
                 , this.NationalityCountryID, this.ImagePath);
 
@@ -201,7 +201,7 @@ namespace BusinessLayer
         private bool _UpdatePerson()
         {
 
-            return clsDataAccess.UpdatePerson(this.PersonID,this.NationalNo, this.FirstName, this.SecondName, this.ThirdName,
+            return clsDAPerson.UpdatePerson(this.PersonID,this.NationalNo, this.FirstName, this.SecondName, this.ThirdName,
                    this.LastName, this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email
                    , this.NationalityCountryID, this.ImagePath);
 
@@ -223,7 +223,7 @@ namespace BusinessLayer
 
             DateTime dateOfBirth = DateTime.Now;
 
-            if (clsDataAccess.GetPersonInfoByID( ID, ref PersonDetails))
+            if (clsDAPerson.GetPersonInfoByID( ID, ref PersonDetails))
             {
                 //  Console.WriteLine("ID is found");
                 return new clsPerson(PersonDetails);
@@ -251,7 +251,7 @@ namespace BusinessLayer
             stPersonDetails PersonDetails = new stPersonDetails();
             //DateTime dateOfBirth = DateTime.Now;
 
-            if (clsDataAccess.GetPersonInfoByNationalNo(NationalNo,ref PersonDetails))
+            if (clsDAPerson.GetPersonInfoByNationalNo(NationalNo,ref PersonDetails))
             {
                 
 
@@ -301,19 +301,10 @@ namespace BusinessLayer
         }
 
 
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-
-      
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-
         public static bool DeleteOnePersonFromTable(int ID)
         {
 
-            return clsDataAccess.DeleteContactPerson(ID);
+            return clsDAPerson.DeleteContactPerson(ID);
 
 
         }
@@ -322,7 +313,7 @@ namespace BusinessLayer
         /////////////////////////////////////////////////////////////////////
         public static DataTable GetPeopleAfterFilter(int TypeFilter, string Filter)
         {
-            return clsDataAccess.GeneralFilter(TypeFilter, Filter);
+            return clsDAPerson.GeneralFilter(TypeFilter, Filter);
 
         }
 

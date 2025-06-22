@@ -215,64 +215,7 @@ namespace DataAccess_Layer
         /////////////////////////////////////////////////////////////////////////////////////////////
         ///
           //////////////////////////////////////////////////////////////////////////////////////////////*/
-        public static bool CheckIfThereIsAPreviousOpenRequest(int PersonID, int LicenseClassID)
-        {
-            bool IsFound = false;
-
-
-            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
-
-            string query = @"       SELECT      Applications.ApplicantPersonID, LocalDrivingLicenseApplications.LicenseClassID,
-              Applications.ApplicationStatus
-        FROM          Applications INNER JOIN
-         LocalDrivingLicenseApplications ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
-		 where ApplicantPersonID= @PersonID and LicenseClassID= @LicenseClassID and  ApplicationStatus = 1
-                 ";
-
-            SqlCommand command = new SqlCommand(query, Connection);
-
-            command.Parameters.AddWithValue("@PersonID", PersonID);
-            command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
-
-            try
-            {
-                Connection.Open();
-                SqlDataReader Reader = command.ExecuteReader();
-
-                if (Reader.Read())
-                {
-                    IsFound = true;
-                   
-                }
-
-                else
-                {
-                    IsFound = false;
-
-                }
-
-                Reader.Close();
-
-
-            }
-
-
-            catch (Exception ex)
-            {
-
-                IsFound = false;
-                throw new Exception("Error : " + ex.Message);
-            }
-
-            finally
-            {
-                Connection.Close();
-            }
-
-            return IsFound;
-        }
-
-        /*//*//*//////////////////////////////////////////*/
+       
 
         public static DataTable LicenseApplicationsFilter(int ColumnIndex, string Filter)
         {
@@ -613,6 +556,81 @@ namespace DataAccess_Layer
             }
 
             return IsFound;
+
+        }
+
+        public static bool UpdateStatus(int ApplicationID, short NewStatus)
+        {
+
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
+
+            string query = @"Update  Applications  
+                            set 
+                                ApplicationStatus = @NewStatus, 
+                                LastStatusDate = @LastStatusDate
+                            where ApplicationID=@ApplicationID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+            command.Parameters.AddWithValue("@NewStatus", NewStatus);
+            command.Parameters.AddWithValue("LastStatusDate", DateTime.Now);
+
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
+
+        public static bool DeleteLocalDrivingLicenseApplication(int LocalDrivingLicenseApplicationID)
+        {
+
+            int rowsAffected = 0;
+
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
+
+            string query = @"Delete LocalDrivingLicenseApplications 
+                                where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+
+                connection.Close();
+
+            }
+
+            return (rowsAffected > 0);
 
         }
 

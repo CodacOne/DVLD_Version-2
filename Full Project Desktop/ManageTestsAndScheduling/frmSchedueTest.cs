@@ -38,7 +38,7 @@ namespace Full_Project_Desktop
 
         private void frmSchedueTest_Load(object sender, EventArgs e)
         {
-            ctrlSchedueTest1.TestTypeID = _TestTypeID;
+            ctrlSchedueTest1.TestTypeID = _TestTypeID;  // change picture and Text For User control base on Test Type
             ctrlSchedueTest1.LoadInfo(_LocalDrivingLicenseApplicationID, _AppointmentID);
         }
     }

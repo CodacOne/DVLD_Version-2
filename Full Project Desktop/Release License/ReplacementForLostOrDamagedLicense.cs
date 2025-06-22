@@ -149,7 +149,7 @@ namespace Full_Project_Desktop
                     _NewLicense.ExpirationDate = DateTime.Now.AddYears(10);
                 }
 
-                int PaidFees = clsDrivers.GetFeesOfLicenseClassTable(LicenseClassID);
+                int PaidFees = clsDriver.GetFeesOfLicenseClassTable(LicenseClassID);
 
                 _NewLicense.PaidFees = PaidFees;
                 _NewLicense.Notes = "";
@@ -214,7 +214,7 @@ namespace Full_Project_Desktop
         private void Ctrl_LicenseIDSelectedForReplacement(object sender, int licenseID)
         {
             // جلب البيانات من قاعدة البيانات أو من الكنترول نفسه
-            _DtAllInfoToReplacementLicense = clsDrivers.GetDataForInternationalLicenseApplication(licenseID);
+            _DtAllInfoToReplacementLicense = clsDriver.GetDataForInternationalLicenseApplication(licenseID);
 
             LoadDataToReplacementForm(licenseID, _DtAllInfoToReplacementLicense);
         }

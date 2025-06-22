@@ -146,9 +146,9 @@ namespace Full_Project_Desktop
         {
             int TestAppointmentID = (int)dgvForTestAppointement.CurrentRow.Cells[0].Value;
 
-            //frmTakeTest frm = new frmTakeTest(TestAppointmentID, _TestType);
-            //frm.ShowDialog();
-            //frmListTestAppointments_Load(null, null);
+            frmTakeTest frm = new frmTakeTest(TestAppointmentID, _TestType);
+            frm.ShowDialog();
+            frmListTestAppointement_Load(null, null);
         }
     }
 }

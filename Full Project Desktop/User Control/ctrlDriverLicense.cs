@@ -48,7 +48,7 @@ namespace Full_Project_Desktop
         public void RefreshDataLocalDrivingLicenseApplication(int PersonID)
         {
             _PersonID = PersonID;
-            dgvLocalDrivingLicenseApplicationHistory.DataSource = clsDrivers.GetAllLicenseToThePersonForDgv(PersonID);
+            dgvLocalDrivingLicenseApplicationHistory.DataSource = clsDriver.GetAllLicenseToThePersonForDgv(PersonID);
 
            
             int realRowCount = dgvLocalDrivingLicenseApplicationHistory.Rows.Cast<DataGridViewRow>()

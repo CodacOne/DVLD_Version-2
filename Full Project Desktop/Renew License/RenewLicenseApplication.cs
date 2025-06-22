@@ -124,7 +124,7 @@ namespace Full_Project_Desktop
                     _NewLicense.ExpirationDate = DateTime.Now.AddYears(10);
                 }
 
-              int  PaidFees = clsDrivers.GetFeesOfLicenseClassTable(LicenseClassID);
+              int  PaidFees = clsDriver.GetFeesOfLicenseClassTable(LicenseClassID);
 
                 _NewLicense.PaidFees = PaidFees;
                 _NewLicense.Notes = txtNotes.Text;

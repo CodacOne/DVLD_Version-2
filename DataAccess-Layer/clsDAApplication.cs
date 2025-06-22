@@ -148,6 +148,41 @@ namespace DataAccess_Layer
         //     }
         ////////////////////////////////////////////////////////////////
 
+        public static bool DeleteApplication(int ApplicationID)
+        {
+
+            int rowsAffected = 0;
+
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
+
+            string query = @"Delete Applications 
+                                where ApplicationID = @ApplicationID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+            try
+            {
+                connection.Open();
+
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+
+                connection.Close();
+
+            }
+
+            return (rowsAffected > 0);
+
+        }
 
 
         ////////////////////////////////////////////////////////////////
@@ -258,41 +293,7 @@ namespace DataAccess_Layer
             return (rowsAffected > 0);
         }
 
-        public static bool DeleteApplication(int ApplicationID)
-        {
-
-            int rowsAffected = 0;
-
-            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
-
-            string query = @"Delete Applications 
-                                where ApplicationID = @ApplicationID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-
-            try
-            {
-                connection.Open();
-
-                rowsAffected = command.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-                // Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-
-                connection.Close();
-
-            }
-
-            return (rowsAffected > 0);
-
-        }
+      
 
         public static bool IsApplicationExist(int ApplicationID)
         {
@@ -464,68 +465,6 @@ namespace DataAccess_Layer
             return TestTypeFees;
         }
 
-        ///
-        ////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////
-
-        public static bool DeleteLocalDriving(int LocalDrivingLicenseApplicationID)
-        {
-            // bool IsFound = false;
-            
-
-            SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
-
-            string query = @"Delete LocalDrivingLicenseApplications 
-                         where LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID ";
-
-
-            SqlCommand command = new SqlCommand(query, Connection);
-
-            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-
-
-            try
-            {
-                Connection.Open();
-                int RowAffected = command.ExecuteNonQuery();
-
-                if (RowAffected > 0)
-                {
-                    return true;
-
-                }
-
-                else
-                {
-                    return false;
-
-                }
-
-
-            }
-
-
-            catch (Exception ex)
-            {
-
-                //    IsFound = false;
-                Console.WriteLine("Error : " + ex.Message);
-            }
-
-            finally
-            {
-                Connection.Close();
-            }
-
-            return false;
-        }
-
-        ////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////
-        ///       
-      
-        ////////////////////////////////////////////////////////////////
-      
         /////////////////////////////////////////////////////////////////////////////////////////////
         /// ////////////////////////////////////////////////////////////////
         public static int GetPersonIDByLocalDrivingID(int LocalDrivingLicenseApplicationID)

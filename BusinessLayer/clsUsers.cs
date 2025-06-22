@@ -96,12 +96,6 @@ namespace BusinessLayer
 
 
 
-
-        /////////////////////////////////////////////////////////////////////
-
-
-        /// /////////////////////////////////////////////////////////////////////
-
         public static clsUsers Find(int PersonID)
         {
             int UserID = -1; string UserName = "", Password = ""; Byte IsActive = 0;

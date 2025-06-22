@@ -34,12 +34,9 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_De
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ShowDetailsForPersonAndUser.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ShowDetailsLicense.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ShowLicenseHistory.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ResultStreetTest.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ResultVisionTest.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.EditApplicationType.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.EditTestType.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ctrlPersonDetails.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ResultWrittenTest.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project Desktop- Presentation.csproj.GenerateResource.cache
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project Desktop- Presentation.csproj.CoreCompileInputs.cache
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Project Desktop.exe
@@ -56,3 +53,5 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full Pro.9C525B
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.CtrlSchedueTest.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.frmSchedueTest.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.frmListTestAppointement.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.CtrlScheduledTest.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.frmTakeTest.resources

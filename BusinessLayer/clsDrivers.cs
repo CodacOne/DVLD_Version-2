@@ -9,7 +9,7 @@ using System.Data;
 
 namespace BusinessLayer
 {
-  public  class clsDrivers
+  public  class clsDriver
     {
 
 
@@ -44,7 +44,7 @@ namespace BusinessLayer
 
 
         /////////////////////////////////////////////////////////////////////
-        public clsDrivers()
+        public clsDriver()
         {
             this.PersonID = -1;
             this.DriverID = -1;
@@ -59,7 +59,7 @@ namespace BusinessLayer
 
         /*/////*/////*/////*/////*/////*/////*/////*////
         /*/*//*/******************************************************************//*/*/
-        private clsDrivers(int DriverID, int PersonID, int CreatedByUserID, DateTime CreatedDate)
+        private clsDriver(int DriverID, int PersonID, int CreatedByUserID, DateTime CreatedDate)
         {
             this.PersonID = PersonID;
             this.DriverID = DriverID;

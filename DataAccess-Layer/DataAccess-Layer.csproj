@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="clsDADetainAndRelease.cs" />
     <Compile Include="clsDACountries.cs" />
+    <Compile Include="clsDADriver.cs" />
     <Compile Include="clsDALicenseClass.cs" />
     <Compile Include="clsDataAccessSettings.cs" />
     <Compile Include="clsDAApplicationType.cs" />

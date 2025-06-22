@@ -103,7 +103,7 @@
             this.gbTestType.Controls.Add(this.lblTitle);
             this.gbTestType.Controls.Add(this.label1);
             this.gbTestType.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTestType.Location = new System.Drawing.Point(16, 25);
+            this.gbTestType.Location = new System.Drawing.Point(3, 3);
             this.gbTestType.Name = "gbTestType";
             this.gbTestType.Size = new System.Drawing.Size(747, 767);
             this.gbTestType.TabIndex = 99;
@@ -405,18 +405,20 @@
             // lblDrivingClass
             // 
             this.lblDrivingClass.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrivingClass.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.lblDrivingClass.Location = new System.Drawing.Point(263, 326);
             this.lblDrivingClass.Name = "lblDrivingClass";
-            this.lblDrivingClass.Size = new System.Drawing.Size(383, 23);
+            this.lblDrivingClass.Size = new System.Drawing.Size(413, 29);
             this.lblDrivingClass.TabIndex = 107;
             this.lblDrivingClass.Text = "??";
             // 
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(263, 372);
+            this.lblName.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lblName.Location = new System.Drawing.Point(262, 372);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(361, 23);
+            this.lblName.Size = new System.Drawing.Size(459, 33);
             this.lblName.TabIndex = 108;
             this.lblName.Text = "??";
             this.lblName.Click += new System.EventHandler(this.lblName_Click);
@@ -449,7 +451,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbTestType);
             this.Name = "CtrlSchedueTest";
-            this.Size = new System.Drawing.Size(780, 808);
+            this.Size = new System.Drawing.Size(764, 792);
+            this.Load += new System.EventHandler(this.CtrlSchedueTest_Load);
             this.gbTestType.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbTestTypeImage)).EndInit();
             this.gbRetakeTestInfo.ResumeLayout(false);

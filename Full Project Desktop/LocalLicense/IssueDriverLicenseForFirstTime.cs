@@ -21,7 +21,7 @@ namespace Full_Project_Desktop
 
         private int _DriverID = -1;
 
-      clsDrivers _Driver = new clsDrivers();
+      clsDriver _Driver = new clsDriver();
 
         public IssueDriverLicenseForFirstTime(int LocalDrivingLicenseApplicationID)
         {
@@ -106,7 +106,7 @@ namespace Full_Project_Desktop
 
 
 
-            PaidFees = clsDrivers.GetFeesOfLicenseClassTable(LicenseClassID);
+            PaidFees = clsDriver.GetFeesOfLicenseClassTable(LicenseClassID);
 
             Notes = txtNotes.Text;
             IsActive = 1;
@@ -119,7 +119,7 @@ namespace Full_Project_Desktop
             DriverID = _DriverID;
 
 
-            if (clsDrivers.InsertLNewLicense(ApplicationID, DriverID, LicenseClassID, IssueReason,
+            if (clsDriver.InsertLNewLicense(ApplicationID, DriverID, LicenseClassID, IssueReason,
      PaidFees, CreatedByUserID, IssueDate, ExpirationDate,
      Notes, IsActive))
             {

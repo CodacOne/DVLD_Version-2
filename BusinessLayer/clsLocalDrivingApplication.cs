@@ -159,8 +159,29 @@ namespace BusinessLayer
             return clsTests.GetPassedTestCount(LocalDrivingLicenseApplicationID);
         }
 
+        /////////////////////////////////////////////////////////////////////
+        public bool Delete()
+        {
+            bool IsLocalDrivingApplicationDeleted = false;
+            bool IsBaseApplicationDeleted = false;
+            //First we delete the Local Driving License Application
+            IsLocalDrivingApplicationDeleted = clsDALocalDrivingApplication.DeleteLocalDrivingLicenseApplication(this.LocalDrivingLicenseApplicationID);
+
+            if (!IsLocalDrivingApplicationDeleted)
+                return false;
+            //Then we delete the base Application
+            IsBaseApplicationDeleted = base.Delete();
+            return IsBaseApplicationDeleted;
+
+        }
 
         /////////////////////////////////////////////////////////////////////
+        public bool Cancel()
+
+        {
+            return clsDALocalDrivingApplication.UpdateStatus(ApplicationID, 2);
+        }
+
 
         public static int GetActiveApplicationIDForLicenseClass(int PersonID, clsApplication.enApplicationType ApplicationTypeID, int LicenseClassID)
         {
@@ -237,11 +258,6 @@ namespace BusinessLayer
             return clsDALocalDrivingApplication.IsThereAnActiveScheduledTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
         }
 
-        public static byte TotalTrialsPerTest(int LocalDrivingLicenseApplicationID, clsTestTypes.enTestType TestTypeID)
-
-        {
-            return clsDALocalDrivingApplication.TotalTrialsPerTest(LocalDrivingLicenseApplicationID, (int)TestTypeID);
-        }
         /////////////////////////////////////////////////////////////////////
         public static DataTable LicenseApplicationsFilter(int ColumnIndex, string Filter)
         {
@@ -280,45 +296,9 @@ namespace BusinessLayer
 
         }
 
-        /////////////////////////////////////////////////////////////////////
-        ///
-        ///   /////////////////////////////////////////////////////////////////////
-        ///
+      
 
-
-        ///   /////////////////////////////////////////////////////////////////////
-        public static int GetAllTestsFees(int TestTypeID)
-        {
-            return clsDAApplication.GetAllTestsFees(TestTypeID);
-
-        }
-
-        /////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////
-        ///
-         public static DataTable GetDataVisionTest(int ApplicationID)
-        {
-          
-            return clsDATestAppointement.VisionTestAppointement(ApplicationID);
-
-        }
-
-        /////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////
-        ///
-
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-        public static int GetResultForTest(int TestAppID)
-        {
-
-            return clsDATestAppointement.GetResultForTestIfPassingOrFailing(TestAppID);
-
-        }
-
-
-
+       
         /////////////////////////////////////////////////////////////////////
         public bool IsLicenseIssued()
         {
@@ -343,14 +323,7 @@ namespace BusinessLayer
 
 
         /////////////////////////////////////////////////////////////////////
-        ///
-        public static bool CancelTheAppointmentAfterPassingOrFailing(int TestID)
-        {
-
-
-            return clsDATestAppointement.CancelTheAppointmentAfterPassingOrFailing(TestID);
-
-        }
+      
 
 
         /////////////////////////////////////////////////////////////////////

@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManageTestsAndScheduling\frmTakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\frmTakeTest.Designer.cs">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\CtrlScheduledTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManageTestsAndScheduling\CtrlScheduledTest.Designer.cs">
+      <DependentUpon>CtrlScheduledTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageTestsAndScheduling\frmListTestAppointement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,18 +292,6 @@
     <Compile Include="All Show Details\ShowLicenseHistory.Designer.cs">
       <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTestsAndScheduling\ResultStreetTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageTestsAndScheduling\ResultStreetTest.Designer.cs">
-      <DependentUpon>ResultStreetTest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageTestsAndScheduling\ResultVisionTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageTestsAndScheduling\ResultVisionTest.Designer.cs">
-      <DependentUpon>ResultVisionTest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Applications\ApplicationsTypes\EditApplicationType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,12 +304,12 @@
     <Compile Include="ManageTestsAndScheduling\EditTestType.Designer.cs">
       <DependentUpon>EditTestType.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTestsAndScheduling\ResultWrittenTest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageTestsAndScheduling\ResultWrittenTest.Designer.cs">
-      <DependentUpon>ResultWrittenTest.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="ManageTestsAndScheduling\frmTakeTest.resx">
+      <DependentUpon>frmTakeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageTestsAndScheduling\CtrlScheduledTest.resx">
+      <DependentUpon>CtrlScheduledTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageTestsAndScheduling\frmListTestAppointement.resx">
       <DependentUpon>frmListTestAppointement.cs</DependentUpon>
     </EmbeddedResource>
@@ -434,20 +434,11 @@
     <EmbeddedResource Include="All Show Details\ShowLicenseHistory.resx">
       <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageTestsAndScheduling\ResultStreetTest.resx">
-      <DependentUpon>ResultStreetTest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageTestsAndScheduling\ResultVisionTest.resx">
-      <DependentUpon>ResultVisionTest.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Applications\ApplicationsTypes\EditApplicationType.resx">
       <DependentUpon>EditApplicationType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageTestsAndScheduling\EditTestType.resx">
       <DependentUpon>EditTestType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageTestsAndScheduling\ResultWrittenTest.resx">
-      <DependentUpon>ResultWrittenTest.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

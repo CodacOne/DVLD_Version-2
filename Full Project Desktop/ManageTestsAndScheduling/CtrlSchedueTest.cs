@@ -397,6 +397,11 @@ namespace Full_Project_Desktop
 
         }
 
+        private void CtrlSchedueTest_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /*//*//*//////////////////////////////////////////*/
 
 

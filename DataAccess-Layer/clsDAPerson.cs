@@ -9,8 +9,6 @@ using System.Data.SqlClient;
 using DataAccess_Layer;
 
 
-
-
 namespace DataAccess_Layer
 {
     // class 
@@ -32,7 +30,7 @@ namespace DataAccess_Layer
     }
 
 
-    public class clsDataAccess
+    public class clsDAPerson
     {
 
         // ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅ ✅
@@ -509,7 +507,7 @@ namespace DataAccess_Layer
             string query = @"Delete People 
                          where PersonID=@PersonID ";
 
-
+            
             SqlCommand command = new SqlCommand(query, Connection);
 
             command.Parameters.AddWithValue("@PersonID", PersonID);
@@ -820,17 +818,7 @@ namespace DataAccess_Layer
         //    return Dt;
         //}
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////
-        /// <summary>\\
-        /// 
-
-
-
-
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////
-
-        /// ////////////////////////////////////////////////////////////////////////////////////////////////
-
+      
         ////////////////////////////////////////////////////////////////////////////////////////////////
         public static DataTable GeneralFilter(int TypeFilter, string Filter)
         {

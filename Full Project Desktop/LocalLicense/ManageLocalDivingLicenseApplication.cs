@@ -172,10 +172,29 @@ namespace Full_Project_Desktop
 
         private void CancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CancelApplication((int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value);
+			if (MessageBox.Show("Are you sure do want to cancel this application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+				return;
 
-            // To refresh
-            LocalDivingLicenseApplication_Load(null, null);
+			int LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+
+			clsLocalDrivingApplication LocalDrivingLicenseApplication =
+				clsLocalDrivingApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+
+			if (LocalDrivingLicenseApplication != null)
+			{
+				if (LocalDrivingLicenseApplication.Cancel())
+				{
+					MessageBox.Show("Application Cancelled Successfully.", "Cancelled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+					//refresh the form again.
+					LocalDivingLicenseApplication_Load(null, null);
+				}
+				else
+				{
+					MessageBox.Show("Could not cancel applicatoin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+			}
+
+		
         }
 
 
@@ -211,10 +230,16 @@ namespace Full_Project_Desktop
 
         private void DeleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you want to delete Local Driving [" + dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value + "]",
+			int LocalDrivingLicenseApplicationID = (int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value;
+
+			clsLocalDrivingApplication LocalDrivingLicenseApplication =
+				clsLocalDrivingApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+
+
+			if (MessageBox.Show("Are you want to delete Local Driving [" + dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value + "]",
                  "Delete Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                if (clsPerson.DeleteOnePersonFromTable((int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value))
+                if (LocalDrivingLicenseApplication.Delete())
                 {
                     MessageBox.Show("Local Driving Deleted Successfully.");
 
@@ -392,7 +417,7 @@ namespace Full_Project_Desktop
 
             //// شرط السماح بإصدار الرخصة:
             //// يجب أن تكون الحالة = 3 والرخصة غير موجودة مسبقًا
-            //bool licenseExists = clsDrivers.ValidationIFLicenseExistOrNot(LocalDrivingID);
+            //bool licenseExists = clsDriver.ValidationIFLicenseExistOrNot(LocalDrivingID);
 
             //if (applicationStatus == 3 && !licenseExists)
             //{

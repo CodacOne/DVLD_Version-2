@@ -35,20 +35,20 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbRefresh = new System.Windows.Forms.PictureBox();
             this.dgvForTestAppointement = new System.Windows.Forms.DataGridView();
+            this.cmsTestAppointment = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label28 = new System.Windows.Forms.Label();
             this.lblCountRecords = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.cmsTestAppointment = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ctrl_T_VisionTestAppointment1 = new Full_Project_Desktop.ctrl_T_VisionTestAppointment();
             ((System.ComponentModel.ISupportInitialize)(this.pbTestTypeImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvForTestAppointement)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.cmsTestAppointment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pbTestTypeImage
@@ -68,7 +68,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(314, 38);
             this.lblTitle.TabIndex = 95;
-            this.lblTitle.Text = "Street Test Appointments";
+            this.lblTitle.Text = " Test Appointments";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pbRefresh
@@ -113,6 +113,30 @@
             this.dgvForTestAppointement.ReadOnly = true;
             this.dgvForTestAppointement.Size = new System.Drawing.Size(990, 117);
             this.dgvForTestAppointement.TabIndex = 102;
+            // 
+            // cmsTestAppointment
+            // 
+            this.cmsTestAppointment.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem1,
+            this.takeTestToolStripMenuItem});
+            this.cmsTestAppointment.Name = "cmsStreetTest";
+            this.cmsTestAppointment.Size = new System.Drawing.Size(121, 48);
+            // 
+            // editToolStripMenuItem1
+            // 
+            this.editToolStripMenuItem1.Image = global::Full_Project_Desktop.Properties.Resources.edit_321;
+            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.editToolStripMenuItem1.Text = "Edit";
+            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
+            // 
+            // takeTestToolStripMenuItem
+            // 
+            this.takeTestToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.Test_321;
+            this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.takeTestToolStripMenuItem.Text = "Take Test";
+            this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -169,30 +193,6 @@
             this.label27.TabIndex = 97;
             this.label27.Text = "# Records :";
             // 
-            // cmsTestAppointment
-            // 
-            this.cmsTestAppointment.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem1,
-            this.takeTestToolStripMenuItem});
-            this.cmsTestAppointment.Name = "cmsStreetTest";
-            this.cmsTestAppointment.Size = new System.Drawing.Size(181, 70);
-            // 
-            // editToolStripMenuItem1
-            // 
-            this.editToolStripMenuItem1.Image = global::Full_Project_Desktop.Properties.Resources.edit_321;
-            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.editToolStripMenuItem1.Text = "Edit";
-            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
-            // 
-            // takeTestToolStripMenuItem
-            // 
-            this.takeTestToolStripMenuItem.Image = global::Full_Project_Desktop.Properties.Resources.Test_321;
-            this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
-            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.takeTestToolStripMenuItem.Text = "Take Test";
-            this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
-            // 
             // ctrl_T_VisionTestAppointment1
             // 
             this.ctrl_T_VisionTestAppointment1.Location = new System.Drawing.Point(70, 191);
@@ -221,8 +221,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbTestTypeImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRefresh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvForTestAppointement)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cmsTestAppointment.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

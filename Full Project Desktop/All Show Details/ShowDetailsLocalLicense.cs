@@ -46,7 +46,7 @@ namespace Full_Project_Desktop
             /**//*/*//*/*//*/**//*/*//***//*****//*****//***//*/////*/
 
            
-            _DtForDriverInfo = clsDrivers.GetAllDriverInfo(_LicenseID);
+            _DtForDriverInfo = clsDriver.GetAllDriverInfo(_LicenseID);
             DataRow row = _DtForDriverInfo.Rows[0];
 
            // نصوص السائق
