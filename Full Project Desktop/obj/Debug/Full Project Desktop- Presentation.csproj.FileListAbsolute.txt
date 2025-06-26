@@ -20,8 +20,6 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_De
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ManageDetainedLicense.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ManageDrivers.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ReleaseDetainedLicense.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.RenewLicenseApplication.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ReplacementForLostOrDamagedLicense.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.Change_Password.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ManageLocalDivingLicenseApplication.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.MainForm.resources
@@ -32,7 +30,6 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_De
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ManageTestType.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.Properties.Resources.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ShowDetailsForPersonAndUser.resources
-D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ShowDetailsLicense.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.ShowLicenseHistory.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.EditApplicationType.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.EditTestType.resources
@@ -55,3 +52,8 @@ D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_De
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.frmListTestAppointement.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.CtrlScheduledTest.resources
 D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.frmTakeTest.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.CtrlDriverInfo.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.DriverDetails.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.CtrlDriverLicenseInfoWithFilter.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.frmRenewLocalDrivingLicense.resources
+D:\GitHub Projects\DVLD_Version 2\Full Project Desktop\obj\Debug\Full_Project_Desktop.frmReplaceLostOrDamagedLicenseApplication.resources

@@ -30,9 +30,9 @@
         {
             this.btnIssuingSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.ctrl_T_VisionTestAppointment1 = new Full_Project_Desktop.ctrl_T_VisionTestAppointment();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtNotes = new System.Windows.Forms.TextBox();
+            this.ctrl_T_VisionTestAppointment1 = new Full_Project_Desktop.ctrl_T_VisionTestAppointment();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,14 +66,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // ctrl_T_VisionTestAppointment1
-            // 
-            this.ctrl_T_VisionTestAppointment1.Location = new System.Drawing.Point(43, 160);
-            this.ctrl_T_VisionTestAppointment1.Name = "ctrl_T_VisionTestAppointment1";
-            this.ctrl_T_VisionTestAppointment1.Size = new System.Drawing.Size(988, 425);
-            this.ctrl_T_VisionTestAppointment1.TabIndex = 95;
-            this.ctrl_T_VisionTestAppointment1.Load += new System.EventHandler(this.Ctrl_T_VisionTestAppointment1_Load);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Full_Project_Desktop.Properties.Resources.Graphicloads_Flat_Finance_Certificate_256;
@@ -92,6 +84,13 @@
             this.txtNotes.Size = new System.Drawing.Size(865, 104);
             this.txtNotes.TabIndex = 97;
             // 
+            // ctrl_T_VisionTestAppointment1
+            // 
+            this.ctrl_T_VisionTestAppointment1.Location = new System.Drawing.Point(23, 170);
+            this.ctrl_T_VisionTestAppointment1.Name = "ctrl_T_VisionTestAppointment1";
+            this.ctrl_T_VisionTestAppointment1.Size = new System.Drawing.Size(999, 425);
+            this.ctrl_T_VisionTestAppointment1.TabIndex = 98;
+            // 
             // IssueDriverLicenseForFirstTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,9 +98,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1054, 881);
+            this.Controls.Add(this.ctrl_T_VisionTestAppointment1);
             this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.ctrl_T_VisionTestAppointment1);
             this.Controls.Add(this.btnIssuingSave);
             this.Controls.Add(this.button1);
             this.Name = "IssueDriverLicenseForFirstTime";
@@ -116,8 +115,8 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnIssuingSave;
-        private ctrl_T_VisionTestAppointment ctrl_T_VisionTestAppointment1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtNotes;
+        private ctrl_T_VisionTestAppointment ctrl_T_VisionTestAppointment1;
     }
 }

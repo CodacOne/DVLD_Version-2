@@ -25,7 +25,7 @@ namespace Full_Project_Desktop
         private int _DetainID = -1;
         private int _PersonID = -1;   // لجلب البيانات الشخصية وتحميلها في ال Show License History
         private int _LicenseClassID = -1;
-        clsDetainLicense _DetainLicense = new clsDetainLicense();
+        clsDetaineLicense _DetainLicense = new clsDetaineLicense();
 
         clsApplication _Application = new clsApplication();
         clsLicense _NewLicense = new clsLicense();
@@ -59,7 +59,7 @@ namespace Full_Project_Desktop
 
             _licenseID = licenseID;
 
-            _DtInfoDetainTable = clsDetainLicense.GetAllDetainInfoByLicenseID(_licenseID);
+           // _DtInfoDetainTable = clsDetaineLicense.GetAllDetainInfoByLicenseID(_licenseID);
 
             if (_DtInfoDetainTable.Rows.Count > 0)
             {
@@ -166,18 +166,7 @@ namespace Full_Project_Desktop
         //int? ReleasedByUserID, int? ReleaseApplicationID
 
                 
-                if (clsDetainLicense.UpdateDetain(_DetainID, IsReleaseId, ReleaseDate,
-                    ReleasedByUserID, ReleaseApplicationID))
-                {
-                   
-                   
-                    MessageBox.Show("License Released Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-                else
-                {
-                    MessageBox.Show("License Released Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+             
 
 
 
@@ -241,7 +230,7 @@ namespace Full_Project_Desktop
 
         private void LlShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ShowDetailsLicense frm = new ShowDetailsLicense(_licenseID);
+            DriverDetails frm = new DriverDetails(_licenseID);
             frm.Show();
         }
 

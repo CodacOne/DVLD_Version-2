@@ -150,5 +150,10 @@ namespace Full_Project_Desktop
         {
 
         }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

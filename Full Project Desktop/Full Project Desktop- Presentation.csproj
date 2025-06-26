@@ -46,6 +46,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LocalLicense\Replace Or Damaged  License Application\frmReplaceLostOrDamagedLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalLicense\Replace Or Damaged  License Application\frmReplaceLostOrDamagedLicenseApplication.Designer.cs">
+      <DependentUpon>frmReplaceLostOrDamagedLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicense\Renew License\frmRenewLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalLicense\Renew License\frmRenewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicense\control Driver\CtrlDriverLicenseInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalLicense\control Driver\CtrlDriverLicenseInfoWithFilter.Designer.cs">
+      <DependentUpon>CtrlDriverLicenseInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\DriverDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\DriverDetails.Designer.cs">
+      <DependentUpon>DriverDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicense\control Driver\CtrlDriverInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LocalLicense\control Driver\CtrlDriverInfo.Designer.cs">
+      <DependentUpon>CtrlDriverInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageTestsAndScheduling\frmTakeTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,10 +164,10 @@
     <Compile Include="Person\AddUpdateNewPerson.Designer.cs">
       <DependentUpon>AddUpdateNewPerson.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\ctrlApplicationInfo.cs">
+    <Compile Include="Applications\ctrlApplicationInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\ctrlApplicationInfo.Designer.cs">
+    <Compile Include="Applications\ctrlApplicationInfo.Designer.cs">
       <DependentUpon>ctrlApplicationInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\ctrlDriverInternationalLicenseInfo.cs">
@@ -212,18 +242,6 @@
     <Compile Include="Datain And Release\ReleaseDetainedLicense.Designer.cs">
       <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Renew License\RenewLicenseApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Renew License\RenewLicenseApplication.Designer.cs">
-      <DependentUpon>RenewLicenseApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Release License\ReplacementForLostOrDamagedLicense.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Release License\ReplacementForLostOrDamagedLicense.Designer.cs">
-      <DependentUpon>ReplacementForLostOrDamagedLicense.cs</DependentUpon>
-    </Compile>
     <Compile Include="User\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,12 +298,6 @@
     <Compile Include="Person\ShowDetailsForPersonAndUser.Designer.cs">
       <DependentUpon>ShowDetailsForPersonAndUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="All Show Details\ShowDetailsLocalLicense.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="All Show Details\ShowDetailsLocalLicense.Designer.cs">
-      <DependentUpon>ShowDetailsLocalLicense.cs</DependentUpon>
-    </Compile>
     <Compile Include="All Show Details\ShowLicenseHistory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +316,21 @@
     <Compile Include="ManageTestsAndScheduling\EditTestType.Designer.cs">
       <DependentUpon>EditTestType.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LocalLicense\Replace Or Damaged  License Application\frmReplaceLostOrDamagedLicenseApplication.resx">
+      <DependentUpon>frmReplaceLostOrDamagedLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicense\Renew License\frmRenewLocalDrivingLicense.resx">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicense\control Driver\CtrlDriverLicenseInfoWithFilter.resx">
+      <DependentUpon>CtrlDriverLicenseInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver\DriverDetails.resx">
+      <DependentUpon>DriverDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicense\control Driver\CtrlDriverInfo.resx">
+      <DependentUpon>CtrlDriverInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageTestsAndScheduling\frmTakeTest.resx">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,7 +373,7 @@
     <EmbeddedResource Include="Person\AddUpdateNewPerson.resx">
       <DependentUpon>AddUpdateNewPerson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\ctrlApplicationInfo.resx">
+    <EmbeddedResource Include="Applications\ctrlApplicationInfo.resx">
       <DependentUpon>ctrlApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\ctrlDriverInternationalLicenseInfo.resx">
@@ -385,12 +412,6 @@
     <EmbeddedResource Include="Datain And Release\ReleaseDetainedLicense.resx">
       <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Renew License\RenewLicenseApplication.resx">
-      <DependentUpon>RenewLicenseApplication.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Release License\ReplacementForLostOrDamagedLicense.resx">
-      <DependentUpon>ReplacementForLostOrDamagedLicense.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -427,9 +448,6 @@
     </Compile>
     <EmbeddedResource Include="Person\ShowDetailsForPersonAndUser.resx">
       <DependentUpon>ShowDetailsForPersonAndUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="All Show Details\ShowDetailsLocalLicense.resx">
-      <DependentUpon>ShowDetailsLocalLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="All Show Details\ShowLicenseHistory.resx">
       <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
@@ -989,6 +1007,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Vision 5122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\License View 324.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

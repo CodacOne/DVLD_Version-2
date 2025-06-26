@@ -87,13 +87,13 @@ namespace Full_Project_Desktop
 
         private void RenewToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RenewLicenseApplication frm = new RenewLicenseApplication();
+            frmRenewLocalDrivingLicense frm = new frmRenewLocalDrivingLicense();
             frm.Show();
         }
 
         private void ReplacementForLostOrDamagedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReplacementForLostOrDamagedLicense frm = new ReplacementForLostOrDamagedLicense();
+            frmReplaceLostOrDamagedLicenseApplication frm = new frmReplaceLostOrDamagedLicenseApplication();
             frm.Show();
         }
 

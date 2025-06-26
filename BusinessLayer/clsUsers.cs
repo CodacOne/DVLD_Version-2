@@ -117,6 +117,22 @@ namespace BusinessLayer
 
         }
         /////////////////////////////////////////////////////////////////////
+      public static clsUsers FindByPersonID(int PersonID)
+        {
+            int UserID = -1;
+        string UserName = "", Password = "";
+            Byte IsActive = 0;
+
+            bool IsFound = clsDAUsers.GetUserInfoByPersonID
+                            (PersonID, ref UserID, ref UserName, ref Password, ref IsActive);
+
+            if (IsFound)
+                //we return new object of that User with the right data
+                return new clsUsers(UserID, PersonID, UserName, Password, IsActive);
+            else
+                return null;
+        }
+
         public static clsUsers FindByUserID(int UserID)
         {
             int PersonID = -1;

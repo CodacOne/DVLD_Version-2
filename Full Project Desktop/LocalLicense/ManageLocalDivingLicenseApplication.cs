@@ -85,7 +85,7 @@ namespace Full_Project_Desktop
 
             if (LicenseID != -1)
             {
-                ShowDetailsLicense frm = new ShowDetailsLicense(LicenseID);
+                DriverDetails frm = new DriverDetails(LicenseID);
                 frm.ShowDialog();
 
             }

@@ -113,7 +113,7 @@ namespace Full_Project_Desktop
         {
            
 
-            ShowDetailsLicense frm = new ShowDetailsLicense((int)dgvLocalDrivingLicenseApplicationHistory.CurrentRow.Cells[0].Value);
+            DriverDetails frm = new DriverDetails((int)dgvLocalDrivingLicenseApplicationHistory.CurrentRow.Cells[0].Value);
             frm.Show();
         }
 

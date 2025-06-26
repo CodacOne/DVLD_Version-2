@@ -144,7 +144,11 @@ namespace BusinessLayer
 
 
         /////////////////////////////////////////////////////////////////////
+        public bool SetComplete()
 
+        {
+            return clsDAApplication.UpdateStatus(ApplicationID, 3);
+        }
         /////////////////////////////////////////////////////////////////////
         ///
         public  bool _AddNewApplication()

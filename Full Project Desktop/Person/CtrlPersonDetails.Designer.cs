@@ -261,6 +261,7 @@
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(464, 27);
             this.lblName.TabIndex = 55;
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // pictureBox5
             // 

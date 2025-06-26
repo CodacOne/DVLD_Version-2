@@ -14,126 +14,19 @@ namespace Full_Project_Desktop
 {
     public partial class IssueDriverLicenseForFirstTime : Form
     {
-        private DataTable _Dt = new DataTable();
+        private int _LocalDrivingLicenseApplicationID;
+        private clsLocalDrivingApplication _LocalDrivingLicenseApplication;
 
-        private int _ApplicationID = -1;
-        private int _LocalDrivingLicenseApplicationID = -1;
-
-        private int _DriverID = -1;
-
-      clsDriver _Driver = new clsDriver();
 
         public IssueDriverLicenseForFirstTime(int LocalDrivingLicenseApplicationID)
         {
             InitializeComponent();
 
             _LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
-            DataTable Dt = new DataTable();
-
-            _Dt = clsLocalDrivingApplication.GetAllDataToSchedulingTest(_LocalDrivingLicenseApplicationID);
-
-
-        //    ctrl_T_VisionTestAppointment1.LoadDataToForm(_Dt);
-
-            //DataRow row = _DtInfoDetainTable.Rows[0];
-
-            //_Release_AppID = (int)row["ApplicationID"];
-
-        }
-
-
        
-        /*/*//*/**********************************************//*/*////
-
-       private void LoadDataDriverAndSaveOnDataBase()
-        {
-            DataRow row = _Dt.Rows[0];
-
-
-            _Driver.PersonID = Convert.ToInt32(row["PersonID"]);
-            _Driver.CreatedByUserID = Convert.ToInt32(row["CreatedByUserID"]);
-            _Driver.CreatedDate = DateTime.Now;
-
-            if (_Driver.Save())
-
-            {
-                _DriverID = _Driver.DriverID;
-                LoadDataLicenseAndSaveOnDataBase();
-            }
-          
-            else
-            {
-                MessageBox.Show("Failed Save Driver Data.", "Error");
-
-            }
-          
-
         }
 
         /*/*//*/**********************************************//*/*////
-        /*/*//*/**********************************************//*/*////
-
-        private void LoadDataLicenseAndSaveOnDataBase()
-        {
-
-         int ApplicationID = -1, DriverID = -1, LicenseClassID = -1, IssueReason = -1,
-               PaidFees = -1 , CreatedByUserID =-1;
-         DateTime IssueDate = DateTime.Now, ExpirationDate = DateTime.Now;
-         string Notes = ""; 
-         Byte IsActive = 0;
-        
-
-            DataRow row = _Dt.Rows[0];
-
-            ApplicationID = Convert.ToInt32(row["ApplicationID"]);
-
-           
-          
-            LicenseClassID = Convert.ToInt32(row["LicenseClassID"]);
-
-            IssueDate = DateTime.Now;
-
-            if (LicenseClassID==1 || LicenseClassID==2)
-            {
-                ExpirationDate = DateTime.Now.AddYears(5);
-            }
-
-            else
-            {
-
-                ExpirationDate = DateTime.Now.AddYears(10);
-            }
-
-
-
-            PaidFees = clsDriver.GetFeesOfLicenseClassTable(LicenseClassID);
-
-            Notes = txtNotes.Text;
-            IsActive = 1;
-            IssueReason = 1;
-
-            CreatedByUserID = Convert.ToInt32(row["CreatedByUserID"]);
-
-
-            _DriverID = _Driver.DriverID;
-            DriverID = _DriverID;
-
-
-            if (clsDriver.InsertLNewLicense(ApplicationID, DriverID, LicenseClassID, IssueReason,
-     PaidFees, CreatedByUserID, IssueDate, ExpirationDate,
-     Notes, IsActive))
-            {
-
-                MessageBox.Show("License Issued Successfully", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-
-            else
-            {
-                MessageBox.Show("License Issued Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-      
-        }
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -151,16 +44,60 @@ namespace Full_Project_Desktop
 
         private void IssueDriverLicenseForFirstTime_Load(object sender, EventArgs e)
         {
+            txtNotes.Focus();
+            _LocalDrivingLicenseApplication = clsLocalDrivingApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplicationID);
+
+
+            if (_LocalDrivingLicenseApplication == null)
+            {
+
+                MessageBox.Show("No Applicaiton with ID=" + _LocalDrivingLicenseApplicationID.ToString(), "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
+
+            if (!_LocalDrivingLicenseApplication.PassedAllTests())
+            {
+
+                MessageBox.Show("Person Should Pass All Tests First.", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+            }
+
+            int LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
+            if (LicenseID != -1)
+            {
+
+                MessageBox.Show("Person already has License before with License ID=" + LicenseID.ToString(), "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+                return;
+
+            }
+
+
+            ctrl_T_VisionTestAppointment1.LoadApplicationInfoByLocalDrivingAppID(_LocalDrivingLicenseApplicationID);
 
         }
-        /*/*//*//*//*********************************************************//*/*///
+
+        /*/*//*//*//**********************//*/*///
 
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            LoadDataDriverAndSaveOnDataBase();
+            int LicenseID = _LocalDrivingLicenseApplication.IssueLicenseForTheFirtTime(txtNotes.Text.Trim(), clsGlobal.CurrentUser.UserID);
 
-            
+            if (LicenseID != -1)
+            {
+                MessageBox.Show("License Issued Successfully with License ID = " + LicenseID.ToString(),
+                    "Succeeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("License Was not Issued ! ",
+                 "Faild", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

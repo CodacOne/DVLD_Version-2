@@ -30,16 +30,7 @@ namespace Full_Project_Desktop
         private void RefreshList()
         {
 
-            _Dt = clsDetainLicense.GetAllInfoForListDetain_Dgv(InputNumber, InputTextBox);
-            if (_Dt.Rows.Count > 0)
-            {
-                DataRow row = _Dt.Rows[0];
-
-                // نصوص السائق
-                _PersonID = Convert.ToInt32(row["Person_ID"]);
-
-
-            }
+           
 
             dgvManageDetain.DataSource = _Dt;
 
@@ -114,7 +105,7 @@ namespace Full_Project_Desktop
 
         private void AddNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowDetailsLicense frm = new ShowDetailsLicense((int)dgvManageDetain.CurrentRow.Cells[1].Value);
+            DriverDetails frm = new DriverDetails((int)dgvManageDetain.CurrentRow.Cells[1].Value);
             frm.Show();
         }
 

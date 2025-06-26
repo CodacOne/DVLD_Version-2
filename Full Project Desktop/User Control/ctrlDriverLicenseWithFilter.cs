@@ -422,17 +422,7 @@ namespace Full_Project_Desktop
         {
 
 
-            // الوصول إلى الفورم الرئيسي
-            Form parentForm = this.FindForm();
-
-            if (parentForm is ReplacementForLostOrDamagedLicense main)
-            {
-                main.LoadDataToReplacementForm(licenseID, _Dt);  // استدعاء التابع الموجود داخل الفورم الرئيسي
-            }
-            else
-            {
-                MessageBox.Show("Unable to find main form.");
-            }
+         
         }
 
         /*/*//*/*******************************************/
@@ -479,17 +469,8 @@ namespace Full_Project_Desktop
         {
 
 
-            // الوصول إلى الفورم الرئيسي
-            Form parentForm = this.FindForm();
-
-            if (parentForm is RenewLicenseApplication main)
-            {
-                main.LoadDataToRenewForm(licenseID, _Dt);  // استدعاء التابع الموجود داخل الفورم الرئيسي
-            }  
-            else
-            {
-                MessageBox.Show("Unable to find main form.");
-            }
+          
+          
         }
 
         /*/*//*/*******************************************/

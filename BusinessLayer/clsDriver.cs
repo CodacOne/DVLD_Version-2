@@ -17,29 +17,14 @@ namespace BusinessLayer
         public enMode Mode = enMode.AddNew;
 
 
+        public clsPerson PersonInfo;
+        public int PersonID { get; set;  }
 
-        public int PersonID
-        {
-            get; set;
-        }
+        public int DriverID  { get; set; }
 
-        public int DriverID
-        {
-            get; set;
-        }
+        public int CreatedByUserID { get; set; }
 
-        public int CreatedByUserID
-        {
-            get; set;
-        }
-
-        public DateTime CreatedDate
-        {
-            get; set;
-        }
-
-
-
+        public DateTime CreatedDate  {   get; set; }
 
 
 
@@ -58,17 +43,33 @@ namespace BusinessLayer
 
 
         /*/////*/////*/////*/////*/////*/////*/////*////
-        /*/*//*/******************************************************************//*/*/
+
+        
         private clsDriver(int DriverID, int PersonID, int CreatedByUserID, DateTime CreatedDate)
         {
             this.PersonID = PersonID;
             this.DriverID = DriverID;
             this.CreatedByUserID = CreatedByUserID;
             this.CreatedDate = CreatedDate;
-          
+            this.PersonInfo = clsPerson.FindByPersonID(PersonID);
 
             Mode = enMode.Update;
         }
+
+        /*/*//*/******************************************************************//*/*/
+        public static clsDriver FindByPersonID(int PersonID)
+        {
+
+            int DriverID = -1; int CreatedByUserID = -1; DateTime CreatedDate = DateTime.Now;
+
+            if (clsDADriver.GetDriverInfoByPersonID(PersonID, ref DriverID, ref CreatedByUserID, ref CreatedDate))
+
+                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
+            else
+                return null;
+
+        }
+
 
         /*/*//*/******************************************************************//*/*/
                                                                                    /////////////////////////////////////////////////////////////////////
@@ -83,6 +84,22 @@ namespace BusinessLayer
         }
 
         /////////////////////////////////////////////////////////////////////
+        /// <summary>
+
+        public static clsDriver FindByDriverID(int DriverID)
+        {
+
+            int PersonID = -1; int CreatedByUserID = -1; DateTime CreatedDate = DateTime.Now;
+
+            if (clsDADriver.GetDriverInfoByDriverID(DriverID, ref PersonID, ref CreatedByUserID, ref CreatedDate))
+
+                return new clsDriver(DriverID, PersonID, CreatedByUserID, CreatedDate);
+            else
+                return null;
+
+        }
+
+        
         /////////////////////////////////////////////////////////////////////
 
         public bool Save()

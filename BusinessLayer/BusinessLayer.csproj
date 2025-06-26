@@ -41,12 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsDetaineLicense.cs" />
     <Compile Include="clsTestAppointement.cs" />
     <Compile Include="clsApplicationType.cs" />
     <Compile Include="clsCountries.cs" />
     <Compile Include="clsCurrentUser.cs" />
-    <Compile Include="clsDetainLicense.cs" />
-    <Compile Include="clsDrivers.cs" />
+    <Compile Include="clsDriver.cs" />
     <Compile Include="clsInternationalLicense.cs" />
     <Compile Include="clsLicenseClass.cs" />
     <Compile Include="clsLocalDrivingApplication.cs" />

@@ -23,7 +23,7 @@ namespace Full_Project_Desktop
         private int _licenseID = -1;
         private int _DetainID = -1;
 
-        clsDetainLicense _DetainLicense = new clsDetainLicense();
+        clsDetaineLicense _DetainLicense = new clsDetaineLicense();
 
         private int _PersonID = -1;   // لجلب البيانات الشخصية وتحميلها في ال Show License History
         private int _ApplicationID = -1;
@@ -136,7 +136,7 @@ namespace Full_Project_Desktop
                 _DetainLicense.DetainDate = DateTime.Now;
                 _DetainLicense.FineFees =Convert.ToInt32( txtFineFees.Text);
                 _DetainLicense.CreatedByUserID= clsCurrentUser.CurrentUserID;
-                _DetainLicense.IsReleaseId = false;
+             
 
 
 
@@ -177,7 +177,7 @@ namespace Full_Project_Desktop
 
         private void LlShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ShowDetailsLicense frm = new ShowDetailsLicense(_licenseID);
+            DriverDetails frm = new DriverDetails(_licenseID);
             frm.Show();
         }
 
