@@ -112,11 +112,13 @@ namespace BusinessLayer
 
         }
 
-        public static DataTable GetAllDetainedLicenses()
+        public static DataTable GetAllDetainedLicenses(int ColumnIndex, string Filter)
         {
-            return clsDADetainLicense.GetAllDetainedLicenses();
+            return clsDADetainLicense.GetAllDetainedLicenses(ColumnIndex , Filter);
 
         }
+
+     
 
         public static clsDetaineLicense FindByLicenseID(int LicenseID)
         {
@@ -170,6 +172,14 @@ namespace BusinessLayer
         {
             return clsDADetainLicense.IsLicenseDetained(LicenseID);
         }
+
+
+        public bool ReleaseDetainedLicense(int ReleasedByUserID, int ReleaseApplicationID)
+        {
+            return clsDADetainLicense.ReleaseDetainedLicense(this.DetainID,
+                   ReleasedByUserID, ReleaseApplicationID);
+        }
+
 
 
     }

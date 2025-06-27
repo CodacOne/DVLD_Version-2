@@ -28,7 +28,7 @@ namespace Full_Project_Desktop
         public clsLicense SelectedLicenseInfo
         { get { return _License; } }
 
-
+       
 
         /*/*//*/******************************************************************//*/*/
 

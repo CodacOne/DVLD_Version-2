@@ -55,7 +55,7 @@ namespace DataAccess_Layer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
                 isFound = false;
             }
             finally
@@ -107,7 +107,7 @@ namespace DataAccess_Layer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
                 isFound = false;
             }
             finally

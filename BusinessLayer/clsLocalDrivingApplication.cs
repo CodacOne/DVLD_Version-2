@@ -353,18 +353,6 @@ namespace BusinessLayer
         }
 
         /////////////////////////////////////////////////////////////////////
-        /// <summary>
-
-        public static DataTable GetAllDataToSchedulingTest(int LocalDrivingLicenseApplicationID)
-        {
-            return clsDAApplication.GetAllDataToSchedulingTest(LocalDrivingLicenseApplicationID);
-
-        }
-
-      
-
-       
-        /////////////////////////////////////////////////////////////////////
         public bool IsLicenseIssued()
         {
             return (GetActiveLicenseID() != -1);

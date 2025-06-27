@@ -23,7 +23,19 @@ namespace Full_Project_Desktop
         {
             get; set;
         }
-
+        private bool _FilterEnabled = true;
+        public bool FilterEnabled
+        {
+            get
+            {
+                return _FilterEnabled;
+            }
+            set
+            {
+                _FilterEnabled = value;
+                gbFilter.Enabled = _FilterEnabled;
+            }
+        }
 
         public CtrlPeronDetailsWithFilterNew()
         {
@@ -38,6 +50,27 @@ namespace Full_Project_Desktop
             {
 
                 _PersonID = Person.PersonID;
+                cbFilter.SelectedIndex = 2;
+                ctrlPersonDetails1.LoadPersonInfo(_PersonID);
+                //////////////////////////////////////////////////////////////////////
+            }
+
+            else
+            {
+                MessageBox.Show("$No Person With PersonID Or National No =" + _InputTextBox, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+            }
+
+        }
+
+        public void _LoadDataToForm(int PersonID)
+        {
+
+            if (PersonID != -1)
+            {
+
+                _PersonID = PersonID;
                 cbFilter.SelectedIndex = 2;
                 ctrlPersonDetails1.LoadPersonInfo(_PersonID);
                 //////////////////////////////////////////////////////////////////////

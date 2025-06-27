@@ -538,7 +538,7 @@ namespace DataAccess_Layer
             {
 
                 //    IsFound = false;
-                Console.WriteLine("Error : " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
             }
 
             finally

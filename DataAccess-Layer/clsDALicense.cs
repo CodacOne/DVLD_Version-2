@@ -64,7 +64,7 @@ namespace DataAccess_Layer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
                 isFound = false;
             }
             finally
@@ -101,7 +101,7 @@ namespace DataAccess_Layer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
                 return false;
             }
 
@@ -181,7 +181,7 @@ namespace DataAccess_Layer
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
 
             }
 
@@ -226,7 +226,7 @@ namespace DataAccess_Layer
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
             }
             finally
             {
@@ -285,7 +285,7 @@ namespace DataAccess_Layer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
                 return false;
             }
 
@@ -299,6 +299,55 @@ namespace DataAccess_Layer
 
 
         /**//*/////////*//*/*//*/*//**//*/////////*//*/*//*/*/
+        public static DataTable GetDriverLicenses(int DriverID)
+        {
+
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
+
+            string query = @"SELECT     
+                           Licenses.LicenseID,
+                           ApplicationID,
+		                   LicenseClasses.ClassName, Licenses.IssueDate, 
+		                   Licenses.ExpirationDate, Licenses.IsActive
+                           FROM Licenses INNER JOIN
+                                LicenseClasses ON Licenses.LicenseClass = LicenseClasses.LicenseClassID
+                            where DriverID=@DriverID
+                            Order By IsActive Desc, ExpirationDate Desc";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@DriverID", DriverID);
+
+            try
+            {
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+
+                {
+                    dt.Load(reader);
+                }
+
+                reader.Close();
+
+
+            }
+
+            catch (Exception ex)
+            {
+                throw new Exception("Error : " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return dt;
+
+        }
+
         /**//*/////////*//*/*//*/*//**//*/////////*//*/*//*/*/
 
         /**//*/////////*//*/*//*/*//**//*/////////*//*/*//*/*/

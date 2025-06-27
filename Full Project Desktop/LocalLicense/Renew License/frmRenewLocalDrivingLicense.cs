@@ -98,7 +98,10 @@ namespace Full_Project_Desktop
 
         private void llLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            int PersonID = ctrlDriverLicenseInfoWithFilter1.SelectedLicenseInfo.DriverInfo.PersonID;
+            ShowLicenseHistory frm = new ShowLicenseHistory(PersonID);
+            frm.ShowDialog();
+        
         }
 
         private void frmRenewLocalDrivingLicense_Activated(object sender, EventArgs e)

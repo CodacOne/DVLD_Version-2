@@ -34,8 +34,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.ctrlApplicationInfo1 = new Full_Project_Desktop.ctrlApplicationInfo();
-            this.ctrlDriverLicenseWithFilter1 = new Full_Project_Desktop.ctrlDriverLicenseWithFilter();
-            this.SuspendLayout();
+               this.SuspendLayout();
             // 
             // label44
             // 
@@ -111,13 +110,7 @@
             this.ctrlApplicationInfo1.Load += new System.EventHandler(this.CtrlApplicationInfo1_Load);
             // 
             // ctrlDriverLicenseWithFilter1
-            // 
-            this.ctrlDriverLicenseWithFilter1.Location = new System.Drawing.Point(33, 54);
-            this.ctrlDriverLicenseWithFilter1.Name = "ctrlDriverLicenseWithFilter1";
-            this.ctrlDriverLicenseWithFilter1.Size = new System.Drawing.Size(1007, 538);
-            this.ctrlDriverLicenseWithFilter1.TabIndex = 104;
-            this.ctrlDriverLicenseWithFilter1.Load += new System.EventHandler(this.CtrlDriverLicenseWithFilter1_Load);
-            // 
+       
             // InternationalLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,7 +120,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1184, 881);
             this.Controls.Add(this.ctrlApplicationInfo1);
-            this.Controls.Add(this.ctrlDriverLicenseWithFilter1);
+         
             this.Controls.Add(this.llShowLicenseInfo);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnSave);
@@ -146,7 +139,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.LinkLabel llShowLicenseInfo;
-        private ctrlDriverLicenseWithFilter ctrlDriverLicenseWithFilter1;
+       
         private ctrlApplicationInfo ctrlApplicationInfo1;
     }
 }

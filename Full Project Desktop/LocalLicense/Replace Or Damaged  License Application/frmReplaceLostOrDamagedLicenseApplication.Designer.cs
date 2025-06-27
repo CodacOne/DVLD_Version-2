@@ -88,6 +88,7 @@
             this.llShowLicenseHistory.TabStop = true;
             this.llShowLicenseHistory.Text = "Show Licenses History";
             this.llShowLicenseHistory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.llShowLicenseHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowLicenseHistory_LinkClicked);
             // 
             // gbReplacementFor
             // 

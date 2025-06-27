@@ -655,8 +655,7 @@ namespace DataAccess_Layer
         {
             DataTable Dt = new DataTable();
 
-            string query = @"
-        SELECT 
+            /* SELECT 
             D.DriverID,
             D.PersonID,
             P.NationalNo,
@@ -679,8 +678,19 @@ namespace DataAccess_Layer
                     WHEN L.IsActive = 0 THEN 'False'
                     ELSE 'Unknown'
                 END LIKE '%' + @Filter + '%')
-        )
-    ";
+        )*/
+               string query = @"SELECT * 
+             FROM Drivers_View
+             WHERE 
+                 @ColumnIndex = 0
+                 OR (@ColumnIndex = 1 AND CAST(DriverID AS VARCHAR) LIKE '%' + @Filter + '%')
+                 OR (@ColumnIndex = 2 AND CAST(PersonID AS VARCHAR) LIKE '%' + @Filter + '%')
+                 OR (@ColumnIndex = 3 AND NationalNo LIKE '%' + @Filter + '%')
+                 OR (@ColumnIndex = 4 AND FullName LIKE '%' + @Filter + '%')
+             ORDER BY FullName;
+
+                     ";
+
 
             SqlConnection Connection = new SqlConnection(clsConnectionString.ConnectionString);
             SqlCommand command = new SqlCommand(query, Connection);
@@ -1540,7 +1550,7 @@ namespace DataAccess_Layer
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
 
             }
 

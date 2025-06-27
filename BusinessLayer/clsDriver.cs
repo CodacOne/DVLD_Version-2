@@ -207,10 +207,13 @@ namespace BusinessLayer
             return clsDAIssuingLicense.GetAllLicenseToThePersonForDgv(PersonID);
 
         }
-        
+
 
         /////////////////////////////////////////////////////////////////////
-
+        public static DataTable GetLicenses(int DriverID)
+        {
+            return clsLicense.GetDriverLicenses(DriverID);
+        }
         /*/*//*/******************************************************************//*/*/
 
 
@@ -223,10 +226,16 @@ namespace BusinessLayer
 
 
         /////////////////////////////////////////////////////////////////////
+        //public static DataTable GetInternationalLicenses(int DriverID)
+        //{
+        //    // return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
+        //}
+
+
         /*/*//*/******************************************************************//*/*/
 
         /*/*//*/******************************************************************//*/*/
-                                                                                   /*/*//*/******************************************************************//*/*/
+        /*/*//*/******************************************************************//*/*/
 
         /*/*//*/******************************************************************//*/*/
     }

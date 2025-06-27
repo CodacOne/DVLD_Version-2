@@ -169,15 +169,30 @@ namespace DataAccess_Layer
             return isFound;
         }
 
-        public static DataTable GetAllDetainedLicenses()
+        public static DataTable GetAllDetainedLicenses(int ColumnIndex, string Filter)
         {
 
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(clsConnectionString.ConnectionString);
+            string query = @"
+                  SELECT * 
+                  FROM detainedLicenses_View
+                  WHERE 
+                      (@ColumnIndex = 0)
+                      OR (@ColumnIndex = 1 AND DetainID IS NOT NULL AND CAST(DetainID AS VARCHAR) LIKE '%' + @Filter + '%')
+                      OR (@ColumnIndex = 2 AND IsReleased IS NOT NULL AND CAST(IsReleased AS VARCHAR) LIKE '%' + @Filter + '%')
+                      OR (@ColumnIndex = 3 AND NationalNo IS NOT NULL AND NationalNo LIKE '%' + @Filter + '%')
+                      OR (@ColumnIndex = 4 AND FullName IS NOT NULL AND FullName LIKE '%' + @Filter + '%')
+                      OR (@ColumnIndex = 5 AND ReleaseApplicationID IS NOT NULL AND CAST(ReleaseApplicationID AS VARCHAR) LIKE '%' + @Filter + '%')
+                  ORDER BY IsReleased, DetainID;";
 
-            string query = "select * from detainedLicenses_View order by IsReleased ,DetainID;";
+
 
             SqlCommand command = new SqlCommand(query, connection);
+
+
+            command.Parameters.AddWithValue("@ColumnIndex", ColumnIndex);
+            command.Parameters.AddWithValue("@Filter", Filter);
 
             try
             {
@@ -198,7 +213,7 @@ namespace DataAccess_Layer
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
             }
             finally
             {
@@ -255,7 +270,7 @@ namespace DataAccess_Layer
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
 
             }
 
@@ -301,7 +316,7 @@ namespace DataAccess_Layer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
                 return false;
             }
 
@@ -341,7 +356,7 @@ namespace DataAccess_Layer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
                 return false;
             }
 
@@ -383,7 +398,7 @@ namespace DataAccess_Layer
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                throw new Exception("Error : " + ex.Message);
 
             }
 
@@ -397,6 +412,9 @@ namespace DataAccess_Layer
             ;
 
         }
+      
+
+
 
 
     }

@@ -176,17 +176,11 @@
     <Compile Include="User Control\ctrlDriverInternationalLicenseInfo.Designer.cs">
       <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\ctrlDriverLicense.cs">
+    <Compile Include="Driver\ctrlDriverLicense.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\ctrlDriverLicense.Designer.cs">
+    <Compile Include="Driver\ctrlDriverLicense.Designer.cs">
       <DependentUpon>ctrlDriverLicense.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User Control\ctrlDriverLicenseWithFilter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control\ctrlDriverLicenseWithFilter.Designer.cs">
-      <DependentUpon>ctrlDriverLicenseWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalLicense\ctrl_T_VisionTestAppointment.cs">
       <SubType>UserControl</SubType>
@@ -194,10 +188,10 @@
     <Compile Include="LocalLicense\ctrl_T_VisionTestAppointment.Designer.cs">
       <DependentUpon>ctrl_T_VisionTestAppointment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Datain And Release\DetainLicense.cs">
+    <Compile Include="LocalLicense\Datain And Release\DetainLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Datain And Release\DetainLicense.Designer.cs">
+    <Compile Include="LocalLicense\Datain And Release\DetainLicense.Designer.cs">
       <DependentUpon>DetainLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="International License\DriverInternationalLicenseInfo.cs">
@@ -224,22 +218,22 @@
     <Compile Include="LocalLicense\IssueDriverLicenseForFirstTime.Designer.cs">
       <DependentUpon>IssueDriverLicenseForFirstTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage All App\ManageDetainedLicense.cs">
+    <Compile Include="LocalLicense\Datain And Release\ManageDetainedLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage All App\ManageDetainedLicense.Designer.cs">
+    <Compile Include="LocalLicense\Datain And Release\ManageDetainedLicense.Designer.cs">
       <DependentUpon>ManageDetainedLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage All App\ManageDrivers.cs">
+    <Compile Include="Driver\ManageDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage All App\ManageDrivers.Designer.cs">
+    <Compile Include="Driver\ManageDrivers.Designer.cs">
       <DependentUpon>ManageDrivers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Datain And Release\ReleaseDetainedLicense.cs">
+    <Compile Include="LocalLicense\Datain And Release\ReleaseDetainedLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Datain And Release\ReleaseDetainedLicense.Designer.cs">
+    <Compile Include="LocalLicense\Datain And Release\ReleaseDetainedLicense.Designer.cs">
       <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="User\ChangePassword.cs">
@@ -298,10 +292,10 @@
     <Compile Include="Person\ShowDetailsForPersonAndUser.Designer.cs">
       <DependentUpon>ShowDetailsForPersonAndUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="All Show Details\ShowLicenseHistory.cs">
+    <Compile Include="Driver\ShowLicenseHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="All Show Details\ShowLicenseHistory.Designer.cs">
+    <Compile Include="Driver\ShowLicenseHistory.Designer.cs">
       <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\ApplicationsTypes\EditApplicationType.cs">
@@ -379,16 +373,13 @@
     <EmbeddedResource Include="User Control\ctrlDriverInternationalLicenseInfo.resx">
       <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\ctrlDriverLicense.resx">
+    <EmbeddedResource Include="Driver\ctrlDriverLicense.resx">
       <DependentUpon>ctrlDriverLicense.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User Control\ctrlDriverLicenseWithFilter.resx">
-      <DependentUpon>ctrlDriverLicenseWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalLicense\ctrl_T_VisionTestAppointment.resx">
       <DependentUpon>ctrl_T_VisionTestAppointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Datain And Release\DetainLicense.resx">
+    <EmbeddedResource Include="LocalLicense\Datain And Release\DetainLicense.resx">
       <DependentUpon>DetainLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="International License\DriverInternationalLicenseInfo.resx">
@@ -403,13 +394,13 @@
     <EmbeddedResource Include="LocalLicense\IssueDriverLicenseForFirstTime.resx">
       <DependentUpon>IssueDriverLicenseForFirstTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage All App\ManageDetainedLicense.resx">
+    <EmbeddedResource Include="LocalLicense\Datain And Release\ManageDetainedLicense.resx">
       <DependentUpon>ManageDetainedLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage All App\ManageDrivers.resx">
+    <EmbeddedResource Include="Driver\ManageDrivers.resx">
       <DependentUpon>ManageDrivers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Datain And Release\ReleaseDetainedLicense.resx">
+    <EmbeddedResource Include="LocalLicense\Datain And Release\ReleaseDetainedLicense.resx">
       <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\ChangePassword.resx">
@@ -449,7 +440,7 @@
     <EmbeddedResource Include="Person\ShowDetailsForPersonAndUser.resx">
       <DependentUpon>ShowDetailsForPersonAndUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="All Show Details\ShowLicenseHistory.resx">
+    <EmbeddedResource Include="Driver\ShowLicenseHistory.resx">
       <DependentUpon>ShowLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ApplicationsTypes\EditApplicationType.resx">
@@ -1013,6 +1004,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\License View 324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

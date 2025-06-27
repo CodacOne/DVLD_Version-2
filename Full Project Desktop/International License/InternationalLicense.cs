@@ -23,8 +23,7 @@ namespace Full_Project_Desktop
             InitializeComponent();
             llShowLicenseInfo.Enabled = false;
 
-            ctrlDriverLicenseWithFilter1.CurrentMode = ctrlDriverLicenseWithFilter.FormMode.International;
-        }
+              }
 
         private void Label43_Click(object sender, EventArgs e)
         {
@@ -56,8 +55,7 @@ namespace Full_Project_Desktop
 
         private void CtrlDriverLicenseWithFilter1_Load(object sender, EventArgs e)
         {
-            ctrlDriverLicenseWithFilter1.SaveEnabled += CtrlDriverLicenseWithFilter_SaveEnabled;
-            ctrlDriverLicenseWithFilter1.SaveDisabled += CtrlDriverLicenseWithFilter_SaveDisabled;
+
         }
 
 
@@ -111,8 +109,7 @@ namespace Full_Project_Desktop
                 int AppID = Convert.ToInt32(row["AppID"]);
                 int LocalDrivingID = clsInternationalLicense.GetLocalDrivingLicenseApplicationIDByApplicationID(AppID);
                
-                ShowLicenseHistory frm = new ShowLicenseHistory(LocalDrivingID,true);
-                frm.Show();
+               
             }
 
             else
