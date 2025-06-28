@@ -188,10 +188,7 @@ namespace BusinessLayer
             return clsDALocalDrivingApplication.GetActiveApplicationIDForLicenseClass(PersonID, (int)ApplicationTypeID, LicenseClassID);
         }
 
-        /////////////////////////////////////////////////////////////////////
-
       
-
         /////////////////////////////////////////////////////////////////////
 
         public bool Save()

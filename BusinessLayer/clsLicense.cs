@@ -220,15 +220,6 @@ namespace BusinessLayer
         }
 
 
-
-        public static bool DisabledOldLicense(int OldLicenseID)
-        {
-
-          return  clsDAIssuingLicense.DisabledOldLicense(OldLicenseID);
-
-        }
-
-
         /*/*//*/****//**********************//*/*///***///
 
         public static string GetIssueReasonText(enIssueReason IssueReason)
@@ -261,33 +252,9 @@ namespace BusinessLayer
 
         }
 
+       
         /*/*//*/****//**********************//*/*///***///
 
-        public static int ValidationIfLicenseActiveOrNotActive(int LicenseID)
-        {
-
-            return clsDAIssuingLicense.ValidationIfLicenseActiveOrNotActive(LicenseID);
-
-        }
-
-        /*/*//*/****//**********************//*/*///***///
-
-
-        public static bool IsLicenseDetainedOrNotDetained(int LicenseID)
-        {
-            return clsDAIssuingLicense.IsLicenseDetainedOrNotDetained(LicenseID);
-
-        }
-
-
-        /*/*//*/****//**********************//*/*///***///
-
-
-        public static bool IsLicenseDisactivatedOrNotDisactivated(int LicenseID)
-        {
-            return clsDAIssuingLicense.IsLicenseDisactivatedOrNotDisactivated(LicenseID);
-
-        }
 
 
         /*/*//*/****//**********************//*/*///***///

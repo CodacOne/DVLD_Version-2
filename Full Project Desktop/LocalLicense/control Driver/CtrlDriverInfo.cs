@@ -1,15 +1,16 @@
 ﻿using BusinessLayer;
 using Full_Project_Desktop.Global_Classes;
+using Full_Project_Desktop.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 
 namespace Full_Project_Desktop
@@ -35,19 +36,14 @@ namespace Full_Project_Desktop
         private void _LoadPersonImage()
         {
 
-            int Gender = _License.DriverInfo.PersonInfo.Gendor;
+            if (_License.DriverInfo.PersonInfo.Gendor == 0)
+            { pbforPerson.Image = Resources.Male_512; }
 
-            if (Gender == 0)
-            {
-
-                pbforPerson.Image = Properties.Resources.male2;
-            }
 
             else
-            {
-                pbforPerson.Image = Properties.Resources.Female2;
-            }
+            { pbforPerson.Image = Resources.Female_512; }
 
+          
             string ImagePath = _License.DriverInfo.PersonInfo.ImagePath?.Trim();
            
                 if (File.Exists(ImagePath))

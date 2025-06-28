@@ -15,15 +15,12 @@ namespace Full_Project_Desktop
     public partial class DriverInternationalLicenseInfo : Form
     {
 
-        private int _licenseID = -1;
-
-        public DriverInternationalLicenseInfo(int licenseID)
+        private int _InternationalLicenseID;
+        public DriverInternationalLicenseInfo(int InternationalLicenseID)
         {
             InitializeComponent();
-            _licenseID = licenseID;
+          _InternationalLicenseID= InternationalLicenseID;
 
-            ctrlDriverInternationalLicenseInfo1.LoadDataToForm(licenseID);
-           
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -40,7 +37,7 @@ namespace Full_Project_Desktop
 
         private void DriverInternationalLicenseInfo_Load(object sender, EventArgs e)
         {
-
+            ctrlDriverInternationalLicenseInfo1.LoadInfo(_InternationalLicenseID);
         }
     }
 }

@@ -376,6 +376,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "CtrlPersonDetails";
             this.Size = new System.Drawing.Size(962, 326);
+            this.Load += new System.EventHandler(this.CtrlPersonDetails_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbforPerson)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

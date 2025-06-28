@@ -170,10 +170,10 @@
     <Compile Include="Applications\ctrlApplicationInfo.Designer.cs">
       <DependentUpon>ctrlApplicationInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\ctrlDriverInternationalLicenseInfo.cs">
+    <Compile Include="International License\Control\ctrlDriverInternationalLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\ctrlDriverInternationalLicenseInfo.Designer.cs">
+    <Compile Include="International License\Control\ctrlDriverInternationalLicenseInfo.Designer.cs">
       <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Driver\ctrlDriverLicense.cs">
@@ -206,10 +206,10 @@
     <Compile Include="International License\InternationalLicense.Designer.cs">
       <DependentUpon>InternationalLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage All App\ManageInternationalLicenseApplication.cs">
+    <Compile Include="International License\ManageInternationalLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage All App\ManageInternationalLicenseApplication.Designer.cs">
+    <Compile Include="International License\ManageInternationalLicenseApplication.Designer.cs">
       <DependentUpon>ManageInternationalLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalLicense\IssueDriverLicenseForFirstTime.cs">
@@ -370,7 +370,7 @@
     <EmbeddedResource Include="Applications\ctrlApplicationInfo.resx">
       <DependentUpon>ctrlApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\ctrlDriverInternationalLicenseInfo.resx">
+    <EmbeddedResource Include="International License\Control\ctrlDriverInternationalLicenseInfo.resx">
       <DependentUpon>ctrlDriverInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Driver\ctrlDriverLicense.resx">
@@ -388,7 +388,7 @@
     <EmbeddedResource Include="International License\InternationalLicense.resx">
       <DependentUpon>InternationalLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage All App\ManageInternationalLicenseApplication.resx">
+    <EmbeddedResource Include="International License\ManageInternationalLicenseApplication.resx">
       <DependentUpon>ManageInternationalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalLicense\IssueDriverLicenseForFirstTime.resx">
@@ -1008,5 +1008,6 @@
   <ItemGroup>
     <None Include="Resources\driver.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

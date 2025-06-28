@@ -216,6 +216,10 @@ namespace BusinessLayer
         }
         /*/*//*/******************************************************************//*/*/
 
+        public static DataTable GetInternationalLicenses(int DriverID)
+        {
+            return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
+        }
 
         public static DataTable DriversWithLicensesFilter(int ColumnIndex, string Filter)
         {

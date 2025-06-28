@@ -1,101 +1,75 @@
-﻿using System;
+﻿using DataAccess_Layer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess_Layer;
-using System.Data;
+using static BusinessLayer.clsApplication;
 
 
 namespace BusinessLayer
 {
-   public class clsInternationalLicense
+   public class clsInternationalLicense : clsApplication
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
 
+        public clsDriver DriverInfo;
+        public int InternationalLicenseID { set; get; }
+        public int DriverID { set; get; }
+        public int IssuedUsingLocalLicenseID { set; get; }
+        public DateTime IssueDate { set; get; }
+        public DateTime ExpirationDate { set; get; }
+        public bool IsActive { set; get; }
 
 
-        public int InternationalLicenseID
-        {
-            get; set;
-        }
-
-        public int ApplicationID
-        {
-            get; set;
-        }
-
-        public int DriverID
-        {
-            get; set;
-        }
-
-        public int IssuedUsingLocalDrivingLicenseApplicationID
-        {
-            get; set;
-        }
-
-
-        public DateTime IssueDate
-        {
-            get; set;
-        }
-
-
-
-        public DateTime ExpirationDate
-        {
-            get; set;
-        }
-
-        public Byte IsActive
-        {
-            get; set;
-        }
-
-        public int CreatedByUserID
-        {
-            get; set;
-        }
-
-      
-
-
-
-        /////////////////////////////////////////////////////////////////////
         public clsInternationalLicense()
+
         {
+            //here we set the applicaiton type to New International License.
+            this.ApplicationTypeID = (int)clsApplication.enApplicationType.NewInternationalLicense;
+
             this.InternationalLicenseID = -1;
-            this.ApplicationID = -1;
             this.DriverID = -1;
-            this.IssuedUsingLocalDrivingLicenseApplicationID = -1;
+            this.IssuedUsingLocalLicenseID = -1;
             this.IssueDate = DateTime.Now;
             this.ExpirationDate = DateTime.Now;
-            this.IsActive = 0;
-            this.CreatedByUserID = -1;
 
-
+            this.IsActive = true;
 
 
             Mode = enMode.AddNew;
+
         }
 
+        public clsInternationalLicense(int ApplicationID, int ApplicantPersonID,
+            DateTime ApplicationDate,
+             enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
+             float PaidFees, int CreatedByUserID,
+             int InternationalLicenseID, int DriverID, int IssuedUsingLocalLicenseID,
+            DateTime IssueDate, DateTime ExpirationDate, bool IsActive)
 
-        /*/////*/////*/////*/////*/////*/////*/////*////
-
-        private clsInternationalLicense(int InternationalLicenseID, int ApplicationID, int DriverID,
-            int IssuedUsingLocalDrivingLicenseApplicationID, DateTime IssueDate, DateTime ExpirationDate, Byte IsActive, int CreatedByUserID)
         {
+            base.ApplicationID = ApplicationID;
+            base.ApplicantPersonID = ApplicantPersonID;
+            base.ApplicationDate = ApplicationDate;
+            base.ApplicationTypeID = (int)clsApplication.enApplicationType.NewInternationalLicense;
+            base.ApplicationStatus = ApplicationStatus;
+            base.LastStatusDate = LastStatusDate;
+            base.PaidFees = PaidFees;
+            base.CreatedByUserID = CreatedByUserID;
+
             this.InternationalLicenseID = InternationalLicenseID;
             this.ApplicationID = ApplicationID;
             this.DriverID = DriverID;
-            this.IssuedUsingLocalDrivingLicenseApplicationID = IssuedUsingLocalDrivingLicenseApplicationID;
+            this.IssuedUsingLocalLicenseID = IssuedUsingLocalLicenseID;
             this.IssueDate = IssueDate;
             this.ExpirationDate = ExpirationDate;
             this.IsActive = IsActive;
             this.CreatedByUserID = CreatedByUserID;
 
+            this.DriverInfo = clsDriver.FindByDriverID(this.DriverID);
 
             Mode = enMode.Update;
         }
@@ -104,162 +78,105 @@ namespace BusinessLayer
         /////////////////////////////////////////////////////////////////////
         private bool _AddNewInternationalLicense()
         {
-            // يفترض أن لديك كلاس Data Access مثل clsDAInternationalLicenses يحتوي على دالة للإضافة
-            this.InternationalLicenseID =clsDAIssuingLicense.AddNewInternationalLicense(
-                this.ApplicationID,
-                this.DriverID,
-                this.IssuedUsingLocalDrivingLicenseApplicationID,
-                this.IssueDate,
-                this.ExpirationDate,
-                this.IsActive,
-                this.CreatedByUserID
-            );
+            //call DataAccess Layer 
+
+            this.InternationalLicenseID =
+                clsDAInternationalLicense.AddNewInternationalLicense(this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
+               this.IssueDate, this.ExpirationDate,
+               this.IsActive, this.CreatedByUserID);
+
 
             return (this.InternationalLicenseID != -1);
         }
 
-       
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-
-        public static bool LicenseExistOrNotInInternationalTable(int LicenseID)
+        private bool _UpdateInternationalLicense()
         {
+            //call DataAccess Layer 
 
-            return clsDAIssuingLicense.CheckIfLicenseExistsInInternationalCertificates(LicenseID);
+            return clsDAInternationalLicense.UpdateInternationalLicense(
+                this.InternationalLicenseID, this.ApplicationID, this.DriverID, this.IssuedUsingLocalLicenseID,
+               this.IssueDate, this.ExpirationDate,
+               this.IsActive, this.CreatedByUserID);
+        }
 
+        public static clsInternationalLicense Find(int InternationalLicenseID)
+        {
+            int ApplicationID = -1;
+            int DriverID = -1; int IssuedUsingLocalLicenseID = -1;
+            DateTime IssueDate = DateTime.Now; DateTime ExpirationDate = DateTime.Now;
+            bool IsActive = true; int CreatedByUserID = 1;
+
+            if (clsDAInternationalLicense.GetInternationalLicenseInfoByID(InternationalLicenseID, ref ApplicationID, ref DriverID,
+                ref IssuedUsingLocalLicenseID,
+            ref IssueDate, ref ExpirationDate, ref IsActive, ref CreatedByUserID))
+            {
+                //now we find the base application
+                clsApplication Application = clsApplication.FindBaseApplication(ApplicationID);
+
+
+                return new clsInternationalLicense(Application.ApplicationID,
+                    Application.ApplicantPersonID,
+                                     Application.ApplicationDate,
+                                    (enApplicationStatus)Application.ApplicationStatus, Application.LastStatusDate,
+                                     Application.PaidFees, Application.CreatedByUserID,
+                                     InternationalLicenseID, DriverID, IssuedUsingLocalLicenseID,
+                                         IssueDate, ExpirationDate, IsActive);
+
+            }
+
+            else
+                return null;
 
         }
 
-        ///   /////////////////////////////////////////////////////////////////////
-        ///   
-        ///  /////////////////////////////////////////////////////////////////////
-        ///
-
-        public static bool CheckIfLocalDrivingLicenseApplicationExistsAndAndLicenseClassWorth_3(int LicenseID)
+        public static DataTable GetAllInternationalLicenses()
         {
-
-            return clsDAIssuingLicense.CheckIfLocalDrivingLicenseApplicationExistsAndAndLicenseClassWorth_3(LicenseID);
-
+            return clsDAInternationalLicense.GetAllInternationalLicenses();
 
         }
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-        public static DataTable GetInternationalLicenseInfo(int LicenseID)
-        {
-
-            return clsDAIssuingLicense.GetInternationalLicenseInfo(LicenseID);
-
-        }
-        /////////////////////////////////////////////////////////////////////
-
-
-        public static int GetLocalDrivingLicenseApplicationIDByApplicationID(int ApplicationID)
-        {
-            
-            return clsDAIssuingLicense.GetLocalDrivingLicenseApplicationIDByApplicationID(ApplicationID);
-
-
-        }
-
-        
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-        public static DataTable GetAllInternationalLicenseByPersonID(int PersonID)
-        {
-
-            return clsDAIssuingLicense.GetAllInternationalLicenseByPersonID(PersonID);
-
-        }
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-        public static DataTable GetInternationalLicenseInforDgv()
-        {
-
-            return clsDAIssuingLicense.GetInternationalLicenseInforDgv();
-
-        }
-
-        /////////////////////////////////////////////////////////////////////
-
-
-        /////////////////////////////////////////////////////////////////////
-        ///
-        public static DataTable GetInternationalLicenseOfPersonForDgv(int ApplicationID)
-        {
-            
-            return clsDAIssuingLicense.GetInternationalLicenseOfPersonForDgv(ApplicationID);
-
-        }
-
-        /////////////////////////////////////////////////////////////////////
-        /////////////////////////////////////////////////////////////////////
-        ///
-        public static DataTable GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(int LicenseID)
-        {
-
-            return clsDAIssuingLicense.GetAllLocalDrivingLicenseApplicationInfoForRenewLicense(LicenseID);
-
-        }
-
-        /////////////////////////////////////////////////////////////////////
-        public static int GetPersonIDByDriverID(int DriverID)
-        {
-
-            return clsDAIssuingLicense.GetPersonIDByDriverID(DriverID);
-
-
-        }
-
-        ///////////////////////**********************//////////////////////////////////
-        /////////////////////////////////////////////////////////////////////
-        public static bool IsLicenseValid(int LicenseID)
-        {
-
-            return clsDAIssuingLicense.IsLicenseValid(LicenseID);
-
-
-        }
-        ///////////////////////**********************//////////////////////////////****
-        public static int GetPersonIDByLocalDrivingID(int LocalDrivingLicenseApplicationID)
-        {
-            
-            return clsDAApplication.GetPersonIDByLocalDrivingID(LocalDrivingLicenseApplicationID);
-
-
-        }
-
-
-        ///////////////////////**********************//////////////////////////////****////
 
         public bool Save()
         {
+
+            //Because of inheritance first we call the save method in the base class,
+            //it will take care of adding all information to the application table.
+            base.Mode = (clsApplication.enMode)Mode;
+            if (!base.Save())
+                return false;
+
             switch (Mode)
             {
                 case enMode.AddNew:
+                    if (_AddNewInternationalLicense())
                     {
 
                         Mode = enMode.Update;
-                        return _AddNewInternationalLicense();
+                        return true;
                     }
-
-
-
-                case enMode.Update:
+                    else
                     {
-                        //  return _UpdateUser();
-
                         return false;
                     }
 
+                case enMode.Update:
 
-                default:
-                    return false;
+                    return _UpdateInternationalLicense();
 
             }
+
+            return false;
+        }
+
+        public static int GetActiveInternationalLicenseIDByDriverID(int DriverID)
+        {
+
+            return clsDAInternationalLicense.GetActiveInternationalLicenseIDByDriverID(DriverID);
+
+        }
+
+        public static DataTable GetDriverInternationalLicenses(int DriverID)
+        {
+            return clsDAInternationalLicense.GetDriverInternationalLicenses(DriverID);
         }
 
         /////////////////////////////////////////////////////////////////////

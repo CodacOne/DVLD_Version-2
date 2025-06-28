@@ -97,11 +97,10 @@
             // 
             // ctrlDriverInternationalLicenseInfo1
             // 
-            this.ctrlDriverInternationalLicenseInfo1.Location = new System.Drawing.Point(40, 217);
+            this.ctrlDriverInternationalLicenseInfo1.Location = new System.Drawing.Point(53, 229);
             this.ctrlDriverInternationalLicenseInfo1.Name = "ctrlDriverInternationalLicenseInfo1";
-            this.ctrlDriverInternationalLicenseInfo1.Size = new System.Drawing.Size(1007, 345);
-            this.ctrlDriverInternationalLicenseInfo1.TabIndex = 0;
-            this.ctrlDriverInternationalLicenseInfo1.Load += new System.EventHandler(this.CtrlDriverInternationalLicenseInfo1_Load);
+            this.ctrlDriverInternationalLicenseInfo1.Size = new System.Drawing.Size(978, 324);
+            this.ctrlDriverInternationalLicenseInfo1.TabIndex = 104;
             // 
             // DriverInternationalLicenseInfo
             // 
@@ -110,12 +109,12 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1179, 638);
+            this.Controls.Add(this.ctrlDriverInternationalLicenseInfo1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label44);
-            this.Controls.Add(this.ctrlDriverInternationalLicenseInfo1);
             this.Name = "DriverInternationalLicenseInfo";
             this.Text = "DriverInternationalLicenseInfo";
             this.Load += new System.EventHandler(this.DriverInternationalLicenseInfo_Load);
@@ -127,12 +126,11 @@
         }
 
         #endregion
-
-        private ctrlDriverInternationalLicenseInfo ctrlDriverInternationalLicenseInfo1;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private ctrlDriverInternationalLicenseInfo ctrlDriverInternationalLicenseInfo1;
     }
 }

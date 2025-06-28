@@ -23,11 +23,8 @@ namespace Full_Project_Desktop
         public ctrlDriverLicense()
         {
             InitializeComponent();
-
-
-
+         
         }
-
 
         private void _LoadLocalLicenseInfo()
         {
@@ -36,7 +33,7 @@ namespace Full_Project_Desktop
 
 
             dgvLocalLicensesHistory.DataSource = _dtDriverLocalLicensesHistory;
-            labse.Text = dgvLocalLicensesHistory.Rows.Count.ToString();
+            lblCountLocalLicensesRecords.Text = dgvLocalLicensesHistory.Rows.Count.ToString();
 
             if (dgvLocalLicensesHistory.Rows.Count > 0)
             {
@@ -65,32 +62,38 @@ namespace Full_Project_Desktop
          private void _LoadInternationalLicenseInfo()
         {
 
-          //  _dtDriverInternationalLicensesHistory = clsDriver.GetInternationalLicenses(_DriverID);
+           _dtDriverInternationalLicensesHistory = clsDriver.GetInternationalLicenses(_DriverID);
 
-
-            dgvInternationalLicensesHistory.DataSource = _dtDriverInternationalLicensesHistory;
-
-            if (dgvInternationalLicensesHistory.Rows.Count > 0)
+            if(_dtDriverInternationalLicensesHistory == null )
             {
-                dgvInternationalLicensesHistory.Columns[0].HeaderText = "Int.License ID";
-                dgvInternationalLicensesHistory.Columns[0].Width = 160;
-
-                dgvInternationalLicensesHistory.Columns[1].HeaderText = "Application ID";
-                dgvInternationalLicensesHistory.Columns[1].Width = 130;
-
-                dgvInternationalLicensesHistory.Columns[2].HeaderText = "L.License ID";
-                dgvInternationalLicensesHistory.Columns[2].Width = 130;
-
-                dgvInternationalLicensesHistory.Columns[3].HeaderText = "Issue Date";
-                dgvInternationalLicensesHistory.Columns[3].Width = 180;
-
-                dgvInternationalLicensesHistory.Columns[4].HeaderText = "Expiration Date";
-                dgvInternationalLicensesHistory.Columns[4].Width = 180;
-
-                dgvInternationalLicensesHistory.Columns[5].HeaderText = "Is Active";
-                dgvInternationalLicensesHistory.Columns[5].Width = 120;
-
+                return;
             }
+
+            dgvManageInternationalHistory.DataSource = _dtDriverInternationalLicensesHistory;
+            lblCountLocalLicensesRecords.Text = dgvManageInternationalHistory.Rows.Count.ToString();
+
+            //if (_dtDriverInternationalLicensesHistory.Rows.Count > 0)
+            //{
+            //    dgvManageInternationalHistory.Columns[0].HeaderText = "Int.License ID";
+            //    dgvManageInternationalHistory.Columns[0].Width = 160;
+
+            //    dgvManageInternationalHistory.Columns[1].HeaderText = "Application ID";
+            //    dgvManageInternationalHistory.Columns[1].Width = 130;
+
+            //    dgvManageInternationalHistory.Columns[2].HeaderText = "L.License ID";
+            //    dgvManageInternationalHistory.Columns[2].Width = 130;
+
+            //    dgvManageInternationalHistory.Columns[3].HeaderText = "Issue Date";
+            //    dgvManageInternationalHistory.Columns[3].Width = 180;
+
+            //    dgvManageInternationalHistory.Columns[4].HeaderText = "Expiration Date";
+            //    dgvManageInternationalHistory.Columns[4].Width = 180;
+
+            //    dgvManageInternationalHistory.Columns[5].HeaderText = "Is Active";
+            //    dgvManageInternationalHistory.Columns[5].Width = 120;
+
+            //}
+
         }
 
 
@@ -147,10 +150,6 @@ namespace Full_Project_Desktop
         }
 
         /*/*//*/********************************//*/*/
-      
-        /*/*//*/********************************//*/*/
-
-        /*/*//*/********************************//*/*/
 
         private void DgvLocalDrivingLicenseApplicationHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -190,7 +189,17 @@ namespace Full_Project_Desktop
             frm.Show();
         }
 
+        private void labse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCountLocalLicensesRecords_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /*/*//*/********************************//*/*/
-                                                 /*/*//*/********************************//*/*/
+        /*/*//*/********************************//*/*/
     }
 }
